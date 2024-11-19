@@ -177,7 +177,7 @@ PrefabInstance:
     - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: _infoData.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -199,8 +199,16 @@ PrefabInstance:
     - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: _infoData.Array.data[2].info
-      value: This project was developed to Valongo's Municipal Chamber with the purpose
-        of displaying what the city's turistic value.
+      value: "The challenge in this project was to showcase a 360\xBA video within
+        a sphere, creating a fully immersive viewing experience."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: _infoData.Array.data[3].info
+      value: To address this, we implemented a solution by incorporating a render
+        texture into the sphere material. This render texture was also applied to
+        the video player. While in retrospect, this solution seems straightforward,
+        at the time, with less experience in Unity, it took some time to figure out.
       objectReference: {fileID: 0}
     - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -210,7 +218,12 @@ PrefabInstance:
     - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: _infoData.Array.data[2].category
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: _infoData.Array.data[3].category
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8563523199043799894, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}

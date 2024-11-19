@@ -341,9 +341,9 @@ PrefabInstance:
         of random obstacles posed both an entertaining and challenging aspect of
         the project. Since the character would be running around a spherical scenario,
         precise placement of obstacles with suitable distance and rotation was crucial
-        to seamlessly integrate them into the scene without cliping with each other.
+        to seamlessly integrate them into the scene without clipping with each other.
         Moreover, the obstacles would also need to disappear after the player dodges
-        them to have room for new ones to spawn. This lead me to know more about
+        them to have room for new ones to spawn. This leads me to know more about
         object pooling and the benefits it was on optimization."
       objectReference: {fileID: 0}
     - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,

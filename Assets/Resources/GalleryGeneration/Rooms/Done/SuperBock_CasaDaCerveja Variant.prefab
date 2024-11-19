@@ -299,7 +299,7 @@ PrefabInstance:
     - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: _infoData.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -333,6 +333,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
+      propertyPath: _infoData.Array.data[3].info
+      value: The primary challenge for this project came from only being able to
+        test in the museum environment. This constraint made the placement of models
+        in the experience particularly challenging.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: _infoData.Array.data[4].info
+      value: To aid in model placement, we developed a script that calculated the
+        distance between the marker and the developer. This allowed us to save the
+        position for later use during development when adding the models. While not
+        flawless, it significantly expedited and simplified the initial placement
+        of the models.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
       propertyPath: _infoData.Array.data[1].category
       value: 1
       objectReference: {fileID: 0}
@@ -340,6 +356,16 @@ PrefabInstance:
         type: 3}
       propertyPath: _infoData.Array.data[2].category
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: _infoData.Array.data[3].category
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110303635493442429, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: _infoData.Array.data[4].category
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8119131832080894656, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
