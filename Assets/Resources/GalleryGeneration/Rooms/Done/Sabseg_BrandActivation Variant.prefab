@@ -20,32 +20,32 @@ PrefabInstance:
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 15.375
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 68.8125
       objectReference: {fileID: 0}
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -7.6875
       objectReference: {fileID: 0}
     - target: {fileID: 1856104302283059666, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -115,7 +115,7 @@ PrefabInstance:
     - target: {fileID: 4216721815233997155, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_text
-      value: "<b><size=90>Role</b></size>\nLead Developer.\n\n<b><size=90>Client</b></size>\nSABSEG
+      value: "<b><size=90>Role</b></size>\nIntern Developer.\n\n<b><size=90>Client</b></size>\nSABSEG
         is an insurance broker that sponsors several football clubs of the 1st and
         2nd division of Portuguese. As part of one of its \u201CCelebrate Football\u201D
         initiatives, hivolve challenged SABSEG to carry out a brand activation using
@@ -123,67 +123,73 @@ PrefabInstance:
         this innovative project, we crafted new immersive environments, including
         various football stadiums, diverse player scenarios, and dynamic weather
         conditions. The core experience revolves around the user's objective of defending
-        penalties, each successful defense resulting in a rewarding outcome.\n\n"
+        penalties, each successful defense resulting in a rewarding outcome.\n\n<b><size=90>Technologies</b></size>\nSteamVR
+        Plugin.\n\n<b><size=90>Challenges</b></size>\nAs my initial venture into
+        VR development, the most significant challenge revolved around grasping the
+        workings of VR components.\n\n<b><size=90>Solutions</b></size>\nTo comprehend
+        the intricacies of the SteamVR plugin, I extensively read its documentation
+        and experimented with the pre-built scenes included in the plugin. This hands-on
+        approach provided a clearer understanding of its capabilities and functioning.\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 15.375
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 48.4375
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -7.6875
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 15.375
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 7.6875
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -7.6875
       objectReference: {fileID: 0}
     - target: {fileID: 5005744636271038246, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -213,32 +219,32 @@ PrefabInstance:
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 15.375
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 89.1875
       objectReference: {fileID: 0}
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -7.6875
       objectReference: {fileID: 0}
     - target: {fileID: 5701410561163785084, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -258,6 +264,11 @@ PrefabInstance:
     - target: {fileID: 5701410561163785084, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750668888546891499, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6530184104893239348, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
@@ -303,7 +314,7 @@ PrefabInstance:
     - target: {fileID: 7836380202051135750, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_text
-      value: "<b><size=90>Role</b></size>\nLead Developer.\n\n<b><size=90>Client</b></size>\nSABSEG
+      value: "<b><size=90>Role</b></size>\nIntern Developer.\n\n<b><size=90>Client</b></size>\nSABSEG
         is an insurance broker that sponsors several football clubs of the 1st and
         2nd division of Portuguese. As part of one of its \u201CCelebrate Football\u201D
         initiatives, hivolve challenged SABSEG to carry out a brand activation using
@@ -311,12 +322,18 @@ PrefabInstance:
         this innovative project, we crafted new immersive environments, including
         various football stadiums, diverse player scenarios, and dynamic weather
         conditions. The core experience revolves around the user's objective of defending
-        penalties, each successful defense resulting in a rewarding outcome.\n\n"
+        penalties, each successful defense resulting in a rewarding outcome.\n\n<b><size=90>Technologies</b></size>\nSteamVR
+        Plugin.\n\n<b><size=90>Challenges</b></size>\nAs my initial venture into
+        VR development, the most significant challenge revolved around grasping the
+        workings of VR components.\n\n<b><size=90>Solutions</b></size>\nTo comprehend
+        the intricacies of the SteamVR plugin, I extensively read its documentation
+        and experimented with the pre-built scenes included in the plugin. This hands-on
+        approach provided a clearer understanding of its capabilities and functioning.\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 7836380202051135750, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_fontSize
-      value: 80
+      value: 68.55
       objectReference: {fileID: 0}
     - target: {fileID: 7894941355213749977, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -401,32 +418,32 @@ PrefabInstance:
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 15.375
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 28.0625
       objectReference: {fileID: 0}
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -7.6875
       objectReference: {fileID: 0}
     - target: {fileID: 8563523199043799894, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}

@@ -180,27 +180,20 @@ PrefabInstance:
     - target: {fileID: 4216721815233997155, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_text
-      value: '<b><size=90>Role</b></size>
-
-        Lead developer.
-
-
-        <b><size=90>Client</b></size>
-
-        Siroco
+      value: "<b><size=90>Role</b></size>\nLead developer.\n\n<b><size=90>Client</b></size>\nSiroco
         develops innovative solutions through the combination of years of expertise,
         attention to detail and fast responses. Siroco also produces high precision
-        mechanical parts and tools, in small series, with technical expertise.
-
-
-        <b><size=90>Overview</b></size>
-
-        This
+        mechanical parts and tools, in small series, with technical expertise.\n\n<b><size=90>Overview</b></size>\nThis
         project was developed for HTC Vive with the purpose of showing the clients
-        machines in high detail as well as containing the necessary information.
-
-
-'
+        machines in high detail as well as containing the necessary information.\n\n<b><size=90>Technologies</b></size>\nSteamVR
+        plugin and later in development Oculus SDK.\n\n<b><size=90>Challenges</b></size>\n\rGiven
+        the intricate details of the machines, maintaining optimal performance became
+        a significant challenge when presenting them and ensuring a stable frame
+        rate.\n\n<b><size=90>Solutions</b></size>\nTo address the optimization challenges,
+        we opted to display only one machine at a time and transition between them
+        this ensured a stable and engaging user experience. This approach led to
+        the creation of a sleek dissolve shader that you can see in action on a video
+        to your right.\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -530,32 +523,25 @@ PrefabInstance:
     - target: {fileID: 7836380202051135750, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_text
-      value: '<b><size=90>Role</b></size>
-
-        Lead developer.
-
-
-        <b><size=90>Client</b></size>
-
-        Siroco
+      value: "<b><size=90>Role</b></size>\nLead developer.\n\n<b><size=90>Client</b></size>\nSiroco
         develops innovative solutions through the combination of years of expertise,
         attention to detail and fast responses. Siroco also produces high precision
-        mechanical parts and tools, in small series, with technical expertise.
-
-
-        <b><size=90>Overview</b></size>
-
-        This
+        mechanical parts and tools, in small series, with technical expertise.\n\n<b><size=90>Overview</b></size>\nThis
         project was developed for HTC Vive with the purpose of showing the clients
-        machines in high detail as well as containing the necessary information.
-
-
-'
+        machines in high detail as well as containing the necessary information.\n\n<b><size=90>Technologies</b></size>\nSteamVR
+        plugin and later in development Oculus SDK.\n\n<b><size=90>Challenges</b></size>\n\rGiven
+        the intricate details of the machines, maintaining optimal performance became
+        a significant challenge when presenting them and ensuring a stable frame
+        rate.\n\n<b><size=90>Solutions</b></size>\nTo address the optimization challenges,
+        we opted to display only one machine at a time and transition between them
+        this ensured a stable and engaging user experience. This approach led to
+        the creation of a sleek dissolve shader that you can see in action on a video
+        to your right.\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 7836380202051135750, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_fontSize
-      value: 80
+      value: 71.2
       objectReference: {fileID: 0}
     - target: {fileID: 7880973366210205075, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
