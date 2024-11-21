@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.39231107, g: 0.4905383, b: 0.64015824, a: 1}
+  m_IndirectSpecularColor: {r: 0.39244017, g: 0.49042714, b: 0.64020693, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3205,6 +3205,7 @@ Transform:
   - {fileID: 532578481}
   - {fileID: 1299057414}
   - {fileID: 1988386790}
+  - {fileID: 1245920438}
   m_Father: {fileID: 1343585543}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13131,10 +13132,10 @@ RectTransform:
   m_Father: {fileID: 1364635634}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 116.53998, y: -21.599976}
-  m_SizeDelta: {x: 0, y: 43.19995}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 38.879955, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &647484208
 MonoBehaviour:
@@ -14193,7 +14194,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1851874
+  m_Name: pb_Mesh31390
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -59257,10 +59258,10 @@ RectTransform:
   m_Father: {fileID: 1364635634}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 199.81993, y: -21.599976}
-  m_SizeDelta: {x: 0, y: 43.19995}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 43.19995, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005384888
 MonoBehaviour:
@@ -68447,12 +68448,12 @@ GameObject:
   - component: {fileID: 1245920440}
   - component: {fileID: 1245920439}
   m_Layer: 0
-  m_Name: Info
+  m_Name: Visitor Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1245920438
 Transform:
   m_ObjectHideFlags: 0
@@ -68460,15 +68461,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245920437}
-  m_LocalRotation: {x: -0, y: 0.11117309, z: -0, w: 0.99380106}
-  m_LocalPosition: {x: -5.563, y: 1, z: 5.363}
+  m_LocalRotation: {x: -0, y: 0.28437796, z: -0, w: 0.9587123}
+  m_LocalPosition: {x: -3.074, y: 0.456, z: 1.856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1251855348}
-  m_Father: {fileID: 1584378938}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 12.766, z: 0}
+  m_Father: {fileID: 91821835}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 33.043, z: 0}
 --- !u!64 &1245920439
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69465,6 +69466,7 @@ GameObject:
   - component: {fileID: 1251855348}
   - component: {fileID: 1251855350}
   - component: {fileID: 1251855349}
+  - component: {fileID: 1251855351}
   m_Layer: 0
   m_Name: Title
   m_TagString: Untagged
@@ -69512,7 +69514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GO THIS WAY ->
+  m_text: You are the 99th visitor
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: af89f7bc16a754a47983556bb7e9bbaf, type: 2}
   m_sharedMaterial: {fileID: 821825300695727300, guid: af89f7bc16a754a47983556bb7e9bbaf,
@@ -69627,6 +69629,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1251855351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251855347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35df990401a09e041a0ac3f9347cc1be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1256617997
 GameObject:
   m_ObjectHideFlags: 0
@@ -70491,7 +70505,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<b><size=70>About Me:</b>\r</size>\nHello, I'm Jo\xE3o, a Unity Developer
-    with over <color=#0066FFFF><b>6</b>Years <b>10</b> Months <b>31</b> Days </color>
+    with over <color=#0066FFFF><b>6</b>Years <b>11</b> Months <b>2</b> Days </color>
     of experience in the field. I'm passionate about creating immersive and engaging
     VR experiences. Based in Portugal, I've been on a continuous journey of growth
     and learning in the world of programming and game development.\n\n<b><size=70>Welcome
@@ -76925,7 +76939,6 @@ Transform:
   - {fileID: 907607032}
   - {fileID: 767275052}
   - {fileID: 191961768}
-  - {fileID: 1245920438}
   m_Father: {fileID: 1343585543}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
