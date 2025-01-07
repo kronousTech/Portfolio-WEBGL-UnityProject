@@ -1,20 +1,25 @@
 using KronosTech.ShowroomGeneration;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public static class GalleryGenerationPieces
 {
     private static GalleryTile _lastTile;
-    [SerializeField] private static List<GalleryTile> _tilesPrefabs;
-    [SerializeField] private static GalleryCorridor[] _corridorPrefabs;
-    [SerializeField] private static GalleryRoom _endWall;
+    private static List<GalleryTile> _tilesPrefabs;
+    private static GalleryCorridor[] _corridorPrefabs;
+    
+    private static GalleryRoom _endWall;
+
+    private static Transform _corridorObjectsParent;
+    private static readonly Dictionary<GalleryCorridor, ObjectPool<GalleryCorridor>> _corridorPools = new();
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Initialize() 
     {
         _tilesPrefabs = Resources.LoadAll<GalleryTile>("GalleryGeneration/Tiles").ToList();
-        _corridorPrefabs = Resources.LoadAll<GalleryCorridor>("GalleryGeneration/Corridors");
         _endWall = Resources.Load<GalleryRoom>("GalleryGeneration/Wall/Wall");
     }
 
@@ -39,6 +44,8 @@ public static class GalleryGenerationPieces
             return _lastTile;
         }
     } 
-    public static GalleryCorridor GetCorridor() => _corridorPrefabs[Random.Range(0, _corridorPrefabs.Length)];
-    public static GalleryRoom GetWall() => _endWall;
+    
+    public static GalleryRoom GetEndWall() => _endWall;
+
+   
 }

@@ -1,3 +1,4 @@
+using KronosTech.GalleryGeneration.Pools;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,9 +10,11 @@ namespace KronosTech.ShowroomGeneration
     {
         [SerializeField] private GalleryTileExit _galleryStart;
 
+        [Header("Requirements")]
+        [SerializeField] private GalleryCorridorPool _corridorsPool;
+
         [Header("Parents")]
         [SerializeField] private Transform _tilesParent;
-        [SerializeField] private Transform _corridorsParent;
 
         public static event Action OnGenerationStart;
         public static event Action<bool> OnGenerationEnd;
@@ -33,7 +36,8 @@ namespace KronosTech.ShowroomGeneration
                 yield break;
 
             _tilesParent.ClearChildren();
-            _corridorsParent.ClearChildren();
+
+            _corridorsPool.ClearObjects();
 
             yield return null;
 
@@ -49,7 +53,7 @@ namespace KronosTech.ShowroomGeneration
 
             while (remainingRooms > 0)
             {
-                var corridor = Instantiate(GalleryGenerationPieces.GetCorridor(), _corridorsParent);
+                var corridor = (GalleryCorridor)_corridorsPool.GetRandomCorridor();
                 corridor.Place(nextExit != null ? nextExit : _galleryStart);
 
                 nextExit = corridor.GetExit;
@@ -77,8 +81,8 @@ namespace KronosTech.ShowroomGeneration
                         }
                         else
                         {
-                            Instantiate(GalleryGenerationPieces.GetWall(), _corridorsParent)
-                            .Place(roomPositions[i]);
+                            Instantiate(GalleryGenerationPieces.GetEndWall(), null) // ADD PARENT
+                                .Place(roomPositions[i]);
                         }
                     }
                 });
