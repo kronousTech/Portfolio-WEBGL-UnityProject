@@ -209,7 +209,7 @@ namespace KronosTech.ShowroomGeneration.Room.Videoplayer
         {
             yield return new WaitForSeconds(2.0f);
 
-            if(!_videoPlayer.isPrepared)
+            if(!_videoPlayer.isPrepared && _videoPlayer.enabled)
                 _videoPlayer.Prepare();
         }
     }

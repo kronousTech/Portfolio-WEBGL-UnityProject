@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace KronosTech.ShowroomGeneration
 {
-    public class GalleryRoom : MonoBehaviour
+    public class GalleryRoom : GalleryPoolObjectBase
     {
         [SerializeField] private GameObject _holder;
         [SerializeField] private GameObject _line;

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace KronosTech.ShowroomGeneration
 {
-    public class GalleryTile : MonoBehaviour
+    public class GalleryTile : GalleryPoolObjectBase
     {
         [SerializeField] private Transform _exitsParent;
 
@@ -11,7 +11,7 @@ namespace KronosTech.ShowroomGeneration
 
         public int GetExitsCount { get { return _exits.Length; } private set { } }
 
-        public void Initialize(int remainingRooms, GalleryTileExit exit, Action<GalleryTileExit, GalleryTileExit[]> exits)
+        public void InitializeGallery(int remainingRooms, GalleryTileExit exit, Action<GalleryTileExit, GalleryTileExit[]> exits)
         {
             _exits = new GalleryTileExit[_exitsParent.childCount];
 

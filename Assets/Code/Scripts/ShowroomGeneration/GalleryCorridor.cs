@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GalleryCorridor : IGalleryPoolObjectBase
+public class GalleryCorridor : GalleryPoolObjectBase
 {
     [SerializeField] private GalleryTileExit _exit;
 

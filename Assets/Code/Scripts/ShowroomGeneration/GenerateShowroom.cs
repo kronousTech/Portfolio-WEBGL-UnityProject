@@ -11,10 +11,9 @@ namespace KronosTech.ShowroomGeneration
         [SerializeField] private GalleryTileExit _galleryStart;
 
         [Header("Requirements")]
-        [SerializeField] private GalleryCorridorPool _corridorsPool;
-
-        [Header("Parents")]
-        [SerializeField] private Transform _tilesParent;
+        [SerializeField] private GalleryObjectsPool _corridorsPool;
+        [SerializeField] private GalleryObjectsPool _tilesPool;
+        [SerializeField] private GalleryObjectsPool _wallsPool;
 
         public static event Action OnGenerationStart;
         public static event Action<bool> OnGenerationEnd;
@@ -35,9 +34,9 @@ namespace KronosTech.ShowroomGeneration
             if (_startedGeneration)
                 yield break;
 
-            _tilesParent.ClearChildren();
-
+            _tilesPool.ClearObjects();
             _corridorsPool.ClearObjects();
+            _wallsPool.ClearObjects();
 
             yield return null;
 
@@ -53,7 +52,7 @@ namespace KronosTech.ShowroomGeneration
 
             while (remainingRooms > 0)
             {
-                var corridor = (GalleryCorridor)_corridorsPool.GetRandomCorridor();
+                var corridor = (GalleryCorridor)_corridorsPool.GetRandomObject();
                 corridor.Place(nextExit != null ? nextExit : _galleryStart);
 
                 nextExit = corridor.GetExit;
@@ -61,8 +60,8 @@ namespace KronosTech.ShowroomGeneration
                 yield return null;
 
                 // Instantiate Tile
-                var currentTile = Instantiate(GalleryGenerationPieces.GetTile(remainingRooms), _tilesParent);
-                currentTile.Initialize(remainingRooms, nextExit, (GalleryTileExit exit, GalleryTileExit[] roomPositions) =>
+                var currentTile = (GalleryTile)_tilesPool.GetRandomObject();
+                currentTile.InitializeGallery(remainingRooms, nextExit, (GalleryTileExit exit, GalleryTileExit[] roomPositions) =>
                 {
                     if(exit != null)
                     {
@@ -81,8 +80,12 @@ namespace KronosTech.ShowroomGeneration
                         }
                         else
                         {
-                            Instantiate(GalleryGenerationPieces.GetEndWall(), null) // ADD PARENT
-                                .Place(roomPositions[i]);
+                            var wall = ((GalleryRoom)_wallsPool.GetRandomObject());
+                            wall.Place(roomPositions[i]);
+                            wall.ToggleVisibility(true);
+
+                            //Instantiate(GalleryGenerationPieces.GetEndWall(), null) // ADD PARENT
+                            //    .Place(roomPositions[i]);
                         }
                     }
                 });
