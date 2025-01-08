@@ -23,7 +23,7 @@ public class InfoText : MonoBehaviour
 
     private void SetText()
     {
-        var begginingOfCarrer = new DateTime(2019, 1, 21, 14, 20, 10);
+        var begginingOfCarrer = new DateTime(2020, 7, 21, 14, 20, 10);
         var carrerTime = DateTime.Now - begginingOfCarrer;
         var time = DateTime.MinValue + carrerTime;
         var carrerTimeString =

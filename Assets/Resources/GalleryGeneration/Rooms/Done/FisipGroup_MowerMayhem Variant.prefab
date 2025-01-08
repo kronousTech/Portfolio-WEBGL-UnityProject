@@ -403,7 +403,7 @@ PrefabInstance:
     - target: {fileID: 1458781899435535092, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2140
+      value: 2143
       objectReference: {fileID: 0}
     - target: {fileID: 1698665289376805758, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -418,7 +418,7 @@ PrefabInstance:
     - target: {fileID: 1759560418321914747, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 637
+      value: 640
       objectReference: {fileID: 0}
     - target: {fileID: 1898065491560273756, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -620,7 +620,7 @@ PrefabInstance:
     - target: {fileID: 6731705865589706749, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 265
+      value: 268
       objectReference: {fileID: 0}
     - target: {fileID: 6794864701753151679, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -640,7 +640,7 @@ PrefabInstance:
     - target: {fileID: 7199256849601663685, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 653
+      value: 656
       objectReference: {fileID: 0}
     - target: {fileID: 7334458154764489102, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -650,7 +650,7 @@ PrefabInstance:
     - target: {fileID: 7334458154764489102, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 731
+      value: 734
       objectReference: {fileID: 0}
     - target: {fileID: 7653291659167730707, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -679,6 +679,16 @@ PrefabInstance:
         their LinkedIn profile and website through the links bellow.\n\n<b><size=90>Duration</b></size>\nOctober
         12, 2022 - Ongoing.\n\n"
       objectReference: {fileID: 0}
+    - target: {fileID: 7852444371007367584, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852444371007367584, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 7880973366210205075, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_Mesh
@@ -687,7 +697,7 @@ PrefabInstance:
     - target: {fileID: 7880973366210205075, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1112
+      value: 1115
       objectReference: {fileID: 0}
     - target: {fileID: 7894941355213749977, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -781,7 +791,7 @@ PrefabInstance:
     - target: {fileID: 8311359088929463285, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 455
+      value: 458
       objectReference: {fileID: 0}
     - target: {fileID: 8563523199043799894, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
