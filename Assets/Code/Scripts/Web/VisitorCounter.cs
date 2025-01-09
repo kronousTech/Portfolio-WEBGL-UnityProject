@@ -7,12 +7,15 @@ namespace KronosTech.Web
 {
     public class VisitorCounter : MonoBehaviour
     {
-        private TextMeshPro _visitorCountText; // Assign this in the Unity Editor
+        [SerializeField] private TextMeshPro _loadingText;
+        [SerializeField] private TextMeshPro _visitorCountText; // Assign this in the Unity Editor
+
         private const string URL = "https://render-backend-ppap.onrender.com/counter"; // Replace with your server's URL if hosted online
 
         private void Awake()
         {
-            _visitorCountText = GetComponent<TextMeshPro>();
+            _loadingText.enabled = true;
+            _visitorCountText.enabled = false;
         }
         private void Start()
         {
@@ -26,6 +29,9 @@ namespace KronosTech.Web
             {
                 // Send the request and wait for the response
                 yield return request.SendWebRequest();
+
+                _visitorCountText.enabled = true;
+                _loadingText.gameObject.SetActive(false);
 
                 // Check for errors
                 if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)

@@ -3792,7 +3792,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-441040
+  m_Name: pb_Mesh-1406
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6238,7 +6238,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127978
+  m_Name: pb_Mesh32114
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6946,7 +6946,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-441026
+  m_Name: pb_Mesh-1392
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7487,6 +7487,192 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362127107}
   m_CullTransparentMesh: 1
+--- !u!1 &365948318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365948319}
+  - component: {fileID: 365948322}
+  - component: {fileID: 365948321}
+  - component: {fileID: 365948323}
+  m_Layer: 0
+  m_Name: Loading
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!224 &365948319
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365948318}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0.07}
+  m_LocalScale: {x: 0.010000001, y: 0.01, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1245920438}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.019, y: 1.048}
+  m_SizeDelta: {x: 100, y: 35}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &365948321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365948318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Loading visitor count value...
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: af89f7bc16a754a47983556bb7e9bbaf, type: 2}
+  m_sharedMaterial: {fileID: 821825300695727300, guid: af89f7bc16a754a47983556bb7e9bbaf,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 125
+  m_fontSizeBase: 125
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 365948322}
+  m_maskType: 0
+--- !u!23 &365948322
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365948318}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 821825300695727300, guid: af89f7bc16a754a47983556bb7e9bbaf, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &365948323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365948318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 384229ecfd58dd04a97a8edde446c0f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &369721765
 GameObject:
   m_ObjectHideFlags: 0
@@ -7584,7 +7770,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127866
+  m_Name: pb_Mesh32002
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8188,7 +8374,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh125906
+  m_Name: pb_Mesh30042
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8578,7 +8764,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh128044
+  m_Name: pb_Mesh32180
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10465,7 +10651,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh126740
+  m_Name: pb_Mesh30876
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14253,7 +14439,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127278
+  m_Name: pb_Mesh31414
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14472,23 +14658,33 @@ MonoBehaviour:
   m_text: '<size=90>WHATS NEW:</size>
 
 
+    09-01-2025
+
+    - Fixed typos.
+
+    -
+    Rewritten some texts.
+
+    - Added loading animation to the visitor count display.
+
+
     08-01-2025
 
-    - Fixed MowerMayhem info
-    font sizes.
+    -
+    Fixed MowerMayhem info font sizes.
 
     - Fixed carrer duration time.
 
-    - Fixed baseboard size on
-    project room walls.
+    -
+    Fixed baseboard size on project room walls.
 
 
     07-01-2025
 
-    - Added MowerMayhem project info.
+    - Added MowerMayhem
+    project info.
 
-    -
-    Improved gallery generation by adding the object ObjectPool pattern.
+    - Improved gallery generation by adding the ObjectPool pattern.
 
 
     21-11-2024
@@ -14535,7 +14731,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 87
+  m_fontSize: 73.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -20288,7 +20484,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh128314
+  m_Name: pb_Mesh32450
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20863,7 +21059,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-441012
+  m_Name: pb_Mesh-1378
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21027,7 +21223,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh128382
+  m_Name: pb_Mesh32518
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -60863,7 +61059,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127174
+  m_Name: pb_Mesh31310
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -67546,7 +67742,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh126890
+  m_Name: pb_Mesh31026
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -68585,6 +68781,7 @@ GameObject:
   - component: {fileID: 1245920441}
   - component: {fileID: 1245920440}
   - component: {fileID: 1245920439}
+  - component: {fileID: 1245920444}
   m_Layer: 0
   m_Name: Visitor Counter
   m_TagString: Untagged
@@ -68604,6 +68801,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 365948319}
   - {fileID: 1251855348}
   m_Father: {fileID: 91821835}
   m_RootOrder: 4
@@ -69516,6 +69714,20 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &1245920444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245920437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35df990401a09e041a0ac3f9347cc1be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loadingText: {fileID: 365948321}
+  _visitorCountText: {fileID: 1251855349}
 --- !u!1 &1251529639
 GameObject:
   m_ObjectHideFlags: 0
@@ -69604,9 +69816,8 @@ GameObject:
   - component: {fileID: 1251855348}
   - component: {fileID: 1251855350}
   - component: {fileID: 1251855349}
-  - component: {fileID: 1251855351}
   m_Layer: 0
-  m_Name: Title
+  m_Name: Response
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69625,7 +69836,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1245920438}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -69767,18 +69978,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1251855351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251855347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35df990401a09e041a0ac3f9347cc1be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1256617997
 GameObject:
   m_ObjectHideFlags: 0
@@ -70294,7 +70493,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh126616
+  m_Name: pb_Mesh30752
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -70589,7 +70788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.085}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314373125
@@ -70604,23 +70803,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d1961b04ab1f14f9da3e193ba13cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textBeforeTime: "<b><size=70>About Me:</b>\r</size>\nHello, I'm Jo\xE3o, a Unity
+  textBeforeTime: "<b><size=90>About Me:</b>\r</size>\nHello, I'm Jo\xE3o, a Unity
     Developer with over"
-  textAfterTime: "of experience in the field. I'm passionate about creating immersive
-    and engaging VR experiences. Based in Portugal, I've been on a continuous journey
-    of growth and learning in the world of programming and game development.\n\n<b><size=70>Welcome
-    to My Portfolio:</b>\r</size>\nWithin this portfolio, you'll discover a selection
-    of projects that showcase my expertise and dedication to the craft. These projects
-    range from my early days in programming to my more recent endeavors. They reflect
-    my commitment to quality and innovation.\n\n<b><size=70>Project Introduction:</b>\r</size>\nEach
-    project in this portfolio has been crafted with the intention of demonstrating
-    the high standard of work I consistently strive for. I invite you to explore
-    and experience the fruits of my creative endeavors.\n\n<b><size=70>Optimized
-    Navigation:</b>\r</size>\nFor your convenience, a Teleport Panel is available
-    to facilitate faster exploration of the projects. If you encounter any challenges
-    while navigating or need assistance with inputs, simply press 'H' to access the
-    help feature.\n\n<b><size=70>Contact:</b>\r</size>\nEmai: joaosantosprofi@protonmail.com\nPhone
-    Number: +351 967 434 301\n\n<b><size=70>You can find me at:</b>\r</size>"
+  textAfterTime: "of professional experience working in both AR/VR experiences and
+    games, based in Portugal, I've been on a continuous journey of growth and learning
+    in the world of programming and game development\n\n<b><size=90>Welcome to My
+    Portfolio:</b>\r</size>\nWithin this portfolio, you'll discover a selection of
+    projects that showcase my expertise and dedication to the craft. These projects
+    range from my early days in programming to my more recent work. Feel free to
+    roam around and explore.\n\nBy pressing '<b>T</b>', you will be prompted with
+    a Teleport panel to facilitate faster exploration of the gallery.\nIf you encounter
+    any challenges while navigating or need assistance with inputs, simply press
+    '<b>H</b>' to access the help panel.\n\n<b><size=90>Contacts:</b>\r</size>\nEmai:
+    joaosantosprofi@protonmail.com\nPhone Number: +351 967 434 301"
   _color: {r: 0, g: 0.40178537, b: 1, a: 1}
 --- !u!114 &1314373126
 MonoBehaviour:
@@ -70642,23 +70837,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b><size=70>About Me:</b>\r</size>\nHello, I'm Jo\xE3o, a Unity Developer
-    with over <color=#0066FFFF><b>5</b>Years <b>6</b> Months <b>20</b> Days </color>
-    of experience in the field. I'm passionate about creating immersive and engaging
-    VR experiences. Based in Portugal, I've been on a continuous journey of growth
-    and learning in the world of programming and game development.\n\n<b><size=70>Welcome
-    to My Portfolio:</b>\r</size>\nWithin this portfolio, you'll discover a selection
-    of projects that showcase my expertise and dedication to the craft. These projects
-    range from my early days in programming to my more recent endeavors. They reflect
-    my commitment to quality and innovation.\n\n<b><size=70>Project Introduction:</b>\r</size>\nEach
-    project in this portfolio has been crafted with the intention of demonstrating
-    the high standard of work I consistently strive for. I invite you to explore
-    and experience the fruits of my creative endeavors.\n\n<b><size=70>Optimized
-    Navigation:</b>\r</size>\nFor your convenience, a Teleport Panel is available
-    to facilitate faster exploration of the projects. If you encounter any challenges
-    while navigating or need assistance with inputs, simply press 'H' to access the
-    help feature.\n\n<b><size=70>Contact:</b>\r</size>\nEmai: joaosantosprofi@protonmail.com\nPhone
-    Number: +351 967 434 301\n\n<b><size=70>You can find me at:</b>\r</size>"
+  m_text: "<b><size=90>About Me:</b>\r</size>\nHello, I'm Jo\xE3o, a Unity Developer
+    with over <color=#0066FFFF><b>5</b>Years <b>6</b> Months <b>21</b> Days </color>
+    of professional experience working in both AR/VR experiences and games, based
+    in Portugal, I've been on a continuous journey of growth and learning in the
+    world of programming and game development\n\n<b><size=90>Welcome to My Portfolio:</b>\r</size>\nWithin
+    this portfolio, you'll discover a selection of projects that showcase my expertise
+    and dedication to the craft. These projects range from my early days in programming
+    to my more recent work. Feel free to roam around and explore.\n\nBy pressing
+    '<b>T</b>', you will be prompted with a Teleport panel to facilitate faster exploration
+    of the gallery.\nIf you encounter any challenges while navigating or need assistance
+    with inputs, simply press '<b>H</b>' to access the help panel.\n\n<b><size=90>Contacts:</b>\r</size>\nEmai:
+    joaosantosprofi@protonmail.com\nPhone Number: +351 967 434 301"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dfd27c5d534376439dea59626b9a0af, type: 2}
   m_sharedMaterial: {fileID: 800483797774632383, guid: 2dfd27c5d534376439dea59626b9a0af,
@@ -70686,10 +70876,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 58.65
-  m_fontSizeBase: 36
+  m_fontSize: 68
+  m_fontSizeBase: 68
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 87
   m_fontStyle: 0
@@ -72997,7 +73187,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh128188
+  m_Name: pb_Mesh32324
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -75343,7 +75533,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127006
+  m_Name: pb_Mesh31142
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -75749,14 +75939,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<b><size=90>GALLERY GENERATION</size></b>\n\nThe gallery will be procedurally
-    generated based on the categories you choose to display. \n\nWhy opt for procedural
-    generation? To begin with, procedural generation adds a unique and engaging element,
-    ensuring that every visit to the gallery offers a distinct experience. \n\nFurthermore,
-    it offers exceptional scalability. When the need arises to include a new project
-    in the gallery, the generation scripts will seamlessly handle the task, expediting
-    the process of adding new rooms.\n\nUtilize the panel on the right to select
-    which categories you want generated and click the <b>\"GENERATE\"</b> button
-    at the bottom to generate the gallery."
+    generated based on the categories you select. \nUse the panel on the right to
+    select which categories you want and click the <b>\"GENERATE\"</b> button at
+    the bottom to generate.\n\nWhy opt for procedural generation? To begin with,
+    procedural generation adds a unique and engaging element, ensuring that every
+    visit to the gallery offers a distinct experience. \nFurthermore, it offers exceptional
+    scalability. When the need arises to include a new project in the gallery, the
+    generation scripts will seamlessly handle the task, expediting the process of
+    adding new rooms."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dfd27c5d534376439dea59626b9a0af, type: 2}
   m_sharedMaterial: {fileID: 800483797774632383, guid: 2dfd27c5d534376439dea59626b9a0af,
@@ -75784,10 +75974,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 82.45
-  m_fontSizeBase: 36
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 90
   m_fontStyle: 0
@@ -76180,7 +76370,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127450
+  m_Name: pb_Mesh31586
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -77086,7 +77276,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh125714
+  m_Name: pb_Mesh29850
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -78833,7 +79023,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127958
+  m_Name: pb_Mesh32094
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -87333,7 +87523,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh126330
+  m_Name: pb_Mesh30466
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -89080,7 +89270,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh128408
+  m_Name: pb_Mesh32544
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -89358,7 +89548,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127604
+  m_Name: pb_Mesh31740
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -90652,7 +90842,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127942
+  m_Name: pb_Mesh32078
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -90893,7 +91083,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh125792
+  m_Name: pb_Mesh29928
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -91627,7 +91817,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh126570
+  m_Name: pb_Mesh30706
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -91889,7 +92079,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh126200
+  m_Name: pb_Mesh30336
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -92379,7 +92569,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127104
+  m_Name: pb_Mesh31240
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -14,13 +14,14 @@ public class InfoText : MonoBehaviour
         SetText();
     }
 
-#if UNITY_EDITOR
-    private void Update()
-    {
-        SetText();
-    }
-#endif
+    //#if UNITY_EDITOR
+    //    private void Update()
+    //    {
+    //        SetText();
+    //    }
+    //#endif
 
+    [ContextMenu("Update text")]
     private void SetText()
     {
         var begginingOfCarrer = new DateTime(2020, 7, 21, 14, 20, 10);
@@ -28,9 +29,9 @@ public class InfoText : MonoBehaviour
         var time = DateTime.MinValue + carrerTime;
         var carrerTimeString =
             "<color=#" + ColorUtility.ToHtmlStringRGBA(_color) + ">"
-            + "<b>" + time.Year   + "</b>" + "Years " 
-            + "<b>" + time.Month  + "</b>" + " Months " 
-            + "<b>" + time.Day    + "</b>" + " Days " 
+            + "<b>" + time.Year + "</b>" + "Years "
+            + "<b>" + time.Month + "</b>" + " Months "
+            + "<b>" + time.Day + "</b>" + " Days "
             /*+ "<b>" + time.Hour   + "</b>" + " Hours "
             + "<b>" + time.Minute + "</b>" + " Minutes "
             + "<b>" + time.Second + "</b>" + " Seconds" */
