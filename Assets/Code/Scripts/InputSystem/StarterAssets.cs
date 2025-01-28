@@ -107,6 +107,15 @@ public partial class @StarterAssets : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OpenPanelMap"",
+                    ""type"": ""Button"",
+                    ""id"": ""828bb0fe-4616-4d42-a9cb-97874137c3b9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -351,6 +360,17 @@ public partial class @StarterAssets : IInputActionCollection2, IDisposable
                     ""action"": ""OpenPanelTeleport"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0350160e-a3c6-417a-adfd-df333c4ea3c5"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardMouse"",
+                    ""action"": ""OpenPanelMap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -416,6 +436,7 @@ public partial class @StarterAssets : IInputActionCollection2, IDisposable
         m_Player_OpenPanelHelp = m_Player.FindAction("OpenPanelHelp", throwIfNotFound: true);
         m_Player_OpenPanelOptions = m_Player.FindAction("OpenPanelOptions", throwIfNotFound: true);
         m_Player_OpenPanelTeleport = m_Player.FindAction("OpenPanelTeleport", throwIfNotFound: true);
+        m_Player_OpenPanelMap = m_Player.FindAction("OpenPanelMap", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -484,6 +505,7 @@ public partial class @StarterAssets : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_OpenPanelHelp;
     private readonly InputAction m_Player_OpenPanelOptions;
     private readonly InputAction m_Player_OpenPanelTeleport;
+    private readonly InputAction m_Player_OpenPanelMap;
     public struct PlayerActions
     {
         private @StarterAssets m_Wrapper;
@@ -497,6 +519,7 @@ public partial class @StarterAssets : IInputActionCollection2, IDisposable
         public InputAction @OpenPanelHelp => m_Wrapper.m_Player_OpenPanelHelp;
         public InputAction @OpenPanelOptions => m_Wrapper.m_Player_OpenPanelOptions;
         public InputAction @OpenPanelTeleport => m_Wrapper.m_Player_OpenPanelTeleport;
+        public InputAction @OpenPanelMap => m_Wrapper.m_Player_OpenPanelMap;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -533,6 +556,9 @@ public partial class @StarterAssets : IInputActionCollection2, IDisposable
                 @OpenPanelTeleport.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenPanelTeleport;
                 @OpenPanelTeleport.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenPanelTeleport;
                 @OpenPanelTeleport.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenPanelTeleport;
+                @OpenPanelMap.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenPanelMap;
+                @OpenPanelMap.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenPanelMap;
+                @OpenPanelMap.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnOpenPanelMap;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -564,6 +590,9 @@ public partial class @StarterAssets : IInputActionCollection2, IDisposable
                 @OpenPanelTeleport.started += instance.OnOpenPanelTeleport;
                 @OpenPanelTeleport.performed += instance.OnOpenPanelTeleport;
                 @OpenPanelTeleport.canceled += instance.OnOpenPanelTeleport;
+                @OpenPanelMap.started += instance.OnOpenPanelMap;
+                @OpenPanelMap.performed += instance.OnOpenPanelMap;
+                @OpenPanelMap.canceled += instance.OnOpenPanelMap;
             }
         }
     }
@@ -615,5 +644,6 @@ public partial class @StarterAssets : IInputActionCollection2, IDisposable
         void OnOpenPanelHelp(InputAction.CallbackContext context);
         void OnOpenPanelOptions(InputAction.CallbackContext context);
         void OnOpenPanelTeleport(InputAction.CallbackContext context);
+        void OnOpenPanelMap(InputAction.CallbackContext context);
     }
 }

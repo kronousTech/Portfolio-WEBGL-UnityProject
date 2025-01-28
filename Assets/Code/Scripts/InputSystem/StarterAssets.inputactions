@@ -85,6 +85,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "OpenPanelMap",
+                    "type": "Button",
+                    "id": "828bb0fe-4616-4d42-a9cb-97874137c3b9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -327,6 +336,17 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "OpenPanelTeleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0350160e-a3c6-417a-adfd-df333c4ea3c5",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "OpenPanelMap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

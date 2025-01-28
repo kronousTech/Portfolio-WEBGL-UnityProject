@@ -36046,33 +36046,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 0}
   m_VersionIndex: 5295
   m_IsSelectable: 1
-  m_SelectedFaces: 28020000270200006e010000
-  m_SelectedEdges:
-  - a: 2211
-    b: 2208
-  - a: 2208
-    b: 2209
-  - a: 2210
-    b: 2211
-  - a: 2209
-    b: 2210
-  - a: 2207
-    b: 2204
-  - a: 2204
-    b: 2205
-  - a: 2206
-    b: 2207
-  - a: 2205
-    b: 2206
-  - a: 1465
-    b: 1464
-  - a: 1464
-    b: 1466
-  - a: 1466
-    b: 1467
-  - a: 1467
-    b: 1465
-  m_SelectedVertices: a3080000a0080000a1080000a20800009f0800009c0800009d0800009e080000ba050000b9050000b8050000bb050000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &3786170500068322861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41862,6 +41838,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _exitsParent: {fileID: 6641917789181226960}
+  OnInitialize:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8279680963932837814}
+        m_TargetAssemblyTypeName: RopeBarrierBuilder, Assembly-CSharp
+        m_MethodName: SetupRopes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7335658921890688164}
+        m_TargetAssemblyTypeName: RopeBarrierBuilder, Assembly-CSharp
+        m_MethodName: SetupRopes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9067266973784821430}
+        m_TargetAssemblyTypeName: RopeBarrierBuilder, Assembly-CSharp
+        m_MethodName: SetupRopes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2753952699416376649}
+        m_TargetAssemblyTypeName: RopeBarrierBuilder, Assembly-CSharp
+        m_MethodName: SetupRopes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6641917788059243153
 GameObject:
   m_ObjectHideFlags: 0
@@ -46000,7 +46027,7 @@ PrefabInstance:
     - target: {fileID: 9001418624506986283, guid: 03acc3106d3536b4db0a56549ee45445,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 836
+      value: 839
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03acc3106d3536b4db0a56549ee45445, type: 3}

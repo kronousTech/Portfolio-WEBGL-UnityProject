@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,10 +14,9 @@ public class RopeBarrierBuilder : MonoBehaviour
     {
         GetBars();
     }
-
-    private void Start()
+    private void OnEnable()
     {
-        SetupRopes();
+        StartCoroutine(SetupRopes());
     }
 
     [ContextMenu("Get Bars")]
@@ -34,8 +34,10 @@ public class RopeBarrierBuilder : MonoBehaviour
     }
 
     [ContextMenu("Build Rope")]
-    private void SetupRopes()
+    private IEnumerator SetupRopes()
     {
+        yield return null;
+
         ClearRopes();
 
         // Add line renderers
