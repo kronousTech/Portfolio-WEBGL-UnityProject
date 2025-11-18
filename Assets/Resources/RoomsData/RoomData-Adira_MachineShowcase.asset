@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-Adira_MachineShowcase
+  m_EditorClassIdentifier: 
+  ProjectName: Machine Showcase
+  ClientName: Adira
+  RoomType: 0
+  Tags: 2
+  Texts:
+  - category: 0
+    info: Lead Developer.
+  - category: 1
+    info: ADIRA is a leading manufacturer and global supplier of sheet metal working
+      machinery, specialized in the production of laser cutting machines, hydraulic
+      press brakes, shears, robotized bending cells and automatic sheet metal transforming
+      systems.
+  - category: 2
+    info: This project, for HTC Vive, was developed to showcase the client's machinery
+      in intricate detail. The experience unfolds through dynamic animations, allowing
+      users to witness the machines in action. Moreover, the immersive environment
+      empowers users to actively engage with the machinery, allowing them to learn
+      about the production process.
+  - category: 6
+    info: At first, we planned to use the SteamVR SDK for VR controls and interaction.
+      However, as the project progressed, we switched to the Oculus Plugin because
+      we decided to develop for the Oculus Quest 2 instead.
+  - category: 3
+    info: Due to the complexity of the machine models, performance issues quickly
+      became present in the project.
+  - category: 4
+    info: To improve performance, several LOD's were created for the models present
+      in the scene. With the addition of LOD's and a downgrade in the quality settings,
+      we managed to maintain a consistent frame rate throughout the experience.
+  Images:
+  - title: 
+    asset:
+      name: Screenshot_1
+      bundle: adiravr
+      category: 1
+  - title: 
+    asset:
+      name: Screenshot_2
+      bundle: adiravr
+      category: 1
+  - title: 
+    asset:
+      name: Screenshot_3
+      bundle: adiravr
+      category: 1
+  - title: 
+    asset:
+      name: Screenshot_4
+      bundle: adiravr
+      category: 1
+  Videos: []
+  ClickableLinks: []

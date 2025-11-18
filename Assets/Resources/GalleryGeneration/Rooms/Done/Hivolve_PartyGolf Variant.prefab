@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 441905407508771473, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
@@ -46,6 +47,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457056407694854913, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 1856104302283059666, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -112,6 +118,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2759629718575411218, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793324659255293617, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 3365814158526226298, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_Mesh
@@ -121,6 +137,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716571268854336871, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 4216721815233997155, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -285,6 +306,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5650590374327856291, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 5701410561163785084, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -309,6 +335,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937646292057083138, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519640755005096008, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 6530184104893239348, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -493,6 +529,11 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 74.05
       objectReference: {fileID: 0}
+    - target: {fileID: 7836380202051135750, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 7894941355213749977, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: _type
@@ -658,10 +699,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9158108730049639402, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 9169170399050841783, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c, type: 3}

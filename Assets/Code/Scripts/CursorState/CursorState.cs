@@ -3,9 +3,9 @@ using UnityEngine;
 public class CursorState : MonoBehaviour
 {
     [Header("Mouse Cursor Settings")]
-    [SerializeField] private bool _lockedOnStart;
+    [SerializeField] private bool m_lockedOnStart;
 
-    private CursorLockMode _lockMode;
+    private CursorLockMode m_lockMode;
 
     private void OnEnable()
     {
@@ -17,17 +17,17 @@ public class CursorState : MonoBehaviour
     }
     private void Awake()
     {
-        SetCursorLockState(_lockedOnStart);
+        SetCursorLockState(m_lockedOnStart);
     }
     private void OnApplicationFocus(bool hasFocus)
     {
-        Cursor.lockState = _lockMode;
+        Cursor.lockState = m_lockMode;
     }
 
     public void SetCursorLockState(bool locked)
     {
         Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
 
-        _lockMode = Cursor.lockState;
+        m_lockMode = Cursor.lockState;
     }
 }

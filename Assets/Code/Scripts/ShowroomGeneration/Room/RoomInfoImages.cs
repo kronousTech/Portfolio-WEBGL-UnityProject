@@ -1,13 +1,13 @@
 using KronosTech.AssetManagement;
+using KronosTech.Data;
 using KronosTech.Services;
-using System;
 using UnityEngine;
 
 namespace KronosTech.ShowroomGeneration.Room
 {
     public class RoomInfoImages : MonoBehaviour
     {
-        private RoomImageSpriteData[] _imageSprites;
+        private RoomSpriteData[] _imageSprites;
 
         [SerializeField] private ContentData[] _imageData;
         [SerializeField] private RoomDisplayImages[] _displays;
@@ -23,12 +23,12 @@ namespace KronosTech.ShowroomGeneration.Room
 
         private void LoadImages()
         {
-            _imageSprites = new RoomImageSpriteData[_imageData.Length];
+            _imageSprites = new RoomSpriteData[_imageData.Length];
 
             for (int i = 0; i < _imageData.Length; i++)
             {
-                _imageSprites[i].title = _imageData[i].title;   
-                _imageSprites[i].sprite = ServiceLocator.Instance.GetWebImagesService().LoadImage(_imageData[i].asset);
+                //_imageSprites[i].Title = _imageData[i].title;   
+                //_imageSprites[i].Sprite = ServiceLocator.Instance.GetWebImagesService().LoadImage(_imageData[i].asset);
             }
 
             AddSpritesToDisplays();
@@ -41,13 +41,5 @@ namespace KronosTech.ShowroomGeneration.Room
                 _displays[i].AddSprites(_imageSprites);
             }
         }
-    }
-
-    
-    [Serializable]
-    public struct RoomImageSpriteData
-    {
-        public string title;
-        public Sprite sprite;
     }
 }

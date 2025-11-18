@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-Empigest_MachineShowcase
+  m_EditorClassIdentifier: 
+  ProjectName: Machine Showcase
+  ClientName: Empigest
+  RoomType: 1
+  Tags: 2
+  Texts:
+  - category: 0
+    info: Lead Developer.
+  - category: 1
+    info: EMPIGEST started its activity in 2007, as a result of the enormous desire
+      of a group of professionals in the forklift market to create a different project,
+      based on the quality of the services provided, regardless of the brands assisted
+      and the size of the customer.
+  - category: 2
+    info: "This project was designed with the intent of showcasing the operational
+      prowess of EMPIGEST's autonomous machines\u2014innovative technologies that
+      function seamlessly without the necessity of direct human control."
+  - category: 6
+    info: The project was developed for Google VR using its SDK for Unity.
+  - category: 3
+    info: In this project, I faced the task of making different machines work together
+      smoothly. It was one of my first professional projects, and ensuring that these
+      components didn't interfere with each other negatively proved to be quite a
+      challenge.
+  - category: 4
+    info: To tackle this issue, I had to enhance my programming skills and develop
+      the behavior of each machine with minimal dependencies to ensure a straightforward
+      and smooth-running system.
+  Images:
+  - title: 
+    asset:
+      name: Scenario 1
+      bundle: empigest
+      category: 1
+  - title: 
+    asset:
+      name: Scenariot 2
+      bundle: empigest
+      category: 1
+  Videos: []
+  ClickableLinks: []

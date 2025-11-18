@@ -1,4 +1,5 @@
 using KronosTech.AssetManagement;
+using KronosTech.Data;
 using KronosTech.Services;
 using System;
 using System.Collections;
@@ -212,11 +213,5 @@ namespace KronosTech.ShowroomGeneration.Room.Videoplayer
             if(!_videoPlayer.isPrepared && _videoPlayer.enabled)
                 _videoPlayer.Prepare();
         }
-    }
-
-    public struct RoomVideoData
-    {
-        public string title;
-        public string url;
     }
 }

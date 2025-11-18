@@ -1,4 +1,4 @@
-using TMPro;
+using KronosTech.Data;
 using UnityEngine;
 
 namespace KronosTech.ShowroomGeneration
@@ -6,12 +6,6 @@ namespace KronosTech.ShowroomGeneration
     [ExecuteInEditMode]
     public class RoomTypeSelector : MonoBehaviour
     {
-        public enum RoomType
-        {
-            Room = 0,
-            Wall = 1
-        }
-
         [SerializeField] private Transform _typesParent;
         [SerializeField] private RoomType _type;
 

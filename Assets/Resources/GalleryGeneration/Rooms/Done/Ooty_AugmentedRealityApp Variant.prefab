@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 441905407508771473, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
@@ -20,32 +21,37 @@ PrefabInstance:
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
-      propertyPath: m_SizeDelta.y
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 68.8125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.6875
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457056407694854913, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 1856104302283059666, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -137,35 +143,33 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2759629718575411218, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793324659255293617, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 3365814158526226298, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3716571268854336871, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 4216721815233997155, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_text
-      value: '<b><size=90>Role</b></size>
-
-        Lead Developer.
-
-
-        <b><size=90>Client</b></size>
-
-        Ooty
+      value: "<b><size=90>Role</b></size>\nLead Developer.\n\n<b><size=90>Client</b></size>\nOoty
         is a registered trademark belonging to the Black Oak Company, which operates
         in the field of prefabricated and modular structures with a wooden substructure.
-        Houses, Bungalows, accommodation modules, tourism, commerce, annexes, etc.
-
-        With
-        a strong and characteristic image, Ooty presents a contemporary concept of
-        prefabricated structures and, at the same time, proposes to respond to particular
-        requests, accompanied by its architecture and engineering department.
-
-
-        <b><size=90>Overview</b></size>
-
-        Developed
+        Houses, Bungalows, accommodation modules, tourism, commerce, annexes, etc.\n\n<b><size=90>Overview</b></size>\nDeveloped
         for both Android and iOS, this project leverages the ArCore and ArKit frameworks
         to provide users with an engaging augmented reality (AR) experience. The
         app allows users to place products in their actual size for an immersive
@@ -173,70 +177,75 @@ PrefabInstance:
         users have the creative freedom to construct personalized houses using a
         custom editor. The primary goal of the app is to showcase the diverse collection
         of products offered by the client, combining functionality with a seamless
-        AR interface.
-
-
-'
+        AR interface.\n\n<b><size=90>Technologies</b></size>\nARKit and ARCore.\n\n<b><size=90>Challenges</b></size>\n\rThe
+        main challenge for this app was devising a method to make it compatible with
+        both iOS and Android by incorporating both the ARKit and ARCore plugins.\n\n<b><size=90>Solutions</b></size>\nTo
+        enable this app to utilize both ARKit and ARCore plugins, I invested considerable
+        time in thoroughly studying the documentation for both ARKit and ARCore.
+        By identifying essential elements for app functionality, I integrated these
+        scripts into the scene and adjusted them to coexist harmoniously. Additionally,
+        I implemented a script to detect whether the app was developed for iOS or
+        Android, enabling or disabling the necessary scripts accordingly.\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
-      propertyPath: m_SizeDelta.y
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 48.4375
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.6875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
-      propertyPath: m_SizeDelta.y
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 7.6875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.6875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5005744636271038246, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -266,32 +275,37 @@ PrefabInstance:
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
-      propertyPath: m_SizeDelta.y
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 89.1875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.6875
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650590374327856291, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5701410561163785084, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -317,6 +331,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937646292057083138, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519640755005096008, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 6530184104893239348, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -461,27 +485,10 @@ PrefabInstance:
     - target: {fileID: 7836380202051135750, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_text
-      value: '<b><size=90>Role</b></size>
-
-        Lead Developer.
-
-
-        <b><size=90>Client</b></size>
-
-        Ooty
+      value: "<b><size=90>Role</b></size>\nLead Developer.\n\n<b><size=90>Client</b></size>\nOoty
         is a registered trademark belonging to the Black Oak Company, which operates
         in the field of prefabricated and modular structures with a wooden substructure.
-        Houses, Bungalows, accommodation modules, tourism, commerce, annexes, etc.
-
-        With
-        a strong and characteristic image, Ooty presents a contemporary concept of
-        prefabricated structures and, at the same time, proposes to respond to particular
-        requests, accompanied by its architecture and engineering department.
-
-
-        <b><size=90>Overview</b></size>
-
-        Developed
+        Houses, Bungalows, accommodation modules, tourism, commerce, annexes, etc.\n\n<b><size=90>Overview</b></size>\nDeveloped
         for both Android and iOS, this project leverages the ArCore and ArKit frameworks
         to provide users with an engaging augmented reality (AR) experience. The
         app allows users to place products in their actual size for an immersive
@@ -489,15 +496,25 @@ PrefabInstance:
         users have the creative freedom to construct personalized houses using a
         custom editor. The primary goal of the app is to showcase the diverse collection
         of products offered by the client, combining functionality with a seamless
-        AR interface.
-
-
-'
+        AR interface.\n\n<b><size=90>Technologies</b></size>\nARKit and ARCore.\n\n<b><size=90>Challenges</b></size>\n\rThe
+        main challenge for this app was devising a method to make it compatible with
+        both iOS and Android by incorporating both the ARKit and ARCore plugins.\n\n<b><size=90>Solutions</b></size>\nTo
+        enable this app to utilize both ARKit and ARCore plugins, I invested considerable
+        time in thoroughly studying the documentation for both ARKit and ARCore.
+        By identifying essential elements for app functionality, I integrated these
+        scripts into the scene and adjusted them to coexist harmoniously. Additionally,
+        I implemented a script to detect whether the app was developed for iOS or
+        Android, enabling or disabling the necessary scripts accordingly.\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 7836380202051135750, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_fontSize
-      value: 76.4
+      value: 57.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836380202051135750, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 7894941355213749977, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -589,32 +606,32 @@ PrefabInstance:
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
-      propertyPath: m_SizeDelta.y
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 28.0625
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.6875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8563523199043799894, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -676,10 +693,18 @@ PrefabInstance:
       propertyPath: _projectURL
       value: https://play.google.com/store/apps/details?id=com.hivolve.ooty&hl=pt_PT&gl=US
       objectReference: {fileID: 0}
+    - target: {fileID: 9158108730049639402, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 9169170399050841783, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c, type: 3}

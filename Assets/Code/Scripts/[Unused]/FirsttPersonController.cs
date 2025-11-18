@@ -80,7 +80,7 @@ public class FirsttPersonController : MonoBehaviour
         _playerInput.RemoveOnSprintInputListener(HandleMoveSpeedListener);
 
         // Prevent buges related to player moving after opening an ui painel
-        _rigidbody.velocity = Vector3.zero;
+        _rigidbody.linearVelocity = Vector3.zero;
         _moveDirection = Vector3.zero;
     }
     public void SetMouseSensivity(float value)
@@ -103,7 +103,7 @@ public class FirsttPersonController : MonoBehaviour
 
     private void HandleDragListener(bool state)
     {
-        _rigidbody.drag = state ? _groundDrag : 0;
+        _rigidbody.linearDamping = state ? _groundDrag : 0;
     }
     private void HandleGravityListener(bool onSlope)
     {
@@ -129,8 +129,8 @@ public class FirsttPersonController : MonoBehaviour
 
         OnJump?.Invoke();
 
-        var velocity = _rigidbody.velocity;
-        _rigidbody.velocity = new Vector3(velocity.x, 0f, velocity.z);
+        var velocity = _rigidbody.linearVelocity;
+        _rigidbody.linearVelocity = new Vector3(velocity.x, 0f, velocity.z);
         _rigidbody.AddForce(transform.up * _jumpForce, ForceMode.Impulse);
     }
     private void MovePlayer(Vector2 movementInput)
@@ -148,7 +148,7 @@ public class FirsttPersonController : MonoBehaviour
 
         _rigidbody.AddForce(slopeForce * _forceMultiplier * _slopeForceMultiplier, ForceMode.Force);
 
-        if (_rigidbody.velocity.y > 0 || _moveDirection != Vector3.zero)
+        if (_rigidbody.linearVelocity.y > 0 || _moveDirection != Vector3.zero)
             _rigidbody.AddForce(Vector3.down * _slopeDownForceMultiplier, ForceMode.Force);
     }
     private void RotateView(Vector2 mouseInput)
@@ -167,12 +167,12 @@ public class FirsttPersonController : MonoBehaviour
     }
     private void SpeedControl()
     {
-        var velocity = _rigidbody.velocity;
+        var velocity = _rigidbody.linearVelocity;
 
         if (_isOnSlope)
         {
             if(velocity.magnitude > _moveSpeed)
-                _rigidbody.velocity = _rigidbody.velocity.normalized * _moveSpeed;
+                _rigidbody.linearVelocity = _rigidbody.linearVelocity.normalized * _moveSpeed;
         }
         else
         {
@@ -181,7 +181,7 @@ public class FirsttPersonController : MonoBehaviour
             if (flatVelocity.magnitude > _moveSpeed)
             {
                 var limitedVelocity = flatVelocity.normalized * _moveSpeed;
-                _rigidbody.velocity = new Vector3(limitedVelocity.x, velocity.y, limitedVelocity.z);
+                _rigidbody.linearVelocity = new Vector3(limitedVelocity.x, velocity.y, limitedVelocity.z);
             }
         }
     }

@@ -1,3 +1,4 @@
+using KronosTech.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +16,7 @@ namespace KronosTech.ShowroomGeneration.Room
         [SerializeField] private Button _buttonNext;
         [SerializeField] private Button _buttonPrev;
 
-        private RoomImageSpriteData[] _sprites;
+        private RoomSpriteData[] _sprites;
         private int _index;
 
         private int Index
@@ -56,7 +57,7 @@ namespace KronosTech.ShowroomGeneration.Room
         private void NextImage() => Index++;
         private void PreviousImage() => Index--;
 
-        public void AddSprites(RoomImageSpriteData[] sprites)
+        public void AddSprites(RoomSpriteData[] sprites)
         {
             _downloadingImageGO.SetActive(false);
 
@@ -69,8 +70,8 @@ namespace KronosTech.ShowroomGeneration.Room
 
         private void UpdateImage()
         {
-            _title.text = _sprites[Index].title;
-            _display.sprite = _sprites[Index].sprite;
+            _title.text = _sprites[Index].Title;
+            _display.sprite = _sprites[Index].Sprite;
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using Cinemachine;
-using KronosTech.InputSystem;
-using System.Collections;
+﻿using KronosTech.InputSystem;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;

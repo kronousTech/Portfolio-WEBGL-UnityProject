@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 441905407508771473, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
@@ -20,32 +21,37 @@ PrefabInstance:
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
-      propertyPath: m_SizeDelta.y
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 200.875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1205457954705345587, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.6875
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1457056407694854913, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 1856104302283059666, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -132,6 +138,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2759629718575411218, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793324659255293617, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 3365814158526226298, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_Mesh
@@ -142,73 +158,85 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3716571268854336871, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 4216721815233997155, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_text
       value: "<b><size=90>Role</b></size>\nLead Developer.\n\n<b><size=90>Client</b></size>\nGr\xE2ndola's
         Municipal Chamber.\n\n<b><size=90>Overview</b></size>\nThe project was developed
         with the purpose of creating entertaining animations related to the pottery
-        process and Gr\xE2ndola's old cultures.\n\n"
+        process and Gr\xE2ndola's old cultures.\n\n<b><size=90>Challenges</b></size>\nThis
+        project was straightforward overall, with the primary hurdle being effectively
+        interpreting AR markers and ensuring consistent tracking once the models
+        appeared.\n\n<b><size=90>Solutions</b></size>\nTo ensure reliable tracking,
+        we implemented a 3-second timer. This way, if the marker temporarily lost
+        tracking, the object would persist in its last known position. This helped
+        prevent the object from disappearing due to minor tracking glitches when
+        the marker detection faltered.\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
-      propertyPath: m_SizeDelta.y
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 182.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4273987360796567649, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.6875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
-      propertyPath: m_SizeDelta.y
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 145.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4652011228962653467, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.6875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5005744636271038246, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -238,32 +266,37 @@ PrefabInstance:
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
-      propertyPath: m_SizeDelta.y
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 219.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5508431463053356674, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.6875
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650590374327856291, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 5701410561163785084, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -284,6 +317,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750668888546891499, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937646292057083138, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519640755005096008, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 6530184104893239348, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -391,12 +439,24 @@ PrefabInstance:
       value: "<b><size=90>Role</b></size>\nLead Developer.\n\n<b><size=90>Client</b></size>\nGr\xE2ndola's
         Municipal Chamber.\n\n<b><size=90>Overview</b></size>\nThe project was developed
         with the purpose of creating entertaining animations related to the pottery
-        process and Gr\xE2ndola's old cultures.\n\n"
+        process and Gr\xE2ndola's old cultures.\n\n<b><size=90>Challenges</b></size>\nThis
+        project was straightforward overall, with the primary hurdle being effectively
+        interpreting AR markers and ensuring consistent tracking once the models
+        appeared.\n\n<b><size=90>Solutions</b></size>\nTo ensure reliable tracking,
+        we implemented a 3-second timer. This way, if the marker temporarily lost
+        tracking, the object would persist in its last known position. This helped
+        prevent the object from disappearing due to minor tracking glitches when
+        the marker detection faltered.\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 7836380202051135750, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_fontSize
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836380202051135750, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 7894941355213749977, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -472,32 +532,32 @@ PrefabInstance:
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
-      propertyPath: m_SizeDelta.y
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 15.375
       objectReference: {fileID: 0}
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 164.125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8345432383405157712, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.6875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8563523199043799894, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
@@ -554,10 +614,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9158108730049639402, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 9169170399050841783, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c,
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff2360dfd2c9dfc4381f0f5a049f6a3c, type: 3}
