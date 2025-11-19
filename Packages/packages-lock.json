@@ -1,5 +1,21 @@
 {
   "dependencies": {
+    "com.dbrizov.naughtyattributes": {
+      "version": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "8a8fa5a9659a6d63f196391c71e06c4286c8acd7"
+    },
+    "com.kronostech.utilities": {
+      "version": "https://github.com/kronousTech/KronosTech-Utilities.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.2"
+      },
+      "hash": "847fbc651566f29a2970d3f8ca6618ebe69ca650"
+    },
     "com.unity.2d.animation": {
       "version": "10.2.2",
       "depth": 0,

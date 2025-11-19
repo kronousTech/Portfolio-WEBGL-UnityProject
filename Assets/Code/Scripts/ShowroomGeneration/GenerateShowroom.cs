@@ -1,5 +1,6 @@
 using KronosTech.Data;
 using KronosTech.ObjectPooling;
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,8 +22,8 @@ namespace KronosTech.ShowroomGeneration
         [SerializeField] private GalleryObjectsPool m_corridorsPool;
         [SerializeField] private GalleryObjectsPool m_tilesPool;
         [SerializeField] private GalleryObjectsPool m_wallsPool;
-        [Header("Debug")]
-        [SerializeField] private RoomData[] m_loadedData;
+        [Header("Debug View")]
+        [SerializeField, ReadOnly] private RoomData[] m_loadedData;
 
         private Dictionary<RoomData, PlaceableRoom> m_rooms = new();
 

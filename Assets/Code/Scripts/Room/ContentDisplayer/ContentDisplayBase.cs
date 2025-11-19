@@ -30,13 +30,13 @@ namespace KronosTech.Room.ContentDisplay
         }
         protected virtual void OnEnable()
         {
-            AssetsLoader.OnBundlesDownload += PrepareDisplayCallback;
+            //AssetsLoader.OnBundlesDownload += PrepareDisplayCallback;
             m_buttonNext.onClick.AddListener(NextCallback);
             m_buttonPrev.onClick.AddListener(PreviousCallback);
         }
         protected virtual void OnDisable()
         {
-            AssetsLoader.OnBundlesDownload -= PrepareDisplayCallback;
+            //AssetsLoader.OnBundlesDownload -= PrepareDisplayCallback;
             m_buttonNext.onClick.RemoveListener(NextCallback);
             m_buttonPrev.onClick.RemoveListener(PreviousCallback);
         }

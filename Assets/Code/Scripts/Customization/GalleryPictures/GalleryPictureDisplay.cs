@@ -1,17 +1,19 @@
 using KronosTech.ShowroomGeneration;
 using UnityEngine;
 
-namespace KronosTech.Customization.Pictures
+namespace KronosTech.Customization.GalleryPictures
 {
-    public class PictureDisplay : MonoBehaviour
+    public class GalleryPictureDisplay : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private SpriteRenderer m_renderer;
 
+        private LoaderGalleryPictures m_loader;
         private IPlaceablePieceBase m_tile;
 
         private void Awake()
         {
+            m_loader = FindFirstObjectByType<LoaderGalleryPictures>(FindObjectsInactive.Include);
             m_tile = GetComponentInParent<IPlaceablePieceBase>(true);
             m_tile.OnPlacement += SetPictureCallback;
         }
@@ -22,7 +24,7 @@ namespace KronosTech.Customization.Pictures
 
         public void SetPictureCallback()
         {
-            m_renderer.sprite = PictureController.RequestPicture();
+            m_renderer.sprite = m_loader.RequestPicture();
         }
     }
 }
