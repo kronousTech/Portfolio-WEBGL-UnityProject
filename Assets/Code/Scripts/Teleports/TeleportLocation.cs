@@ -1,40 +1,37 @@
+using KronosTech.Data;
 using UnityEngine;
 
 namespace KronosTech.Teleport
 {
     public class TeleportLocation : MonoBehaviour
     {
-        [SerializeField] private string _name;
-        [SerializeField] private RoomInfoTags _tags;
+        [Header("References")]
+        [SerializeField] protected RoomData m_roomData;
+        [SerializeField] private Transform m_transformLocation;
+
+        public RoomData Data
+        {
+            get { return m_roomData; }
+        }
 
         private TeleportsManager _teleportsManager;
 
-        public string Name => _name;
-
-        private void Awake()
+        protected virtual void Awake()
         {
-            Initialize();
+            _teleportsManager = FindFirstObjectByType<TeleportsManager>(FindObjectsInactive.Include);
         }
         private void OnEnable()
         {
-            if (_teleportsManager == null)
-            {
-                Initialize();
+            if(m_roomData == null)
+            { 
+                return; 
             }
 
-            _teleportsManager.AddTeleport(transform, _name, _tags != null ? _tags.Tags.ToString() : string.Empty);
+            _teleportsManager.AddTeleport(m_roomData, m_transformLocation);
         }
         private void OnDisable()
         {
             _teleportsManager.RemoveTeleport(transform);
-        }
-
-        private void Initialize()
-        {
-            if (_teleportsManager == null)
-            {
-                _teleportsManager = FindFirstObjectByType<TeleportsManager>(FindObjectsInactive.Include);
-            }
         }
     }
 }

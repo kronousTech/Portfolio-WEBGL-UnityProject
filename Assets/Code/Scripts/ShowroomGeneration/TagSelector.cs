@@ -1,49 +1,44 @@
+using KronosTech.Data;
 using KronosTech.ShowroomGeneration;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TagSelector : MonoBehaviour
 {
-    [SerializeField] private Transform _parent;
-    [SerializeField] private TagToggle _togglePrefab;
-    [SerializeField] private Button _generateButton;
+    [Header("References")]
+    [SerializeField] private GenerateShowroom m_builder;
+    [SerializeField] private Transform m_parent;
+    [SerializeField] private TagToggle m_togglePrefab;
 
-    private readonly List<TagToggle> _toggles = new();
-
-    public static event Action<RoomTagFlags> OnNewRequest;
+    private readonly List<TagToggle> m_toggles = new();
 
     private void OnEnable()
     {
-        _generateButton.onClick.AddListener(RequestNewRooms);
-
-        GenerateShowroom.OnGenerationStart += () => SetInteractivity(false);
-        GenerateShowroom.OnGenerationEnd += (state) => SetInteractivity(true);
+        m_builder.OnGenerationStart += () => SetInteractivity(false);
+        m_builder.OnGenerationEnd += (state) => SetInteractivity(true);
     }
     private void OnDisable()
     {
-        _generateButton.onClick.RemoveListener(RequestNewRooms);
-
-        GenerateShowroom.OnGenerationStart -= () => SetInteractivity(false);
-        GenerateShowroom.OnGenerationEnd -= (state) => SetInteractivity(true);
+        m_builder.OnGenerationStart -= () => SetInteractivity(false);
+        m_builder.OnGenerationEnd -= (state) => SetInteractivity(true);
     }
     private void Awake()
     {
         foreach (var tag in System.Enum.GetNames(typeof(RoomTagFlags)))
         {
-            var toggle = Instantiate(_togglePrefab, _parent);
+            var toggle = Instantiate(m_togglePrefab, m_parent);
             toggle.Initialize(tag);
 
-            _toggles.Add(toggle);
+            m_toggles.Add(toggle);
         }
     }
     
-    private void RequestNewRooms()
+    public RoomTagFlags GetTags()
     {
         var tags = new RoomTagFlags();
 
-        foreach (var toggle in _toggles)
+        foreach (var toggle in m_toggles)
         {
             if(toggle.GetTag(out var tag))
             {
@@ -51,19 +46,14 @@ public class TagSelector : MonoBehaviour
             }
         }
 
-        OnNewRequest?.Invoke(tags);
+        return tags;
     }
 
     private void SetInteractivity(bool interactable)
     {
-        foreach (var toggle in _toggles)
+        foreach (var toggle in m_toggles)
         {
             toggle.SetInteractability(interactable);
         }
-
-        _generateButton.interactable = interactable;
     }
-
-    // Called via EditorWindow script.
-    public static void ForceNewRequest(RoomTagFlags tags) => OnNewRequest?.Invoke(tags);
 }

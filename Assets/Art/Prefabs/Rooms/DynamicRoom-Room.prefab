@@ -9722,7 +9722,7 @@ GameObject:
   - component: {fileID: 535255428352124378}
   - component: {fileID: 1457056407694854913}
   m_Layer: 8
-  m_Name: Text_DownloadingImage
+  m_Name: DownloadingOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10231,7 +10231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonsLayout: {fileID: 9131921851686984129}
-  _controller: {fileID: 1856104302283059666}
+  m_videoDisplay: {fileID: 1856104302283059666}
   _title: {fileID: 5937646292057083138}
   _indexDisplay: {fileID: 2793324659255293617}
   _loadingVideoGO: {fileID: 8374801406466250943}
@@ -10253,7 +10253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882bebb1b14e98646b780f970dc27ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 1856104302283059666}
+  m_videosDisplay: {fileID: 1856104302283059666}
 --- !u!114 &542268842462088370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16331,6 +16331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13bf9c4f660bb7a4a935fc4751be4616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_setOnAwake: {fileID: 0}
 --- !u!114 &6896444297880718890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16345,6 +16346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _holder: {fileID: 3856398361313657467}
   _line: {fileID: 6982869727397150311}
+  m_repository: {fileID: 7374500422630450165}
 --- !u!114 &6530184104893239348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16357,10 +16359,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da1db30298f3d84c900cf5da741a5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _imageData: []
-  _displays:
-  - {fileID: 0}
-  - {fileID: 3557030414371700938}
+  m_repository: {fileID: 7374500422630450165}
+  m_indexDisplay: {fileID: 9158108730049639402}
+  m_downloadingImageGO: {fileID: 2706808100067341418}
+  m_buttonsHolder: {fileID: 4707237772073087981}
+  m_buttonNext: {fileID: 6254448011585130827}
+  m_buttonPrev: {fileID: 7322572315868529641}
+  m_display: {fileID: 4239834585059104346}
+  m_titleDisplay: {fileID: 5650590374327856291}
 --- !u!114 &1856104302283059666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16373,13 +16379,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230a59053e34be149bde196605dd048f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _videoData: []
+  m_repository: {fileID: 7374500422630450165}
+  m_indexDisplay: {fileID: 2793324659255293617}
+  m_downloadingImageGO: {fileID: 8374801406466250943}
+  m_buttonsHolder: {fileID: 3176344511322484316}
+  m_buttonNext: {fileID: 5259767263579807382}
+  m_buttonPrev: {fileID: 4473596482788604242}
   _videoPlayer: {fileID: 1490853910251118893}
   _buttonPlay: {fileID: 1583791382030495633}
   _buttonPause: {fileID: 8631889033493307549}
   _buttonRestart: {fileID: 6903805937973630687}
-  _buttonNext: {fileID: 5259767263579807382}
-  _buttonPrev: {fileID: 4473596482788604242}
 --- !u!114 &1292540644432511968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16772,8 +16781,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7625574640914076617}
-  - component: {fileID: 7653291659167730707}
-  - component: {fileID: 4959623466235176715}
+  - component: {fileID: 8064263876387930374}
+  - component: {fileID: 722494451741688005}
   m_Layer: 0
   m_Name: Teleport
   m_TagString: Untagged
@@ -16796,21 +16805,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5697255566407508258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7653291659167730707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5916113201084755902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421d88b462d3ad2428d75c0cfcfddc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _name: 
-  _tags: {fileID: 0}
---- !u!114 &4959623466235176715
+--- !u!114 &8064263876387930374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16822,6 +16817,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4059cfbf682d48942b5fb41091cd70a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_teleport: {fileID: 722494451741688005}
+--- !u!114 &722494451741688005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5916113201084755902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1e540b0f2f0ed4f8587fba7e10d441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_roomData: {fileID: 0}
+  m_transformLocation: {fileID: 7625574640914076617}
+  m_repository: {fileID: 7374500422630450165}
 --- !u!1 &5973768848180158875
 GameObject:
   m_ObjectHideFlags: 0
@@ -22700,10 +22711,9 @@ GameObject:
   - component: {fileID: 2919282794310404903}
   - component: {fileID: 4635859643452119866}
   - component: {fileID: 2249913154256109028}
-  - component: {fileID: 3557030414371700938}
   - component: {fileID: 1791500192125945061}
   m_Layer: 8
-  m_Name: PictureDisplay
+  m_Name: DisplayImages
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23019,25 +23029,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8082294969377337823}
   m_Mesh: {fileID: 0}
---- !u!114 &3557030414371700938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8082294969377337823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7a3c420163bb404c834f1e4733813fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _display: {fileID: 4239834585059104346}
-  _title: {fileID: 5650590374327856291}
-  _indexDisplay: {fileID: 9158108730049639402}
-  _downloadingImageGO: {fileID: 2706808100067341418}
-  _buttonsHolder: {fileID: 4707237772073087981}
-  _buttonNext: {fileID: 7322572315868529641}
-  _buttonPrev: {fileID: 6254448011585130827}
 --- !u!114 &1791500192125945061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23215,7 +23206,7 @@ GameObject:
   - component: {fileID: 6438890930691156891}
   - component: {fileID: 3099901978141551600}
   m_Layer: 8
-  m_Name: Tint Loading
+  m_Name: DownloadingOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

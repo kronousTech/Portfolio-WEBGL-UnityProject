@@ -6,12 +6,13 @@ namespace KronosTech.Teleport.GizmosVisualizer
     [ExecuteInEditMode]
     public class GizmoTeleportLocation : MonoBehaviour
     {
-        private TeleportLocation m_teleport;
+        [Header("References")]
+        [SerializeField] private TeleportLocation m_teleport;
+
         private Mesh m_capsuleMesh;
 
         private void Awake()
         {
-            m_teleport = GetComponent<TeleportLocation>();
             m_capsuleMesh = Resources.Load<GameObject>("BasicPrimitives/Capsule").GetComponent<MeshFilter>().sharedMesh;
         }
 
@@ -21,7 +22,7 @@ namespace KronosTech.Teleport.GizmosVisualizer
             Gizmos.DrawMesh(m_capsuleMesh, transform.position, Quaternion.identity, Vector3.one);
 #if UNITY_EDITOR
             Handles.color = Color.cyan;
-            Handles.Label(transform.position + (Vector3.up * 1.5f), m_teleport.Name);
+            Handles.Label(transform.position + (Vector3.up * 1.5f), m_teleport.Data.GetFullName());
 #endif
         }
     }

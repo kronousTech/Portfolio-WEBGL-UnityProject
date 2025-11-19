@@ -42,8 +42,23 @@ MonoBehaviour:
   Images:
   - title: 
     asset:
-      name: Logo
-      bundle: codeverze
+      name: p1
+      bundle: mower
+      category: 1
+  - title: 
+    asset:
+      name: p2
+      bundle: mower
+      category: 1
+  - title: 
+    asset:
+      name: p3
+      bundle: mower
+      category: 1
+  - title: 
+    asset:
+      name: p4
+      bundle: mower
       category: 1
   Videos: []
   ClickableLinks:

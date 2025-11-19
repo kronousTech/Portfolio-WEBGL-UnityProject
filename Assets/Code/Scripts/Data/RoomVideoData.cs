@@ -1,8 +1,14 @@
 namespace KronosTech.Data
 {
-    public struct RoomVideoData
+    public readonly struct RoomVideoData
     {
-        public string title;
-        public string url;
+        public string Title { get; }
+        public string Url { get; }
+
+        public RoomVideoData(string title, string url)
+        {
+            Title = title; 
+            Url = url;
+        }
     }
 }

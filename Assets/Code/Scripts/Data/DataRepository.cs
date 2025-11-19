@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace KronosTech.Data
 {
-    public class DataRepository<TDataType> : MonoBehaviour
+    public class DataRepository<TDataType> : MonoBehaviour  where TDataType : class
     {
         public TDataType Data { get; private set; }
 

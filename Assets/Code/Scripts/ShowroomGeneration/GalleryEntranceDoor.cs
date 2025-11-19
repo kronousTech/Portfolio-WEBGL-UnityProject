@@ -4,6 +4,9 @@ namespace KronosTech.ShowroomGeneration
 {
     public class GalleryEntranceDoor : MonoBehaviour
     {
+        [Header("References")]
+        [SerializeField] private GenerateShowroom m_generator;
+
         private AudioSource _audioSource;
         private Animator _animator;
 
@@ -14,13 +17,13 @@ namespace KronosTech.ShowroomGeneration
         }
         private void OnEnable()
         {
-            GenerateShowroom.OnGenerationStart += () => SetDoorState(false);
-            GenerateShowroom.OnGenerationEnd += (state) => SetDoorState(state);
+            m_generator.OnGenerationStart += () => SetDoorState(false);
+            m_generator.OnGenerationEnd += (state) => SetDoorState(state);
         }
         private void OnDisable()
         {
-            GenerateShowroom.OnGenerationStart -= () => SetDoorState(false);
-            GenerateShowroom.OnGenerationEnd -= (state) => SetDoorState(state);
+            m_generator.OnGenerationStart -= () => SetDoorState(false);
+            m_generator.OnGenerationEnd -= (state) => SetDoorState(state);
         }
 
         private void SetDoorState(bool open)

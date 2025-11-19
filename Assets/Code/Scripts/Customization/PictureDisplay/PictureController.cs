@@ -1,8 +1,5 @@
 using KronosTech.AssetManagement;
-using KronosTech.Customization.Decoration;
-using KronosTech.Customization.Pictures;
 using KronosTech.Services;
-using KronosTech.ShowroomGeneration;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
@@ -11,16 +8,15 @@ namespace KronosTech.Customization.Pictures
 {
     public static class PictureController
     {
-        private static string _manifestURL = "https://raw.githubusercontent.com/kronousTech/Portfolio-WEBGL-PC/main/Content/Bundles/gallery/memes.manifest";
-
-        private static readonly List<Sprite> _picturesList = new();
-        private static readonly List<PictureDisplay> _displaysList = new();
+        private static readonly System.Random s_Random = new();
+        private static string m_manifestURL = "https://raw.githubusercontent.com/kronousTech/Portfolio-WEBGL-PC/main/Content/Bundles/gallery/memes.manifest";
+        private static readonly List<Sprite> m_picturesList = new();
+        private static int Index = 0;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Initialize()
         {
             AssetsLoader.OnBundlesDownload += GetPictures;
-            GenerateShowroom.OnGenerationEnd += (state) => SetPictures();
         }
 
         private static void GetPictures()
@@ -28,7 +24,7 @@ namespace KronosTech.Customization.Pictures
             var temporaryObject = new GameObject("TemporaryCoroutineRunner");
             var temporaryRunner = temporaryObject.AddComponent<CoroutineRunner>();
 
-            temporaryRunner.StartCoroutine(CallWebRequest.GetRequest(_manifestURL, (string data, string error) =>
+            temporaryRunner.StartCoroutine(CallWebRequest.GetRequest(m_manifestURL, (string data, string error) =>
             {
                 if (!string.IsNullOrEmpty(error))
                 {
@@ -40,36 +36,41 @@ namespace KronosTech.Customization.Pictures
                 {
                     var asset = new Asset(match.Value.Split('/')[^1], "memes", AssetCategory.gallery);
 
-                    _picturesList.Add(ServiceLocator.Instance.GetWebImagesService().LoadImage(asset));
+                    m_picturesList.Add(ServiceLocator.Instance.GetWebImagesService().LoadImage(asset));
                 }
+
+                m_picturesList.Shuffle();
             }));
         }
-        private static void SetPictures()
+
+        public static void Shuffle<T>(this IList<T> parent)
         {
-            var availablePictures = new List<Sprite>(_picturesList);
+            int n = parent.Count;
+            int k;
 
-            foreach (var item in _displaysList)
+            while (n > 1)
             {
-                var pictureIndex = Random.Range(0, availablePictures.Count);
-
-                item.SetPicture(availablePictures[pictureIndex]);
-
-                availablePictures.RemoveAt(pictureIndex);
-
-                if(availablePictures.Count == 0)
-                {
-                    availablePictures = new List<Sprite>(_picturesList);
-                }
+                n--;
+                k = s_Random.Next(n + 1);
+                (parent[k], parent[n]) = (parent[n], parent[k]);
             }
         }
 
-        public static void Add(PictureDisplay model)
+        public static Sprite RequestPicture()
         {
-            _displaysList.Add(model);
-        }
-        public static void Remove(PictureDisplay model)
-        {
-            _displaysList.Remove(model);
+            if(m_picturesList.Count == 0)
+            {
+                return null;
+            }
+
+            if(Index >= m_picturesList.Count)
+            {
+                Index = 0;
+
+                m_picturesList.Shuffle();
+            }
+
+            return m_picturesList[Index++];
         }
     }
 }

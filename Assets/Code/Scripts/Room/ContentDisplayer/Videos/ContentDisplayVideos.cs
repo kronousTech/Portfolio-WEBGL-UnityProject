@@ -1,4 +1,3 @@
-using KronosTech.AssetManagement;
 using KronosTech.Data;
 using KronosTech.Services;
 using System;
@@ -7,61 +6,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-namespace KronosTech.ShowroomGeneration.Room.Videoplayer
+namespace KronosTech.Room.ContentDisplay
 {
-    public class RoomVideosController : MonoBehaviour
+    public class ContentDisplayVideos : ContentDisplayBase<RoomVideoData>
     {
-        [SerializeField] private ContentData[] _videoData;
+        [Header("References")]
         [SerializeField] private VideoPlayer _videoPlayer;
-
-        [Header("Buttons")]
         [SerializeField] private Button _buttonPlay;
         [SerializeField] private Button _buttonPause;
         [SerializeField] private Button _buttonRestart;
-        [SerializeField] private Button _buttonNext;
-        [SerializeField] private Button _buttonPrev;
 
-        private int _index;
-        private int Index
-        {
-            get => _index;
-            set
-            {
-                if (value >= _videoClips.Length)
-                {
-                    _index = 0;
-                }
-                else if (value < 0)
-                {
-                    _index = _videoClips.Length - 1;
-                }
-                else
-                {
-                    _index = value;
-                }
-
-                OnVideoChange?.Invoke(_index, _videoClips[_index].title);
-
-                _videoPlayer.url = _videoClips[_index].url;
-
-                if(_videoPlayer.isActiveAndEnabled)
-                {
-                    _videoPlayer.Prepare();
-
-                    StartCoroutine(PrepareCoroutine());
-                }
-
-                OnPrepare?.Invoke();
-            }
-        }
-
-        private RoomVideoData[] _videoClips;
-
-        private static Action<RoomVideosController> OnVideoStart;
+        private static Action<ContentDisplayVideos> OnVideoStart;
 
         public event Action<int> OnInitialize;
         public event Action<int, string> OnVideoChange;
-
         public event Action OnPrepare;
         public event Action<double> OnPrepareCompleted;
         public event Action OnPlayInput;
@@ -71,47 +29,31 @@ namespace KronosTech.ShowroomGeneration.Room.Videoplayer
         public event Action OnPause;
         public event Action<double> OnPlaying;
 
-        private void OnEnable()
+        protected override void OnEnable()
         {
-            AssetsLoader.OnBundlesDownload += LoadVideos;
-            GenerateShowroom.OnGenerationEnd += (state) => Prepare();
+            base.OnEnable();
 
-            _buttonNext.onClick.AddListener(NextVideo);
-            _buttonPrev.onClick.AddListener(PreviousVideo);
             _buttonPlay.onClick.AddListener(() => StartCoroutine(PlayCoroutine()));
             _buttonPause.onClick.AddListener(Pause);
             _buttonRestart.onClick.AddListener(() => StartCoroutine(Restart()));
 
-            _videoPlayer.prepareCompleted += (source) => Prepared();
+            _videoPlayer.prepareCompleted += (source) => PreparedCallback();
             _videoPlayer.prepareCompleted += (source) => Pause();
 
             OnVideoStart += DisableOtherVideoPlayers;
         }
-        private void OnDisable()
+        protected override void OnDisable()
         {
-            AssetsLoader.OnBundlesDownload -= LoadVideos;
-            GenerateShowroom.OnGenerationEnd -= (state) => Prepare();
+            base.OnDisable();
 
-            _buttonNext.onClick.RemoveListener(NextVideo);
-            _buttonPrev.onClick.RemoveListener(PreviousVideo);
             _buttonPlay.onClick.RemoveListener(() => StartCoroutine(PlayCoroutine()));
             _buttonPause.onClick.RemoveListener(Pause);
             _buttonRestart.onClick.RemoveListener(() => StartCoroutine(Restart()));
 
-            _videoPlayer.prepareCompleted -= (source) => Prepared();
+            _videoPlayer.prepareCompleted -= (source) => PreparedCallback();
             _videoPlayer.prepareCompleted -= (source) => Pause();
 
             OnVideoStart -= DisableOtherVideoPlayers;
-        }
-        private void Start()
-        {
-            _videoPlayer.source = VideoSource.Url;
-
-            var renderTexture = new RenderTexture(800, 600, 0);
-            _videoPlayer.targetTexture = renderTexture;
-            _videoPlayer.GetComponent<RawImage>().texture = renderTexture;
-
-            OnInitialize?.Invoke(_videoData.Length);
         }
         private void Update()
         {
@@ -121,21 +63,7 @@ namespace KronosTech.ShowroomGeneration.Room.Videoplayer
             }
         }
 
-        private void LoadVideos()
-        {
-            if (_videoData.Length == 0)
-                return;
-
-            _videoClips = new RoomVideoData[_videoData.Length];
-
-            for (int i = 0; i < _videoClips.Length; i++)
-            {
-                _videoClips[i].title = _videoData[i].title;
-                _videoClips[i].url = ServiceLocator.Instance.GetWebVideosService().LoadVideo(_videoData[i].asset);
-            }
-        }
-
-        private void DisableOtherVideoPlayers(RoomVideosController controller)
+        private void DisableOtherVideoPlayers(ContentDisplayVideos controller)
         {
             if(controller != this)
             {
@@ -143,16 +71,14 @@ namespace KronosTech.ShowroomGeneration.Room.Videoplayer
             }
         }
 
-        private void NextVideo() => Index++;
-        private void PreviousVideo() => Index--;
         private void Prepare()
         {
-            if (_videoData.Length >= 1)
+            if (Data.Length >= 1)
             {
                 Index = 0;
             }
         }
-        private void Prepared()
+        private void PreparedCallback()
         {
             OnPrepareCompleted?.Invoke(_videoPlayer.length);
         }
@@ -213,5 +139,50 @@ namespace KronosTech.ShowroomGeneration.Room.Videoplayer
             if(!_videoPlayer.isPrepared && _videoPlayer.enabled)
                 _videoPlayer.Prepare();
         }
+
+        #region ContentDisplayBase
+        protected override void LoadData()
+        {
+            _videoPlayer.source = VideoSource.Url;
+
+            var renderTexture = new RenderTexture(800, 600, 0);
+            _videoPlayer.targetTexture = renderTexture;
+            _videoPlayer.GetComponent<RawImage>().texture = renderTexture;
+
+            var data = m_repository.Data.Videos;
+            if (data.Length == 0)
+            {
+                return;
+            }
+
+            Data = new RoomVideoData[data.Length];
+
+            for (int i = 0; i < Data.Length; i++)
+            {
+                Data[i] = new RoomVideoData(
+                    title: data[i].title,
+                    url: ServiceLocator.Instance.GetWebVideosService().LoadVideo(data[i].asset));
+            }
+
+            Prepare();
+         
+            OnInitialize?.Invoke(Data.Length);
+        }
+        protected override void ShowContent(int index)
+        {
+            OnVideoChange?.Invoke(index, Data[index].Title);
+
+            _videoPlayer.url = Data[index].Url;
+
+            if (_videoPlayer.isActiveAndEnabled)
+            {
+                _videoPlayer.Prepare();
+
+                StartCoroutine(PrepareCoroutine());
+            }
+
+            OnPrepare?.Invoke();
+        }
+        #endregion
     }
 }

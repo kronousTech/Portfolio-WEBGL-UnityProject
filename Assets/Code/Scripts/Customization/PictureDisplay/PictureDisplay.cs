@@ -1,23 +1,28 @@
+using KronosTech.ShowroomGeneration;
 using UnityEngine;
 
 namespace KronosTech.Customization.Pictures
 {
     public class PictureDisplay : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer _renderer;
+        [Header("References")]
+        [SerializeField] private SpriteRenderer m_renderer;
+
+        private IPlaceablePieceBase m_tile;
 
         private void Awake()
         {
-            PictureController.Add(this);
+            m_tile = GetComponentInParent<IPlaceablePieceBase>(true);
+            m_tile.OnPlacement += SetPictureCallback;
         }
         private void OnDestroy()
         {
-            PictureController.Remove(this);
+            m_tile.OnPlacement -= SetPictureCallback;
         }
 
-        public void SetPicture(Sprite sprite)
+        public void SetPictureCallback()
         {
-            _renderer.sprite = sprite;
+            m_renderer.sprite = PictureController.RequestPicture();
         }
     }
 }

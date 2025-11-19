@@ -89,18 +89,7 @@ namespace KronosTech.Services
 
                 if (www.result == UnityWebRequest.Result.Success)
                 {
-                    try
-                    {
-                        var query_error = www.error;
-                        var data = www.downloadHandler.text;
-
-                        onComplete?.Invoke(data, string.Empty);
-                    }
-                    catch (Exception e)
-                    {
-                        Debug.LogError("Error getting text data: " + url + " - " + e.Message);
-                        onComplete?.Invoke(null, e.Message);
-                    }
+                    onComplete?.Invoke(www.downloadHandler.text, string.Empty);
                 }
                 else
                 {

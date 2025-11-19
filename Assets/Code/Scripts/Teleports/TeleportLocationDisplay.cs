@@ -1,3 +1,4 @@
+using KronosTech.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,10 +13,10 @@ namespace KronosTech.Teleport
         [SerializeField] private TextMeshProUGUI m_tagsDisplay;
         [SerializeField] private Button m_button;
 
-        public void Initialize(string name, string tags, UnityAction clickAction)
+        public void Initialize(RoomData roomData, UnityAction clickAction)
         {
-            m_nameDisplay.text = name;
-            m_tagsDisplay.text = tags;
+            m_nameDisplay.text = roomData.GetFullName();
+            m_tagsDisplay.text = roomData.Tags.ToString();
 
             m_button.onClick.AddListener(clickAction);
         }

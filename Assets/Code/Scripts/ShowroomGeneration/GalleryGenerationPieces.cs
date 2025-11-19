@@ -7,23 +7,23 @@ using UnityEngine.Pool;
 
 public static class GalleryGenerationPieces
 {
-    private static GalleryTile _lastTile;
-    private static List<GalleryTile> _tilesPrefabs;
-    private static GalleryCorridor[] _corridorPrefabs;
+    private static PlaceableTile _lastTile;
+    private static List<PlaceableTile> _tilesPrefabs;
+    private static PlaceableCorridor[] _corridorPrefabs;
     
-    private static GalleryRoom _endWall;
+    private static PlaceableRoom _endWall;
 
     private static Transform _corridorObjectsParent;
-    private static readonly Dictionary<GalleryCorridor, ObjectPool<GalleryCorridor>> _corridorPools = new();
+    private static readonly Dictionary<PlaceableCorridor, ObjectPool<PlaceableCorridor>> _corridorPools = new();
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Initialize() 
     {
-        _tilesPrefabs = Resources.LoadAll<GalleryTile>("GalleryGeneration/Tiles").ToList();
-        _endWall = Resources.Load<GalleryRoom>("GalleryGeneration/Wall/Wall");
+        _tilesPrefabs = Resources.LoadAll<PlaceableTile>("GalleryGeneration/Tiles").ToList();
+        _endWall = Resources.Load<PlaceableRoom>("GalleryGeneration/Wall/Wall");
     }
 
-    public static GalleryTile GetTile(int remainingRoomsCount)
+    public static PlaceableTile GetTile(int remainingRoomsCount)
     {
         if(_lastTile == null)
         {
@@ -45,7 +45,7 @@ public static class GalleryGenerationPieces
         }
     } 
     
-    public static GalleryRoom GetEndWall() => _endWall;
+    public static PlaceableRoom GetEndWall() => _endWall;
 
    
 }

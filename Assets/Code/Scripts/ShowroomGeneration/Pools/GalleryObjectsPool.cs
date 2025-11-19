@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-namespace KronosTech.GalleryGeneration.Pools
+namespace KronosTech.ObjectPooling
 {
     public class GalleryObjectsPool : MonoBehaviour
     {
@@ -10,18 +10,18 @@ namespace KronosTech.GalleryGeneration.Pools
         [SerializeField] private string _resourcesPath;
         [SerializeField] private int _preloadCount;
 
-        private readonly Dictionary<int, IObjectPool<GalleryPoolObjectBase>> _pools = new();
-        private readonly List<GalleryPoolObjectBase> _activeObjects = new();
+        private readonly Dictionary<int, IObjectPool<GalleryPoolObjectBase>> m_pools = new();
+        private readonly List<GalleryPoolObjectBase> m_activeObjects = new();
 
         private void Awake()
         {
-            var corridors = Resources.LoadAll<GalleryPoolObjectBase>(_resourcesPath);
+            var objects = Resources.LoadAll<GalleryPoolObjectBase>(_resourcesPath);
 
-            for(int i = 0; i < corridors.Length; i++)
+            for(int i = 0; i < objects.Length; i++)
             {
                 var index = i;
-                _pools.Add(index, new ObjectPool<GalleryPoolObjectBase>(
-                    () => OnCreate(corridors[index], index),
+                m_pools.Add(index, new ObjectPool<GalleryPoolObjectBase>(
+                    () => OnCreate(objects[index], index),
                     OnGet,
                     OnRelease,
                     OnObjectDestroy,
@@ -32,31 +32,31 @@ namespace KronosTech.GalleryGeneration.Pools
 
                 for(int j = 0; j < _preloadCount; j++) 
                 {
-                    cache.Add(_pools[index].Get());
+                    cache.Add(m_pools[index].Get());
                 }
                 for (int j = 0; j < _preloadCount; j++)
                 {
-                    _pools[index].Release(cache[j]);
+                    m_pools[index].Release(cache[j]);
                 }
             }
         }
 
         public GalleryPoolObjectBase GetRandomObject()
         {
-            return _pools[Random.Range(0, _pools.Count)].Get();
+            return m_pools[Random.Range(0, m_pools.Count)].Get();
         }
         public void ClearObjects()
         {
-            for (int i = _activeObjects.Count-1; i >= 0; i--)
+            for (int i = m_activeObjects.Count-1; i >= 0; i--)
             {
-                _activeObjects[i].Release();
+                m_activeObjects[i].Release();
             }
         }
 
         private GalleryPoolObjectBase OnCreate(GalleryPoolObjectBase obj, int index)
         { 
             var corridor = Instantiate(obj, transform);
-            corridor.Initialize(_pools[index]);
+            corridor.Initialize(m_pools[index]);
             
             return corridor;
         }
@@ -64,13 +64,13 @@ namespace KronosTech.GalleryGeneration.Pools
         {
             obj.gameObject.SetActive(true);
 
-            _activeObjects.Add(obj);
+            m_activeObjects.Add(obj);
         }
         private void OnRelease(GalleryPoolObjectBase obj)
         {
             obj.gameObject.SetActive(false);
 
-            _activeObjects.Remove(obj);
+            m_activeObjects.Remove(obj);
         }
         private void OnObjectDestroy(GalleryPoolObjectBase obj)
         {

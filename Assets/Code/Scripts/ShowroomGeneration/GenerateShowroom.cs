@@ -1,66 +1,125 @@
-using KronosTech.GalleryGeneration.Pools;
+using KronosTech.Data;
+using KronosTech.ObjectPooling;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace KronosTech.ShowroomGeneration
 {
     public class GenerateShowroom : MonoBehaviour
     {
-        [SerializeField] private GalleryTileExit _galleryStart;
+        [Header("Settings")]
+        [SerializeField] private PlaceableRoom m_galleryWall;
+        [SerializeField] private PlaceableRoom m_galleryRoom;
+        [Header("References")]
+        [SerializeField] private TagSelector m_selector;
+        [SerializeField] private Button m_generateButton;
+        [SerializeField] private GalleryTileExit m_start;
+        [SerializeField] private Transform m_roomsParent;
+        [SerializeField] private GalleryObjectsPool m_corridorsPool;
+        [SerializeField] private GalleryObjectsPool m_tilesPool;
+        [SerializeField] private GalleryObjectsPool m_wallsPool;
+        [Header("Debug")]
+        [SerializeField] private RoomData[] m_loadedData;
 
-        [Header("Requirements")]
-        [SerializeField] private GalleryObjectsPool _corridorsPool;
-        [SerializeField] private GalleryObjectsPool _tilesPool;
-        [SerializeField] private GalleryObjectsPool _wallsPool;
+        private Dictionary<RoomData, PlaceableRoom> m_rooms = new();
 
-        public static event Action OnGenerationStart;
-        public static event Action<bool> OnGenerationEnd;
+        private readonly string m_dataFolderPath = "RoomsData/";
 
-        private bool _startedGeneration;
+        public event Action OnGenerationStart;
+        public event Action<bool> OnGenerationEnd;
+
+        private bool m_isBuilding;
 
         private void OnEnable()
         {
-            RoomsSelector.OnSelection += (rooms) => StartCoroutine(GenerateRooms(rooms));
+            m_generateButton.onClick.AddListener(() => StartCoroutine(GenerateRooms()));
         }
         private void OnDisable()
         {
-            RoomsSelector.OnSelection -= (rooms) => StartCoroutine(GenerateRooms(rooms));
+            m_generateButton.onClick.RemoveListener(() => StartCoroutine(GenerateRooms()));
+        }
+        private void Start()
+        {
+            m_loadedData = Resources.LoadAll<RoomData>(m_dataFolderPath);
+
+            PlaceableRoom roomPrefab;
+            PlaceableRoom roomInstantiated;
+
+            foreach (var data in m_loadedData)
+            {
+                roomPrefab = data.HasVideos() ? m_galleryRoom : m_galleryWall;
+                roomInstantiated = GameObject.Instantiate(roomPrefab, m_roomsParent);
+                roomInstantiated.Initialize(data);
+                roomInstantiated.SetVisibility(false);
+
+                m_rooms.Add(data, roomInstantiated);
+            }
+        }
+        public RoomData[] GetSelectedRooms()
+        {
+            var currentTags = m_selector.GetTags();
+            var selectedRooms = new List<RoomData>();
+
+            for (int i = 0; i < m_loadedData.Length; i++)
+            {
+                if (m_loadedData[i].Tags.HasAny(currentTags))
+                {
+                    selectedRooms.Add(m_loadedData[i]);
+                }
+            }
+
+            return selectedRooms.ToArray();
         }
 
-        private IEnumerator GenerateRooms(List<GalleryRoom> rooms) 
+        private void HideAllRooms()
         {
-            if (_startedGeneration)
-                yield break;
+            foreach (var item in m_rooms)
+            {
+                item.Value.SetVisibility(false);
+            }
+        }
 
-            _tilesPool.ClearObjects();
-            _corridorsPool.ClearObjects();
-            _wallsPool.ClearObjects();
+        private IEnumerator GenerateRooms() 
+        {
+            if (m_isBuilding)
+            {
+                yield break;
+            }
+
+            m_tilesPool.ClearObjects();
+            m_corridorsPool.ClearObjects();
+            m_wallsPool.ClearObjects();
+            
+            HideAllRooms();
 
             yield return null;
 
             OnGenerationStart?.Invoke();
 
-            var remainingRooms = rooms.Count;
+            var availableRooms = GetSelectedRooms();
+            var remainingRooms = availableRooms.Length;
             GalleryTileExit nextExit = null;
             var roomIndex = 0;
 
-            _startedGeneration = true;
+            m_isBuilding = true;
 
             yield return null;
 
             while (remainingRooms > 0)
             {
-                var corridor = (GalleryCorridor)_corridorsPool.GetRandomObject();
-                corridor.Place(nextExit != null ? nextExit : _galleryStart);
+                var corridor = (PlaceableCorridor)m_corridorsPool.GetRandomObject();
+                corridor.Place(nextExit != null ? nextExit : m_start);
 
                 nextExit = corridor.GetExit;
 
                 yield return null;
 
                 // Instantiate Tile
-                var currentTile = (GalleryTile)_tilesPool.GetRandomObject();
+                var currentTile = (PlaceableTile)m_tilesPool.GetRandomObject();
+                currentTile.Place(nextExit);
                 currentTile.InitializeGallery(remainingRooms, nextExit, (GalleryTileExit exit, GalleryTileExit[] roomPositions) =>
                 {
                     if(exit != null)
@@ -71,21 +130,17 @@ namespace KronosTech.ShowroomGeneration
                     // Add Display Rooms
                     for (int i = 0; i < roomPositions.Length; i++)
                     {
-                        if(roomIndex < rooms.Count)
+                        if(roomIndex < availableRooms.Length)
                         {
-                            rooms[roomIndex].ToggleVisibility(true);
-                            rooms[roomIndex++].Place(roomPositions[i]);
+                            m_rooms[availableRooms[roomIndex]].SetVisibility(true);
+                            m_rooms[availableRooms[roomIndex++]].Place(roomPositions[i]);
 
                             remainingRooms--;
                         }
                         else
                         {
-                            var wall = ((GalleryRoom)_wallsPool.GetRandomObject());
+                            var wall = ((PlaceableWall)m_wallsPool.GetRandomObject());
                             wall.Place(roomPositions[i]);
-                            wall.ToggleVisibility(true);
-
-                            //Instantiate(GalleryGenerationPieces.GetEndWall(), null) // ADD PARENT
-                            //    .Place(roomPositions[i]);
                         }
                     }
                 });
@@ -93,9 +148,9 @@ namespace KronosTech.ShowroomGeneration
                 yield return null;
             }
 
-            _startedGeneration = false;
+            m_isBuilding = false;
 
-            OnGenerationEnd?.Invoke(rooms.Count > 0);
+            OnGenerationEnd?.Invoke(availableRooms.Length > 0);
         }
     }
 }

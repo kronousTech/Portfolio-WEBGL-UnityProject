@@ -1,5 +1,4 @@
 using KronosTech.AssetManagement;
-using KronosTech.ShowroomGeneration.Room;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,5 +15,14 @@ namespace KronosTech.Data
         public ContentData[] Images;
         public ContentData[] Videos;
         public RoomClickableLinkData[] ClickableLinks;
+
+        public string GetFullName()
+        {
+            return $"{ClientName}-{ProjectName}";
+        }
+        public bool HasVideos()
+        {
+            return Videos.Length > 0;
+        }
     }
 }

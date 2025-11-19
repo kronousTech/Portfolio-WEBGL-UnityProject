@@ -1,3 +1,4 @@
+using KronosTech.Data;
 using KronosTech.Player;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,12 +15,12 @@ namespace KronosTech.Teleport
 
         private readonly Dictionary<Transform, GameObject> _locationsDictionary = new();
 
-        public void AddTeleport(Transform location, string name, string tags)
+        public void AddTeleport(RoomData roomData, Transform teleportLocation)
         {
             var newDisplay = Instantiate(m_displayPrefab, m_parent);
-            newDisplay.Initialize(name, tags, () => TeleportPlayerCallback(location));
+            newDisplay.Initialize(roomData, () => TeleportPlayerCallback(teleportLocation));
 
-            if(!_locationsDictionary.TryAdd(location, newDisplay.gameObject))
+            if(!_locationsDictionary.TryAdd(teleportLocation, newDisplay.gameObject))
             {
                 Debug.LogError($"{nameof(TeleportsManager)}.cs: " +
                     $"Trying to add the same teleport twice.");

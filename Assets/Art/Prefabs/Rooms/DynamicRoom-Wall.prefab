@@ -1555,10 +1555,9 @@ GameObject:
   - component: {fileID: 6293981699928380673}
   - component: {fileID: 7784711717088193071}
   - component: {fileID: 3291773372820177048}
-  - component: {fileID: 6354194692023837993}
   - component: {fileID: 2034576277141742753}
   m_Layer: 8
-  m_Name: PictureDisplay
+  m_Name: DisplayImages
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1874,25 +1873,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4084746134424241271}
   m_Mesh: {fileID: 0}
---- !u!114 &6354194692023837993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4084746134424241271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7a3c420163bb404c834f1e4733813fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _display: {fileID: 7773747001322548025}
-  _title: {fileID: 4054300553838382454}
-  _indexDisplay: {fileID: 8484214648972100279}
-  _downloadingImageGO: {fileID: 3238681411086168527}
-  _buttonsHolder: {fileID: 3998924162222105985}
-  _buttonNext: {fileID: 7198213861159263918}
-  _buttonPrev: {fileID: 6264124968146017704}
 --- !u!114 &2034576277141742753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2381,7 +2361,7 @@ GameObject:
   - component: {fileID: 8563523199043799894}
   - component: {fileID: 1518586823748319061}
   - component: {fileID: 6896444297880718890}
-  - component: {fileID: 2879789896935102613}
+  - component: {fileID: 1527160551301240569}
   - component: {fileID: 4231585592771002133}
   - component: {fileID: 8418231347290441402}
   m_Layer: 0
@@ -2433,7 +2413,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _holder: {fileID: 3856398361313657467}
   _line: {fileID: 6982869727397150311}
---- !u!114 &2879789896935102613
+  m_repository: {fileID: 1518586823748319061}
+--- !u!114 &1527160551301240569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2442,11 +2423,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5196600039252470121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65b58ca1bc0c5f14690fcfa73520af62, type: 3}
+  m_Script: {fileID: 11500000, guid: 3da1db30298f3d84c900cf5da741a5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_repository: {fileID: 1518586823748319061}
-  m_display: {fileID: 6354194692023837993}
+  m_indexDisplay: {fileID: 8484214648972100279}
+  m_downloadingImageGO: {fileID: 3238681411086168527}
+  m_buttonsHolder: {fileID: 3998924162222105985}
+  m_buttonNext: {fileID: 7198213861159263918}
+  m_buttonPrev: {fileID: 6264124968146017704}
+  m_display: {fileID: 7773747001322548025}
+  m_titleDisplay: {fileID: 8438391199740591979}
 --- !u!114 &4231585592771002133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5427,8 +5414,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7625574640914076617}
-  - component: {fileID: 7653291659167730707}
   - component: {fileID: 4959623466235176715}
+  - component: {fileID: 2623970967210464946}
   m_Layer: 0
   m_Name: Teleport
   m_TagString: Untagged
@@ -5451,20 +5438,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5697255566407508258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7653291659167730707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5916113201084755902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421d88b462d3ad2428d75c0cfcfddc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _name: 
-  _tags: {fileID: 0}
 --- !u!114 &4959623466235176715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5477,6 +5450,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4059cfbf682d48942b5fb41091cd70a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_teleport: {fileID: 2623970967210464946}
+--- !u!114 &2623970967210464946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5916113201084755902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1e540b0f2f0ed4f8587fba7e10d441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_roomData: {fileID: 0}
+  m_transformLocation: {fileID: 7625574640914076617}
+  m_repository: {fileID: 1518586823748319061}
 --- !u!1 &6083771966475174310
 GameObject:
   m_ObjectHideFlags: 0
