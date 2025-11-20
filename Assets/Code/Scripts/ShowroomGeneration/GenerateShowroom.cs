@@ -1,3 +1,4 @@
+using KronosTech.AssetBundles;
 using KronosTech.Data;
 using KronosTech.ObjectPooling;
 using NaughtyAttributes;
@@ -15,6 +16,7 @@ namespace KronosTech.ShowroomGeneration
         [SerializeField] private PlaceableRoom m_galleryWall;
         [SerializeField] private PlaceableRoom m_galleryRoom;
         [Header("References")]
+        [SerializeField] private AssetBundleDownloadAll m_downloader;
         [SerializeField] private TagSelector m_selector;
         [SerializeField] private Button m_generateButton;
         [SerializeField] private GalleryTileExit m_start;
@@ -36,13 +38,16 @@ namespace KronosTech.ShowroomGeneration
 
         private void OnEnable()
         {
+            m_downloader.OnAllBundlesDownloaded += CacheRoomsCallback;
             m_generateButton.onClick.AddListener(() => StartCoroutine(GenerateRooms()));
         }
         private void OnDisable()
         {
+            m_downloader.OnAllBundlesDownloaded -= CacheRoomsCallback;
             m_generateButton.onClick.RemoveListener(() => StartCoroutine(GenerateRooms()));
         }
-        private void Start()
+
+        private void CacheRoomsCallback()
         {
             m_loadedData = Resources.LoadAll<RoomData>(m_dataFolderPath);
 
@@ -59,6 +64,7 @@ namespace KronosTech.ShowroomGeneration
                 m_rooms.Add(data, roomInstantiated);
             }
         }
+        
         public RoomData[] GetSelectedRooms()
         {
             var currentTags = m_selector.GetTags();

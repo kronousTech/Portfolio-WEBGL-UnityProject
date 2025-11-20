@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-Essani_360Environments
+  m_EditorClassIdentifier: 
+  ProjectName: 360 Environments
+  ClientName: Essani
+  RoomType: 1
+  Tags: 72
+  Texts:
+  - category: 0
+    info: Lead Developer.
+  - category: 1
+    info: Essani is specialized in customized lighting products and services for
+      the furniture and architecture industry, as well as for industrial automation.
+  - category: 2
+    info: The primary objective of this project was to showcase diverse environments
+      illuminated by various types of lighting. This was accomplished through a dynamic
+      exploration of distinct 360-degree images, seamlessly adjusting their presentation
+      in response to the selected lighting conditions.
+  - category: 3
+    info: In embarking on my first WebGL project, I encountered a range of new challenges
+      related to optimization and build sizes. These challenges provided valuable
+      learning opportunities, allowing me to deepen my understanding of WebGL development
+      intricacies and refine my problem-solving skills.
+  - category: 4
+    info: To address the optimization and build size concerns, I began by reducing
+      the quality of various images. In some cases, the default quality was unnecessarily
+      high, and cutting it in half significantly reduced the build size. This adjustment
+      resulted in smoother application performance with almost no noticeable difference
+      in visual quality.
+  Images: {fileID: 0}
+  Videos: {fileID: 0}
+  ClickableLinks:
+  - Name: 
+    URL: https://kronoustech.github.io/PortfolioProject-Essani/
+    Icon: {fileID: 0}

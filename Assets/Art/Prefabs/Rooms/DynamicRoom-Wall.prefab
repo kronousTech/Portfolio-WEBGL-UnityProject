@@ -2362,6 +2362,7 @@ GameObject:
   - component: {fileID: 1518586823748319061}
   - component: {fileID: 6896444297880718890}
   - component: {fileID: 1527160551301240569}
+  - component: {fileID: 5506080319409926538}
   - component: {fileID: 4231585592771002133}
   - component: {fileID: 8418231347290441402}
   m_Layer: 0
@@ -2426,7 +2427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da1db30298f3d84c900cf5da741a5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_repository: {fileID: 1518586823748319061}
+  m_data: {fileID: 0}
   m_indexDisplay: {fileID: 8484214648972100279}
   m_downloadingImageGO: {fileID: 3238681411086168527}
   m_buttonsHolder: {fileID: 3998924162222105985}
@@ -2434,6 +2435,21 @@ MonoBehaviour:
   m_buttonPrev: {fileID: 6264124968146017704}
   m_display: {fileID: 7773747001322548025}
   m_titleDisplay: {fileID: 8438391199740591979}
+--- !u!114 &5506080319409926538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5196600039252470121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964dce7d93b01914d99ac029326e2f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_imagesDisplay: {fileID: 1527160551301240569}
+  m_videosDisplay: {fileID: 0}
+  m_repository: {fileID: 1518586823748319061}
 --- !u!114 &4231585592771002133
 MonoBehaviour:
   m_ObjectHideFlags: 0

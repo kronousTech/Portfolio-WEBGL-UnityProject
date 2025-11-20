@@ -1713,7 +1713,6 @@ GameObject:
   - component: {fileID: 62412902}
   - component: {fileID: 62412905}
   - component: {fileID: 62412904}
-  - component: {fileID: 62412903}
   - component: {fileID: 62412908}
   - component: {fileID: 62412907}
   - component: {fileID: 62412906}
@@ -1749,23 +1748,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 788, y: 1024}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &62412903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62412901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &62412904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9717,7 +9699,7 @@ GameObject:
   - component: {fileID: 469262092}
   - component: {fileID: 469262091}
   m_Layer: 0
-  m_Name: ShowroomBuilder
+  m_Name: ShowroomGeneration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9760,6 +9742,7 @@ MonoBehaviour:
     type: 3}
   m_galleryRoom: {fileID: 6896444297880718890, guid: 8e77a50340a9dda418728f3863d083c4,
     type: 3}
+  m_downloader: {fileID: 1100870928}
   m_selector: {fileID: 469262092}
   m_generateButton: {fileID: 1148067453}
   m_start: {fileID: 1872444377}
@@ -96283,14 +96266,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da1db30298f3d84c900cf5da741a5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_repository: {fileID: 0}
+  m_data: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
   m_indexDisplay: {fileID: 466268130}
   m_downloadingImageGO: {fileID: 888232443}
   m_buttonsHolder: {fileID: 1194004171}
   m_buttonNext: {fileID: 2131360265}
   m_buttonPrev: {fileID: 1534554370}
   m_display: {fileID: 486162537}
-  m_titleDisplay: {fileID: 0}
+  m_titleDisplay: {fileID: 1283663825}
 --- !u!64 &2419649745350575976
 MeshCollider:
   m_ObjectHideFlags: 0

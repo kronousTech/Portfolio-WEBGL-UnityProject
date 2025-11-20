@@ -29,15 +29,9 @@ namespace KronosTech.AssetBundles
             if (File.Exists(bundlePath))
             {
                 var bundle = AssetBundle.LoadFromFile(bundlePath);
-                var request = bundle.LoadAssetAsync<T>(assetName);
+                var asset = bundle.LoadAsset<T>(assetName);
 
-                // Await completion
-                while (!request.isDone)
-                {
-                    await Task.Yield();
-                }
-
-                if(request.asset == null)
+                if(asset == null)
                 {
                     var message = "Asset from bundle is null";
 
@@ -48,11 +42,9 @@ namespace KronosTech.AssetBundles
                     return;
                 }
 
-                T asset = request.asset as T;
-
                 bundle.Unload(false);
 
-                callback?.Invoke(new(asset));
+                callback?.Invoke(new(asset as T));
             }
             else
             {

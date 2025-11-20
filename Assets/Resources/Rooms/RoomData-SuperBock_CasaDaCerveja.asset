@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-SuperBock_CasaDaCerveja
+  m_EditorClassIdentifier: 
+  ProjectName: Casa da Cerveja
+  ClientName: SuperBock
+  RoomType: 1
+  Tags: 68
+  Texts:
+  - category: 0
+    info: Lead Developer.
+  - category: 1
+    info: Super Bock is a Portuguese beer brand from the Super Bock Group brewery,
+      which produces a range of beers under the same name. Established in 1927, Super
+      Bock maintains a leading position in the market, and it is among the favorite
+      beer brands of the Portuguese. It is also the best-selling Portuguese beer
+      in the world.
+  - category: 2
+    info: 'Come travel back in time at Super Bock ''Casa da Cerveja'', and follow
+      how beer was made in our first brewing room, which now comes to life again
+      through this immersive Augmented Reality experience.
+
+
+
+      The Super Bock
+      ''Casa da Cerveja'' is a tour circuit located right inside the Super Bock Group
+      Production Center. On this journey through the world of beer, you will learn
+      about its manufacturing process, from the raw materials that give rise to it,
+      to the production of the wort, through fermentation and ending with the filling,
+      where you can hear the clinking of the bottles.'
+  - category: 3
+    info: The primary challenge for this project came from only being able to test
+      in the museum environment. This constraint made the placement of models in
+      the experience particularly challenging.
+  - category: 4
+    info: To aid in model placement, we developed a script that calculated the distance
+      between the marker and the developer. This allowed us to save the position
+      for later use during development when adding the models. While not flawless,
+      it significantly expedited and simplified the initial placement of the models.
+  Images: {fileID: 0}
+  Videos: {fileID: 0}
+  ClickableLinks:
+  - Name: 
+    URL: https://play.google.com/store/apps/details?id=com.YourCompany.SuperBockHouse
+    Icon: {fileID: 0}

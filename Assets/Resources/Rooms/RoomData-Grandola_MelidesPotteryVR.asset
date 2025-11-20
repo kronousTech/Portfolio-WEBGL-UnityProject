@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-Grandola_MelidesPotteryVR
+  m_EditorClassIdentifier: 
+  ProjectName: Melides Pottery VR
+  ClientName: Grandola
+  RoomType: 0
+  Tags: 2
+  Texts:
+  - category: 0
+    info: Lead Developer.
+  - category: 1
+    info: "Gr\xE2ndola's Municipal Chamber."
+  - category: 2
+    info: This project showcases the traditional process of crafting clay pots, allowing
+      players to experience each step, from gathering raw clay to shaping and eventually
+      selling the finished pot.
+  - category: 3
+    info: Being a long experience, the main challenge involved establishing a system
+      to incorporate multiple tasks for players. Each task required a clear condition
+      and corresponding visual cues to guide the player. Additionally, there was
+      a need for visual or auditory feedback upon task completion.
+  - category: 4
+    info: To address this challenge, I devised a script encompassing all scene tasks,
+      iterating to the next one once the current task was finished. I established
+      an abstract class for tasks, providing a flexible structure that allowed for
+      creativity and expansion while maintaining a robust foundation.
+  Images: {fileID: 0}
+  Videos: {fileID: 0}
+  ClickableLinks: []

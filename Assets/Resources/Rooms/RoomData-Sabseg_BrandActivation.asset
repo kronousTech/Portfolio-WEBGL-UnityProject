@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-Sabseg_BrandActivation
+  m_EditorClassIdentifier: 
+  ProjectName: Brand Activation
+  ClientName: Sabseg
+  RoomType: 0
+  Tags: 34
+  Texts:
+  - category: 0
+    info: Intern Developer.
+  - category: 1
+    info: "SABSEG is an insurance broker that sponsors several football clubs of
+      the 1st and 2nd division of Portuguese. As part of one of its \u201CCelebrate
+      Football\u201D initiatives, hivolve challenged SABSEG to carry out a brand
+      activation using Virtual Reality in the stadiums of sponsored clubs."
+  - category: 2
+    info: In this innovative project, we crafted new immersive environments, including
+      various football stadiums, diverse player scenarios, and dynamic weather conditions.
+      The core experience revolves around the user's objective of defending penalties,
+      each successful defense resulting in a rewarding outcome.
+  - category: 6
+    info: SteamVR Plugin.
+  - category: 3
+    info: As my initial venture into VR development, the most significant challenge
+      revolved around grasping the workings of VR components.
+  - category: 4
+    info: To comprehend the intricacies of the SteamVR plugin, I extensively read
+      its documentation and experimented with the pre-built scenes included in the
+      plugin. This hands-on approach provided a clearer understanding of its capabilities
+      and functioning.
+  Images: {fileID: 0}
+  Videos: {fileID: 0}
+  ClickableLinks:
+  - Name: 
+    URL: https://github.com/kronousTech/SABSEG-BrandActivation-Build
+    Icon: {fileID: 0}

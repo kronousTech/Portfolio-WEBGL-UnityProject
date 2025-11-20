@@ -1,5 +1,4 @@
 using KronosTech.Data;
-using KronosTech.Services;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -149,7 +148,7 @@ namespace KronosTech.Room.ContentDisplay
             _videoPlayer.targetTexture = renderTexture;
             _videoPlayer.GetComponent<RawImage>().texture = renderTexture;
 
-            var data = m_repository.Data.Videos;
+            var data = m_data.Content;
             if (data.Length == 0)
             {
                 return;
@@ -157,14 +156,14 @@ namespace KronosTech.Room.ContentDisplay
 
             Data = new RoomVideoData[data.Length];
 
-            for (int i = 0; i < Data.Length; i++)
-            {
-                Data[i] = new RoomVideoData(
-                    title: data[i].title,
-                    url: ServiceLocator.Instance.GetWebVideosService().LoadVideo(data[i].asset));
-            }
+            //for (int i = 0; i < Data.Length; i++)
+            //{
+            //    Data[i] = new RoomVideoData(
+            //        title: data[i].title,
+            //        url: ServiceLocator.Instance.GetWebVideosService().LoadVideo(data[i].asset));
+            //}
 
-            Prepare();
+            //Prepare();
          
             OnInitialize?.Invoke(Data.Length);
         }

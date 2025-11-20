@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-Hivolve_PartyGolf
+  m_EditorClassIdentifier: 
+  ProjectName: Party Golf
+  ClientName: Hivolve
+  RoomType: 0
+  Tags: 96
+  Texts:
+  - category: 0
+    info: Intern Developer.
+  - category: 1
+    info: hivolve develops XR (VR/AR/MR) experiences to increase business performance.
+      With businesses in Europe & America, working closely with HR, Sales or Marketing
+      executives.
+  - category: 2
+    info: '''Party Golf'' is a game that I developed during my internship at hivolve.
+      The game was inspired by the golf game ''Golf It'' but following a party theme.'
+  - category: 3
+    info: Though it's been quite a few years since my internship, I distinctly recall
+      struggling with the physics of the golf ball and incorporating Ads into the
+      game.
+  - category: 4
+    info: To overcome these challenges, I spent a significant amount of time delving
+      into Unity documentation until I pinpointed the sources of these issues and
+      could address them effectively.
+  - category: 5
+    info: Being my first mobile game I've developed at the time, it inspired me to
+      learn more about how to create inputs via mobile screen, game optimization,
+      ads and physics.
+  Images: {fileID: 0}
+  Videos: {fileID: 0}
+  ClickableLinks: []

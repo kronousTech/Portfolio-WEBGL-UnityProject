@@ -16294,6 +16294,7 @@ GameObject:
   - component: {fileID: 6896444297880718890}
   - component: {fileID: 6530184104893239348}
   - component: {fileID: 1856104302283059666}
+  - component: {fileID: 7351727914744528176}
   - component: {fileID: 1292540644432511968}
   - component: {fileID: 1269966058159285049}
   m_Layer: 0
@@ -16358,7 +16359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da1db30298f3d84c900cf5da741a5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_repository: {fileID: 7374500422630450165}
+  m_data: {fileID: 0}
   m_indexDisplay: {fileID: 9158108730049639402}
   m_downloadingImageGO: {fileID: 2706808100067341418}
   m_buttonsHolder: {fileID: 4707237772073087981}
@@ -16378,7 +16379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230a59053e34be149bde196605dd048f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_repository: {fileID: 7374500422630450165}
+  m_data: {fileID: 0}
   m_indexDisplay: {fileID: 2793324659255293617}
   m_downloadingImageGO: {fileID: 8374801406466250943}
   m_buttonsHolder: {fileID: 3176344511322484316}
@@ -16388,6 +16389,21 @@ MonoBehaviour:
   _buttonPlay: {fileID: 1583791382030495633}
   _buttonPause: {fileID: 8631889033493307549}
   _buttonRestart: {fileID: 6903805937973630687}
+--- !u!114 &7351727914744528176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5196600039252470121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964dce7d93b01914d99ac029326e2f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_imagesDisplay: {fileID: 6530184104893239348}
+  m_videosDisplay: {fileID: 1856104302283059666}
+  m_repository: {fileID: 7374500422630450165}
 --- !u!114 &1292540644432511968
 MonoBehaviour:
   m_ObjectHideFlags: 0

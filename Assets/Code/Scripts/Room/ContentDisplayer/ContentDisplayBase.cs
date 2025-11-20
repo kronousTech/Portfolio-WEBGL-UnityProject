@@ -1,4 +1,4 @@
-using KronosTech.Data;
+using KronosTech.AssetBundles;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,13 +7,16 @@ namespace KronosTech.Room.ContentDisplay
 {
     public abstract class ContentDisplayBase<T> : MonoBehaviour
     {
+        [Header("Settings")]
+        [SerializeField] protected ContentDataArrayData m_data;
         [Header("References Base")]
-        [SerializeField] protected DataRepositoryRoomData m_repository;
         [SerializeField] private TextMeshProUGUI m_indexDisplay;
         [SerializeField] private GameObject m_downloadingImageGO;
         [SerializeField] private GameObject m_buttonsHolder;
         [SerializeField] private Button m_buttonNext;
         [SerializeField] private Button m_buttonPrev;
+
+        private AssetBundleDownloadAll m_downloader;
 
         protected T[] Data;
 
@@ -23,27 +26,53 @@ namespace KronosTech.Room.ContentDisplay
             get => m_index;
             set
             {
-                m_index = ((value % Data.Length) + Data.Length) % Data.Length;
+                if(Data.Length == 0)
+                {
+                    m_index = 0;
+                }
+                else
+                {
+                    m_index = ((value % Data.Length) + Data.Length) % Data.Length;
+                }
 
                 UpdateDisplay(m_index);
             }
         }
+        private void Awake()
+        {
+            m_downloader = FindFirstObjectByType<AssetBundleDownloadAll>(FindObjectsInactive.Include);
+        }
+
         protected virtual void OnEnable()
         {
-            //AssetsLoader.OnBundlesDownload += PrepareDisplayCallback;
+            m_downloader.OnAllBundlesDownloaded += LoadContentDataCallback;
             m_buttonNext.onClick.AddListener(NextCallback);
             m_buttonPrev.onClick.AddListener(PreviousCallback);
         }
         protected virtual void OnDisable()
         {
-            //AssetsLoader.OnBundlesDownload -= PrepareDisplayCallback;
+            m_downloader.OnAllBundlesDownloaded -= LoadContentDataCallback;
             m_buttonNext.onClick.RemoveListener(NextCallback);
             m_buttonPrev.onClick.RemoveListener(PreviousCallback);
         }
 
+        public void SetData(ContentDataArrayData data)
+        {
+            m_data = data;
+
+            PrepareDisplay();
+        }
+        private void LoadContentDataCallback()
+        {
+            if (m_data != null)
+            {
+                PrepareDisplay();
+            }
+        }
+
         private void NextCallback() => Index++;
         private void PreviousCallback() => Index--;
-        private void PrepareDisplayCallback()
+        private void PrepareDisplay()
         {
             LoadData();
 

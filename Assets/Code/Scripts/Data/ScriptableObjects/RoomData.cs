@@ -1,4 +1,3 @@
-using KronosTech.AssetManagement;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,8 +11,8 @@ namespace KronosTech.Data
         public RoomType RoomType;
         public RoomTagFlags Tags;
         public List<InfoCategory> Texts;
-        public ContentData[] Images;
-        public ContentData[] Videos;
+        public ContentDataArrayData Images;
+        public ContentDataArrayData Videos;
         public RoomClickableLinkData[] ClickableLinks;
 
         public string GetFullName()
@@ -22,7 +21,7 @@ namespace KronosTech.Data
         }
         public bool HasVideos()
         {
-            return Videos.Length > 0;
+            return Videos.Content.Length > 0;
         }
     }
 }

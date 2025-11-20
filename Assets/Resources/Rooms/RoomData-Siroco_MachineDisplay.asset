@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-Siroco_MachineDisplay
+  m_EditorClassIdentifier: 
+  ProjectName: Machine Display
+  ClientName: Siroco
+  RoomType: 0
+  Tags: 2
+  Texts:
+  - category: 0
+    info: Lead developer.
+  - category: 1
+    info: Siroco develops innovative solutions through the combination of years of
+      expertise, attention to detail and fast responses. Siroco also produces high
+      precision mechanical parts and tools, in small series, with technical expertise.
+  - category: 2
+    info: This project was developed for HTC Vive with the purpose of showing the
+      clients machines in high detail as well as containing the necessary information.
+  - category: 6
+    info: SteamVR plugin and later in development Oculus SDK.
+  - category: 3
+    info: "\rGiven the intricate details of the machines, maintaining optimal performance
+      became a significant challenge when presenting them and ensuring a stable frame
+      rate."
+  - category: 4
+    info: To address the optimization challenges, we opted to display only one machine
+      at a time and transition between them this ensured a stable and engaging user
+      experience. This approach led to the creation of a sleek dissolve shader that
+      you can see in action on a video to your right.
+  Images: {fileID: 0}
+  Videos: {fileID: 0}
+  ClickableLinks: []
