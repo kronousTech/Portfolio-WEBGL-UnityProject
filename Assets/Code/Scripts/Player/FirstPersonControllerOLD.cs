@@ -1,4 +1,5 @@
 ﻿using KronosTech.InputSystem;
+using KronosTech.Teleport;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
@@ -8,7 +9,7 @@ using UnityEngine.InputSystem.XR;
 namespace KronosTech.Player
 {
 	[RequireComponent(typeof(CharacterController))]
-	public class FirstPersonControllerOLD : MonoBehaviour
+	public class FirstPersonControllerOLD : MonoBehaviour, ITeleportable
 	{
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
@@ -41,10 +42,8 @@ namespace KronosTech.Player
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
-	
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
-
 
 		private void Start()
 		{
@@ -58,34 +57,10 @@ namespace KronosTech.Player
 		private void Update()
 		{
 			JumpAndGravity();
+
 			Move();
 		}
-		private void LateUpdate()
-		{
-			CameraRotation();
-		}
 		
-		private void CameraRotation()
-		{
-            // if there is an input
-
-            //// if there is an input
-            //if (_input.look.sqrMagnitude >= _threshold)
-			//{
-            //    _cinemachineTargetPitch += Mathf.Clamp(_input.look.y, -_interpolateValue, _interpolateValue) * RotationSpeed;
-			//
-			//	// clamp our pitch rotation
-			//	_cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
-			//
-			//	// Update Cinemachine camera target pitch
-			//	CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(_cinemachineTargetPitch, 0.0f, 0.0f);
-			//
-            //    // rotate the player left and right
-            //    _rotationVelocity = Mathf.Clamp(_input.look.x, -_interpolateValue, _interpolateValue) * RotationSpeed;
-            //    
-			//	transform.Rotate(Vector3.up * _rotationVelocity);
-			//}
-		}
 		private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
@@ -180,23 +155,15 @@ namespace KronosTech.Player
 			}
 		}
 
-		public void Teleport(Transform location)
+        #region ITeleportable
+        public void Teleport(Transform location)
 		{
 			_controller.enabled = false;
 
             transform.position = location.position;
-			transform.eulerAngles = location.eulerAngles;
-
-            //CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(0, 0.0f, 0.0f);
 
             _controller.enabled = true;
         }
-
-        private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
-		{
-			if (lfAngle < -360f) lfAngle += 360f;
-			if (lfAngle > 360f) lfAngle -= 360f;
-			return Mathf.Clamp(lfAngle, lfMin, lfMax);
-		}
+        #endregion
 	}
 }

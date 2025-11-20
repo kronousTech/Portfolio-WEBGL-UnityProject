@@ -1,9 +1,10 @@
 using KronosTech.InputSystem;
+using KronosTech.Teleport;
 using UnityEngine;
 
 namespace KronosTech.Player
 {
-    public class PlayerCameraMovement : MonoBehaviour
+    public class PlayerCameraMovement : MonoBehaviour, ITeleportable
     {
         [Header("Settings")]
         [SerializeField] private Transform m_cameraTransform;
@@ -15,8 +16,6 @@ namespace KronosTech.Player
 
         private float m_targetPitch;
         private float _rotationVelocity;
-
-        private readonly float _interpolateValue = 5.5f;
 
         private void LateUpdate()
         {
@@ -38,5 +37,13 @@ namespace KronosTech.Player
         {
             m_rotationSpeed = speed;
         }
+
+        #region ITeleportable
+        public void Teleport(Transform location)
+        {
+            transform.eulerAngles = location.eulerAngles;
+            m_cameraTransform.eulerAngles = Vector3.zero;
+        }
+        #endregion
     }
 }

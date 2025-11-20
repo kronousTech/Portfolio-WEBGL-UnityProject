@@ -1,7 +1,7 @@
 using KronosTech.Data;
-using KronosTech.Player;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace KronosTech.Teleport
 {
@@ -11,16 +11,24 @@ namespace KronosTech.Teleport
         [SerializeField] private Transform m_parent;
         [SerializeField] private TeleportLocationDisplay m_displayPrefab;
         [SerializeField] private UiDisplay m_teleportPanel;
-        [SerializeField] private FirstPersonControllerOLD m_playerController;
 
-        private readonly Dictionary<Transform, GameObject> _locationsDictionary = new();
+        private readonly Dictionary<Transform, GameObject> m_locationsDictionary = new();
+
+        private IEnumerable<ITeleportable> m_teleportableElements;
+
+        private void Awake()
+        {
+            m_teleportableElements = 
+                FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+                .OfType<ITeleportable>();
+        }
 
         public void AddTeleport(RoomData roomData, Transform teleportLocation)
         {
             var newDisplay = Instantiate(m_displayPrefab, m_parent);
             newDisplay.Initialize(roomData, () => TeleportPlayerCallback(teleportLocation));
 
-            if(!_locationsDictionary.TryAdd(teleportLocation, newDisplay.gameObject))
+            if(!m_locationsDictionary.TryAdd(teleportLocation, newDisplay.gameObject))
             {
                 Debug.LogError($"{nameof(TeleportsManager)}.cs: " +
                     $"Trying to add the same teleport twice.");
@@ -28,17 +36,20 @@ namespace KronosTech.Teleport
         }
         public void RemoveTeleport(Transform location)
         {
-            if(_locationsDictionary.ContainsKey(location) )
+            if(m_locationsDictionary.ContainsKey(location) )
             {
-                Destroy(_locationsDictionary[location]);
+                Destroy(m_locationsDictionary[location]);
             }
 
-            _locationsDictionary.Remove(location);
+            m_locationsDictionary.Remove(location);
         }
 
         private void TeleportPlayerCallback(Transform location)
         {
-            m_playerController.Teleport(location);
+            foreach (var item in m_teleportableElements)
+            {
+                item.Teleport(location);
+            }
             
             m_teleportPanel.ClosePanel();
         }

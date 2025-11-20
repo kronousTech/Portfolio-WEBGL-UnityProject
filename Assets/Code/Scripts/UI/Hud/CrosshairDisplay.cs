@@ -1,14 +1,13 @@
-using Core.Player;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
 
 namespace Ui.Hud
 {
     public class CrosshairDisplay : MonoBehaviour
     {
-        private void Awake()
-        {
-            GameObject.FindObjectOfType<PlayerInteractableObject>().OnLookedAtInteractableObject += SetCrossairState;
-        }
+        [SerializeField] private InputSystemUIInputModule m_inputModule;
+
 
         private void SetCrossairState(bool lookingAtInteractable)
         {

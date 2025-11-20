@@ -1159,7 +1159,7 @@ GameObject:
   - component: {fileID: 4764698532092506123}
   - component: {fileID: 8256073822488871345}
   - component: {fileID: 1880312443645079508}
-  - component: {fileID: 8031976640500846629}
+  - component: {fileID: 8185212919617311029}
   m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
---- !u!114 &8031976640500846629
+--- !u!114 &8185212919617311029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1246,7 +1246,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 787697642497490097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: f607df0b8d0632847af781853b1e1787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -12105,7 +12105,7 @@ GameObject:
   - component: {fileID: 7622337386032214530}
   - component: {fileID: 7218047744772254613}
   - component: {fileID: 54041545006640456}
-  - component: {fileID: 930073698931237394}
+  - component: {fileID: 2837822006968129860}
   m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
@@ -12184,7 +12184,7 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
---- !u!114 &930073698931237394
+--- !u!114 &2837822006968129860
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12193,7 +12193,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3741761107295345485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: f607df0b8d0632847af781853b1e1787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -16331,7 +16331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13bf9c4f660bb7a4a935fc4751be4616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_setOnAwake: {fileID: 0}
 --- !u!114 &6896444297880718890
 MonoBehaviour:
   m_ObjectHideFlags: 0
