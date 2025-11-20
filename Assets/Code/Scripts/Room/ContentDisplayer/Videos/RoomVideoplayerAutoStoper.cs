@@ -27,7 +27,7 @@ public class RoomVideoplayerAutoStoper : MonoBehaviour
     }
     private void Awake()
     {
-        m_playerTF = FindFirstObjectByType<FirstPersonController>(FindObjectsInactive.Include).transform;
+        m_playerTF = FindFirstObjectByType<FirstPersonControllerOLD>(FindObjectsInactive.Include).transform;
     }
 
     private IEnumerator CheckDistance()

@@ -11,7 +11,7 @@ namespace KronosTech.Teleport
         [SerializeField] private Transform m_parent;
         [SerializeField] private TeleportLocationDisplay m_displayPrefab;
         [SerializeField] private UiDisplay m_teleportPanel;
-        [SerializeField] private FirstPersonController m_playerController;
+        [SerializeField] private FirstPersonControllerOLD m_playerController;
 
         private readonly Dictionary<Transform, GameObject> _locationsDictionary = new();
 

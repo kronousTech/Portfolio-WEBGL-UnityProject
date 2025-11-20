@@ -8,7 +8,7 @@ using UnityEngine.InputSystem.XR;
 namespace KronosTech.Player
 {
 	[RequireComponent(typeof(CharacterController))]
-	public class FirstPersonController : MonoBehaviour
+	public class FirstPersonControllerOLD : MonoBehaviour
 	{
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
@@ -16,8 +16,6 @@ namespace KronosTech.Player
 		[Tooltip("Sprint speed of the character in m/s")]
 		public float SprintSpeed = 6.0f;
 		[Tooltip("Rotation speed of the character")]
-		public float RotationSpeed = 1.0f;
-		[Tooltip("Acceleration and deceleration")]
 		public float SpeedChangeRate = 10.0f;
 
 		[Space(10)]
@@ -32,20 +30,10 @@ namespace KronosTech.Player
 		[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
 		public float FallTimeout = 0.15f;
 
-		[Header("Cinemachine")]
-		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
-		public GameObject CinemachineCameraTarget;
-		[Tooltip("How far in degrees can you move the camera up")]
-		public float TopClamp = 90.0f;
-		[Tooltip("How far in degrees can you move the camera down")]
-		public float BottomClamp = -90.0f;
-
-		// cinemachine
-		private float _cinemachineTargetPitch;
-
+		[Header("References")]
+		
 		// player
 		private float _speed;
-		private float _rotationVelocity;
 		private float _verticalVelocity;
 		private float _terminalVelocity = 53.0f;
 
@@ -54,34 +42,14 @@ namespace KronosTech.Player
 		private float _fallTimeoutDelta;
 
 	
-#if ENABLE_INPUT_SYSTEM
-		private PlayerInputt _playerInput;
-#endif
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
-		private GameObject _mainCamera;
 
-		private const float _threshold = 0.00f;
 
-        private readonly float _interpolateValue = 5.5f; //8
-
-        private void Awake()
-		{
-			// get a reference to our main camera
-			if (_mainCamera == null)
-			{
-				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-			}
-		}
 		private void Start()
 		{
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
-#if ENABLE_INPUT_SYSTEM
-			_playerInput = GetComponent<PlayerInputt>();
-#else
-			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
-#endif
 
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
@@ -99,21 +67,24 @@ namespace KronosTech.Player
 		
 		private void CameraRotation()
 		{
-			// if there is an input
-			if (_input.look.sqrMagnitude >= _threshold)
-			{
-                _cinemachineTargetPitch += Mathf.Clamp(_input.look.y, -_interpolateValue, _interpolateValue) * RotationSpeed;
+            // if there is an input
 
-				// clamp our pitch rotation
-				_cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
-
-				// Update Cinemachine camera target pitch
-				CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(_cinemachineTargetPitch, 0.0f, 0.0f);
-
-                // rotate the player left and right
-                _rotationVelocity = Mathf.Clamp(_input.look.x, -_interpolateValue, _interpolateValue) * RotationSpeed;
-                transform.Rotate(Vector3.up * _rotationVelocity);
-			}
+            //// if there is an input
+            //if (_input.look.sqrMagnitude >= _threshold)
+			//{
+            //    _cinemachineTargetPitch += Mathf.Clamp(_input.look.y, -_interpolateValue, _interpolateValue) * RotationSpeed;
+			//
+			//	// clamp our pitch rotation
+			//	_cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
+			//
+			//	// Update Cinemachine camera target pitch
+			//	CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(_cinemachineTargetPitch, 0.0f, 0.0f);
+			//
+            //    // rotate the player left and right
+            //    _rotationVelocity = Mathf.Clamp(_input.look.x, -_interpolateValue, _interpolateValue) * RotationSpeed;
+            //    
+			//	transform.Rotate(Vector3.up * _rotationVelocity);
+			//}
 		}
 		private void Move()
 		{
@@ -216,7 +187,7 @@ namespace KronosTech.Player
             transform.position = location.position;
 			transform.eulerAngles = location.eulerAngles;
 
-            CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(0, 0.0f, 0.0f);
+            //CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(0, 0.0f, 0.0f);
 
             _controller.enabled = true;
         }

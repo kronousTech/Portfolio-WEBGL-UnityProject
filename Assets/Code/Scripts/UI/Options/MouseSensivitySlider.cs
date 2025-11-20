@@ -8,27 +8,29 @@ namespace Ui.Options
     public class MouseSensivitySlider : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _sensivityText;
-        private FirstPersonController _firstPersonController;
+        
+        private PlayerCameraMovement m_cameraMovement;
+
         private void Awake()
         {
-            _firstPersonController = GameObject.FindObjectOfType<FirstPersonController>();
-            if (_firstPersonController == null)
+            m_cameraMovement = FindFirstObjectByType<PlayerCameraMovement>();
+            if (m_cameraMovement == null)
             {
                 Debug.LogError("Didn't found FirstPersonController on MouseSensivitySlider");
                 return;
             }
 
             GetComponent<Slider>().onValueChanged.AddListener(SetMouseSensivity);
-            GetComponent<Slider>().value = _firstPersonController.RotationSpeed / 10f;
+            GetComponent<Slider>().value = m_cameraMovement.GetRotationSpeed() / 10f;
         }
 
         private void SetMouseSensivity(float value)
         {
             var newMouseSensivity = value * 10f;
 
-            _firstPersonController.RotationSpeed = newMouseSensivity;
+            m_cameraMovement.SetRotationSpeed(newMouseSensivity);
 
-            _sensivityText.text = _firstPersonController.RotationSpeed.ToString("0.0#");
+            _sensivityText.text = m_cameraMovement.GetRotationSpeed().ToString("0.0#");
         }
     }
 }

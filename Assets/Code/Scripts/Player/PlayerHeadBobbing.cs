@@ -8,11 +8,11 @@ namespace KronosTech.Player
         [SerializeField] private Animator _animator;
         [SerializeField] private bool _state;
 
-        private FirstPersonController _controller;
+        private FirstPersonControllerOLD _controller;
 
         private void Awake()
         {
-            _controller = GetComponent<FirstPersonController>();
+            _controller = GetComponent<FirstPersonControllerOLD>();
 
             SetAnimatorOnGroundState(false);
             SetAnimatorWakingState(false);
