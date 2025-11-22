@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectName: 360 Environments
   ClientName: Essani
-  RoomType: 1
   Tags: 72
   Texts:
   - category: 0
@@ -38,7 +37,7 @@ MonoBehaviour:
       high, and cutting it in half significantly reduced the build size. This adjustment
       resulted in smoother application performance with almost no noticeable difference
       in visual quality.
-  Images: {fileID: 0}
+  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
   Videos: {fileID: 0}
   ClickableLinks:
   - Name: 

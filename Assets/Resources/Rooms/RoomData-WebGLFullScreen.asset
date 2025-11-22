@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectName: WebGL Fullscreen
   ClientName: Unity Store
-  RoomType: 1
   Tags: 152
   Texts:
   - category: 0
@@ -38,7 +37,7 @@ MonoBehaviour:
       valuable insights into Unity's publishing guidelines. Additionally, delving
       into the code behind the WebGL templates provided me with a comprehensive understanding
       of the technical aspects involved in it.
-  Images: {fileID: 0}
+  Images: {fileID: 11400000, guid: 848b73b8c834c824f8345ec96a5e665e, type: 2}
   Videos: {fileID: 0}
   ClickableLinks:
   - Name: 

@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectName: Melides Pottery AR
   ClientName: Grandola
-  RoomType: 0
   Tags: 68
   Texts:
   - category: 0
@@ -33,6 +32,6 @@ MonoBehaviour:
       if the marker temporarily lost tracking, the object would persist in its last
       known position. This helped prevent the object from disappearing due to minor
       tracking glitches when the marker detection faltered.
-  Images: {fileID: 0}
+  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
   Videos: {fileID: 0}
   ClickableLinks: []

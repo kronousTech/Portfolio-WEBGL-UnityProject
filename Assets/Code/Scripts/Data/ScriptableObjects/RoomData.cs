@@ -8,7 +8,6 @@ namespace KronosTech.Data
     {
         public string ProjectName;
         public string ClientName;
-        public RoomType RoomType;
         public RoomTagFlags Tags;
         public List<InfoCategory> Texts;
         public ContentDataArrayData Images;

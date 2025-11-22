@@ -1,4 +1,4 @@
-using KendirStudios.CustomPackages.Utilities.Extensions;
+using KronosTech.CustomPackage.Utilities.Extensions;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;

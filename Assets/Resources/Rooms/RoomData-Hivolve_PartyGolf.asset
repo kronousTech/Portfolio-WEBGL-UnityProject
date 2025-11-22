@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectName: Party Golf
   ClientName: Hivolve
-  RoomType: 0
   Tags: 96
   Texts:
   - category: 0
@@ -38,6 +37,6 @@ MonoBehaviour:
     info: Being my first mobile game I've developed at the time, it inspired me to
       learn more about how to create inputs via mobile screen, game optimization,
       ads and physics.
-  Images: {fileID: 0}
+  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
   Videos: {fileID: 0}
   ClickableLinks: []

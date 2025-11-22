@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectName: 630 VideoPlayer
   ClientName: Valongo
-  RoomType: 1
   Tags: 2
   Texts:
   - category: 0
@@ -36,6 +35,6 @@ MonoBehaviour:
       into the sphere material. This render texture was also applied to the video
       player. While in retrospect, this solution seems straightforward, at the time,
       with less experience in Unity, it took some time to figure out.
-  Images: {fileID: 0}
+  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
   Videos: {fileID: 0}
   ClickableLinks: []

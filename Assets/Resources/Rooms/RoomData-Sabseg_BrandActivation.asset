@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectName: Brand Activation
   ClientName: Sabseg
-  RoomType: 0
   Tags: 34
   Texts:
   - category: 0
@@ -39,7 +38,7 @@ MonoBehaviour:
       its documentation and experimented with the pre-built scenes included in the
       plugin. This hands-on approach provided a clearer understanding of its capabilities
       and functioning.
-  Images: {fileID: 0}
+  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
   Videos: {fileID: 0}
   ClickableLinks:
   - Name: 

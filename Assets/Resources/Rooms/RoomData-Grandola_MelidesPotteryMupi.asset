@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectName: Melides Pottery Mupi
   ClientName: Grandola
-  RoomType: 0
   Tags: 96
   Texts:
   - category: 0
@@ -43,6 +42,6 @@ MonoBehaviour:
       word, this made the need for restarts very rare. After placing all the words,
       I filled the remaining empty squares with random letters and then displayed
       the grid on the screen."
-  Images: {fileID: 0}
+  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
   Videos: {fileID: 0}
   ClickableLinks: []

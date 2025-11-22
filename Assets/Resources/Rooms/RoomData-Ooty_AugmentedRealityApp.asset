@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectName: Augmented Reality App
   ClientName: Ooty
-  RoomType: 0
   Tags: 68
   Texts:
   - category: 0
@@ -45,7 +44,7 @@ MonoBehaviour:
       these scripts into the scene and adjusted them to coexist harmoniously. Additionally,
       I implemented a script to detect whether the app was developed for iOS or Android,
       enabling or disabling the necessary scripts accordingly.
-  Images: {fileID: 0}
+  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
   Videos: {fileID: 0}
   ClickableLinks:
   - Name: 

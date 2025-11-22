@@ -1,4 +1,6 @@
 using KronosTech.AssetBundles;
+using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,7 +20,7 @@ namespace KronosTech.Room.ContentDisplay
 
         private AssetBundleDownloadAll m_downloader;
 
-        protected T[] Data;
+        protected List<T> Data;
 
         private int m_index;
         protected int Index
@@ -26,16 +28,16 @@ namespace KronosTech.Room.ContentDisplay
             get => m_index;
             set
             {
-                if(Data.Length == 0)
+                if(Data.Count == 0)
                 {
                     m_index = 0;
                 }
                 else
                 {
-                    m_index = ((value % Data.Length) + Data.Length) % Data.Length;
+                    m_index = ((value % Data.Count) + Data.Count) % Data.Count;
                 }
 
-                UpdateDisplay(m_index);
+                UpdateDisplay();
             }
         }
         private void Awake()
@@ -74,21 +76,22 @@ namespace KronosTech.Room.ContentDisplay
         private void PreviousCallback() => Index--;
         private void PrepareDisplay()
         {
-            LoadData();
+            LoadData(() =>
+            {
+                Index = 0;
 
-            Index = 0;
-
-            m_downloadingImageGO.SetActive(false);
-            m_buttonsHolder.SetActive(Data.Length > 1);
+                m_downloadingImageGO.SetActive(false);
+                m_buttonsHolder.SetActive(Data.Count > 1);
+            });
         }
-        private void UpdateDisplay(int index)
+        private void UpdateDisplay()
         {
-            m_indexDisplay.text = Data.Length > 1 ? (m_index + 1).ToString() : string.Empty;
+            m_indexDisplay.text = Data.Count > 1 ? (m_index + 1).ToString() : string.Empty;
 
-            ShowContent(index);
+            ShowContent(m_index);
         }
 
-        protected abstract void LoadData();
+        protected abstract void LoadData(Action callback);
         protected abstract void ShowContent(int index);
     }
 }

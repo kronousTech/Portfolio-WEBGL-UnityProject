@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectName: Melides Pottery VR
   ClientName: Grandola
-  RoomType: 0
   Tags: 2
   Texts:
   - category: 0
@@ -35,6 +34,6 @@ MonoBehaviour:
       iterating to the next one once the current task was finished. I established
       an abstract class for tasks, providing a flexible structure that allowed for
       creativity and expansion while maintaining a robust foundation.
-  Images: {fileID: 0}
+  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
   Videos: {fileID: 0}
   ClickableLinks: []

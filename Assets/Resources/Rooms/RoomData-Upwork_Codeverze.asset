@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectName: External API Integration
   ClientName: Codeverze
-  RoomType: 1
   Tags: 200
   Texts:
   - category: 0
@@ -39,7 +38,7 @@ MonoBehaviour:
       LinkedIn profile and website through the links bellow."
   - category: 7
     info: October 12, 2022 - Ongoing.
-  Images: {fileID: 0}
+  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
   Videos: {fileID: 0}
   ClickableLinks:
   - Name: 

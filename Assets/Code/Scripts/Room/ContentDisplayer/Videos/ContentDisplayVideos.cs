@@ -1,3 +1,4 @@
+using KronosTech.AssetBundles;
 using KronosTech.Data;
 using System;
 using System.Collections;
@@ -14,6 +15,9 @@ namespace KronosTech.Room.ContentDisplay
         [SerializeField] private Button _buttonPlay;
         [SerializeField] private Button _buttonPause;
         [SerializeField] private Button _buttonRestart;
+
+        private int m_videosToLoadCount = 0;
+        private int m_loadedVideosCount = 0;
 
         private static Action<ContentDisplayVideos> OnVideoStart;
 
@@ -72,7 +76,7 @@ namespace KronosTech.Room.ContentDisplay
 
         private void Prepare()
         {
-            if (Data.Length >= 1)
+            if (Data.Count >= 1)
             {
                 Index = 0;
             }
@@ -139,10 +143,34 @@ namespace KronosTech.Room.ContentDisplay
                 _videoPlayer.Prepare();
         }
 
-        #region ContentDisplayBase
-        protected override void LoadData()
+        private void SaveVideoClipToDataCallback(AssetBundleLoadEventArgs<VideoClip> args, int index, Action callback)
         {
-            _videoPlayer.source = VideoSource.Url;
+            m_loadedVideosCount += 1;
+
+            if (!args.IsSuccessful)
+            {
+                Debug.LogError($"{nameof(ContentDisplayImages)}.cs: " +
+                    $"Failed to load image at index {index}.");
+
+                return;
+            }
+
+            Data.Add(new RoomVideoData(m_data.Content[index].Title, args.Asset));
+
+            if (m_loadedVideosCount >= m_videosToLoadCount)
+            {
+                Debug.Log(m_loadedVideosCount + "" + m_videosToLoadCount);
+
+                OnInitialize?.Invoke(Data.Count);
+
+                callback?.Invoke();
+            }
+        }
+
+        #region ContentDisplayBase
+        protected override void LoadData(Action callback)
+        {
+            _videoPlayer.source = VideoSource.VideoClip;
 
             var renderTexture = new RenderTexture(800, 600, 0);
             _videoPlayer.targetTexture = renderTexture;
@@ -154,24 +182,24 @@ namespace KronosTech.Room.ContentDisplay
                 return;
             }
 
-            Data = new RoomVideoData[data.Length];
+            m_videosToLoadCount = data.Length;
+            m_loadedVideosCount = 0;
 
-            //for (int i = 0; i < Data.Length; i++)
-            //{
-            //    Data[i] = new RoomVideoData(
-            //        title: data[i].title,
-            //        url: ServiceLocator.Instance.GetWebVideosService().LoadVideo(data[i].asset));
-            //}
+            Data = new();
 
-            //Prepare();
-         
-            OnInitialize?.Invoke(Data.Length);
+            for (int i = 0; i < data.Length; i++)
+            {
+                var index = i;
+                var asset = m_data.Content[i].Asset;
+
+                AssetBundlesRequest.Load<VideoClip>(asset.Bundle, asset.Name, (args) => SaveVideoClipToDataCallback(args, index, callback));
+            }
         }
         protected override void ShowContent(int index)
         {
             OnVideoChange?.Invoke(index, Data[index].Title);
 
-            _videoPlayer.url = Data[index].Url;
+            _videoPlayer.clip = Data[index].VideoClip;
 
             if (_videoPlayer.isActiveAndEnabled)
             {

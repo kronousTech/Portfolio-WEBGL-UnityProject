@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectName: Forest Runners
   ClientName: Goldenergy
-  RoomType: 1
   Tags: 96
   Texts:
   - category: 0
@@ -46,6 +45,6 @@ MonoBehaviour:
       obstacles would also need to disappear after the player dodges them to have
       room for new ones to spawn. This leads me to know more about object pooling
       and the benefits it was on optimization."
-  Images: {fileID: 0}
+  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
   Videos: {fileID: 0}
   ClickableLinks: []

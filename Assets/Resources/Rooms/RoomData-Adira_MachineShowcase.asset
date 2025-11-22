@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectName: Machine Showcase
   ClientName: Adira
-  RoomType: 0
   Tags: 2
   Texts:
   - category: 0
@@ -41,6 +40,6 @@ MonoBehaviour:
     info: To improve performance, several LOD's were created for the models present
       in the scene. With the addition of LOD's and a downgrade in the quality settings,
       we managed to maintain a consistent frame rate throughout the experience.
-  Images: {fileID: 0}
+  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
   Videos: {fileID: 0}
   ClickableLinks: []
