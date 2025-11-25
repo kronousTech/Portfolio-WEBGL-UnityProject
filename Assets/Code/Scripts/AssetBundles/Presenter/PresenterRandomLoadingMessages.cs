@@ -1,4 +1,5 @@
 using KronosTech.CustomPackage.Utilities.Extensions;
+using KronosTech.Data;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
@@ -39,7 +40,7 @@ namespace KronosTech.AssetBundles
 
         private void ChangeToRandomMessage()
         {
-            m_messageDisplay.text = m_messagesData.Strings.GetRandomElement();
+            m_messageDisplay.text = m_messagesData.Data.GetRandomElement();
         }
 
         [Button("Set random message")]

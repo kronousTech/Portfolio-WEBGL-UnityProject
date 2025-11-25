@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c165b9ca27f042901d22b918e029b, type: 3}
+  m_Name: LoadingScreenMessagesData
+  m_EditorClassIdentifier: 
+  m_data:
+  - "Compiling scripts because you changed one comma\u2026"
+  - "Trying to remember why this script exists\u2026"
+  - "Injecting another NullReferenceException\u2026"
+  - "Running your code through the anxiety compiler\u2026"
+  - Checking if this will cause a circular dependency.
+  - "Entering Play Mode\u2026 fingers crossed!"
+  - "Spawning debug cubes\u2026 just in case."
+  - "Debug.Log(\u2018Loading\u2026\u2019);"
+  - Ignoring 67 warnings like a pro.
+  - "Fixing materials after URP migration\u2026"
+  - Normalizing normals that refuse to be normal.
+  - "Resolving 134,582 Addressables dependencies\u2026"
+  - Downloading bundles of despair.
+  - "Optimizing\u2026 but we both know it won\u2019t help."
+  - "Profiling\u2026 ignoring the red spikes."
+  - Applying 200MB of shaders to a 10MB build
+  - Chasing garbage collector with a broom.

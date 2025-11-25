@@ -1,12 +1,13 @@
+using KronosTech.Room.ContentViewer;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "StringArrayData", menuName = "Scriptable Objects/StringArrayData")]
-public class StringArrayData : ScriptableObject
+namespace KronosTech.Data
 {
-    [SerializeField] private string[] m_strings;
-
-    public string[] Strings
+    [CreateAssetMenu(
+        fileName = "StringArray", 
+        menuName = "Scriptable Objects/String Array Data")]
+    public class StringArrayData : DataArrayHolder<string>
     {
-        get { return m_strings; }
+        
     }
 }

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec09539df3cb7449ac4891ca8607fc0, type: 3}
   m_Name: ContentDataArray-WebGLFullscreen-Images
   m_EditorClassIdentifier: 
-  m_content:
+  m_data:
   - Title: 
-    Asset:
+    Data:
       Bundle: portfolio/webgltemplate
-      Name: 'page.png '
+      Name: page

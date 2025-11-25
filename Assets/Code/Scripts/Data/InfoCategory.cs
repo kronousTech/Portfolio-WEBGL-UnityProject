@@ -6,7 +6,7 @@ namespace KronosTech.Data
     [Serializable]
     public struct InfoCategory
     {
-        public InfoCategories category;
+        public CategoryType category;
         [TextArea(15, 75)] public string info;
     }
 }

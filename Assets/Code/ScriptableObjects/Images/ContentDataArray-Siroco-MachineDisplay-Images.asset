@@ -12,24 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec09539df3cb7449ac4891ca8607fc0, type: 3}
   m_Name: ContentDataArray-Siroco-MachineDisplay-Images
   m_EditorClassIdentifier: 
-  m_content:
+  m_data:
   - Title: 
-    Asset:
+    Data:
       Bundle: portfolio/siroco
-      Name: Screenshot_1
+      Name: screenshot_1
   - Title: 
-    Asset:
+    Data:
       Bundle: portfolio/siroco
-      Name: Screenshot_2
+      Name: screenshot_2
   - Title: 
-    Asset:
+    Data:
       Bundle: portfolio/siroco
-      Name: Screenshot_3
+      Name: screenshot_3
   - Title: 
-    Asset:
+    Data:
       Bundle: portfolio/siroco
-      Name: Screenshot_4
+      Name: screenshot_4
   - Title: 
-    Asset:
+    Data:
       Bundle: portfolio/siroco
-      Name: Screenshot_5
+      Name: screenshot_5
