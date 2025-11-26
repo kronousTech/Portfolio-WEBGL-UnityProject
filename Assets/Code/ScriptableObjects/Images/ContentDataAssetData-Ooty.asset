@@ -21,11 +21,11 @@ MonoBehaviour:
     Data:
       Bundle: portfolio/ooty
       Name: House 2
-  - Title: 
+  - Title: House Editor
     Data:
       Bundle: portfolio/ooty
       Name: House Editor
-  - Title: 
+  - Title: AR Interior View
     Data:
       Bundle: portfolio/ooty
       Name: House 1

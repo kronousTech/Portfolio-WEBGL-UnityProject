@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: ContentDataAssetData-HivolvePartyGolf
   m_EditorClassIdentifier: 
   m_data:
-  - Title: 
+  - Title: Gamplay
     Data:
       Bundle: portfolio/hivolve_partygolf
       Name: Gameplay
-  - Title: 
+  - Title: Shop
     Data:
       Bundle: portfolio/hivolve_partygolf
       Name: Shop
-  - Title: 
+  - Title: Main Menu
     Data:
       Bundle: portfolio/hivolve_partygolf
       Name: MainMenu
-  - Title: 
+  - Title: Local Multiplayer
     Data:
       Bundle: portfolio/hivolve_partygolf
       Name: Local Multiplayer
-  - Title: 
+  - Title: Level Select
     Data:
       Bundle: portfolio/hivolve_partygolf
       Name: Level Select
