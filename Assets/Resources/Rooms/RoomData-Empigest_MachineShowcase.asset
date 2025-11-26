@@ -38,6 +38,6 @@ MonoBehaviour:
     info: To tackle this issue, I had to enhance my programming skills and develop
       the behavior of each machine with minimal dependencies to ensure a straightforward
       and smooth-running system.
-  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
+  Images: {fileID: 11400000, guid: 0dd79ca3ed491084aaf912ad3f1d224d, type: 2}
   Videos: {fileID: 0}
   ClickableLinks: []

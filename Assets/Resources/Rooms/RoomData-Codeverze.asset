@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
-  m_Name: RoomData-Upwork_Codeverze
+  m_Name: RoomData-Codeverze
   m_EditorClassIdentifier: 
   ProjectName: External API Integration
   ClientName: Codeverze
-  Tags: 200
+  Tags: 136
   Texts:
   - category: 0
     info: Unity Developer
@@ -38,7 +38,7 @@ MonoBehaviour:
       LinkedIn profile and website through the links bellow."
   - category: 7
     info: October 12, 2022 - Ongoing.
-  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
+  Images: {fileID: 11400000, guid: 30cc639f0b8d7dd40a3f47b915fd0164, type: 2}
   Videos: {fileID: 0}
   ClickableLinks:
   - Name: 

@@ -57,6 +57,14 @@ namespace KronosTech.Room.ContentViewer
 
         public void SetData(DataArrayHolder<T> data)
         {
+            if(data == null)
+            {
+                Debug.LogError($"ContentViewerBase.cs: " +
+                    $"Data is null.");
+
+                return;
+            }
+
             m_dataHolder = data;
 
             PrepareDisplay();

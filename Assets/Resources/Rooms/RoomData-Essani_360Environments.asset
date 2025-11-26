@@ -37,7 +37,7 @@ MonoBehaviour:
       high, and cutting it in half significantly reduced the build size. This adjustment
       resulted in smoother application performance with almost no noticeable difference
       in visual quality.
-  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
+  Images: {fileID: 11400000, guid: 26f166a90aad30449a632dadd7d9db40, type: 2}
   Videos: {fileID: 0}
   ClickableLinks:
   - Name: 

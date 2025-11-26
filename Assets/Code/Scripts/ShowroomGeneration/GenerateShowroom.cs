@@ -27,14 +27,14 @@ namespace KronosTech.ShowroomGeneration
         [Header("Debug View")]
         [SerializeField, ReadOnly] private RoomData[] m_loadedData;
 
-        private Dictionary<RoomData, PlaceableRoom> m_rooms = new();
+        private readonly Dictionary<RoomData, PlaceableRoom> m_rooms = new();
 
-        private readonly string m_dataFolderPath = "RoomsData/";
+        private readonly string m_dataFolderPath = "Rooms/";
 
         public event Action OnGenerationStart;
         public event Action<bool> OnGenerationEnd;
 
-        private bool m_isBuilding;
+        private bool m_isGeneratingRoom;
 
         private void OnEnable()
         {
@@ -91,7 +91,7 @@ namespace KronosTech.ShowroomGeneration
 
         private IEnumerator GenerateRooms() 
         {
-            if (m_isBuilding)
+            if (m_isGeneratingRoom)
             {
                 yield break;
             }
@@ -111,9 +111,7 @@ namespace KronosTech.ShowroomGeneration
             GalleryTileExit nextExit = null;
             var roomIndex = 0;
 
-            m_isBuilding = true;
-
-            yield return null;
+            m_isGeneratingRoom = true;
 
             while (remainingRooms > 0)
             {
@@ -121,8 +119,6 @@ namespace KronosTech.ShowroomGeneration
                 corridor.Place(nextExit != null ? nextExit : m_start);
 
                 nextExit = corridor.GetExit;
-
-                yield return null;
 
                 // Instantiate Tile
                 var currentTile = (PlaceableTile)m_tilesPool.GetRandomObject();
@@ -155,7 +151,7 @@ namespace KronosTech.ShowroomGeneration
                 yield return null;
             }
 
-            m_isBuilding = false;
+            m_isGeneratingRoom = false;
 
             OnGenerationEnd?.Invoke(availableRooms.Length > 0);
         }

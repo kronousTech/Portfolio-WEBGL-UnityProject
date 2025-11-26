@@ -21,7 +21,7 @@ namespace KronosTech.Data
         }
         public bool HasVideos()
         {
-            return Videos.Data.Length > 0;
+            return Videos != null && Videos.Data != null && Videos.Data.Length > 0;
         }
     }
 }

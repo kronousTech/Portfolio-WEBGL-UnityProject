@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
   m_Name: RoomData-Valongo_360VideoPlayer
   m_EditorClassIdentifier: 
-  ProjectName: 630 VideoPlayer
+  ProjectName: 360 VideoPlayer
   ClientName: Valongo
   Tags: 2
   Texts:
@@ -35,6 +35,6 @@ MonoBehaviour:
       into the sphere material. This render texture was also applied to the video
       player. While in retrospect, this solution seems straightforward, at the time,
       with less experience in Unity, it took some time to figure out.
-  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
+  Images: {fileID: 11400000, guid: 3d2b29b2094831a49a43849af744c279, type: 2}
   Videos: {fileID: 0}
   ClickableLinks: []

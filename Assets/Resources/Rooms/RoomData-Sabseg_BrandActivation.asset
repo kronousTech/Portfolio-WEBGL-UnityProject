@@ -38,8 +38,8 @@ MonoBehaviour:
       its documentation and experimented with the pre-built scenes included in the
       plugin. This hands-on approach provided a clearer understanding of its capabilities
       and functioning.
-  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
-  Videos: {fileID: 0}
+  Images: {fileID: 11400000, guid: d3d8b909e22d17c4495a74bfd9d25d95, type: 2}
+  Videos: {fileID: 11400000, guid: b50760c5f84bdee4e92e58a357a5ab54, type: 2}
   ClickableLinks:
   - Name: 
     URL: https://github.com/kronousTech/SABSEG-BrandActivation-Build

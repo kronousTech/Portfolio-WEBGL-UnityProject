@@ -46,7 +46,7 @@ MonoBehaviour:
       between the marker and the developer. This allowed us to save the position
       for later use during development when adding the models. While not flawless,
       it significantly expedited and simplified the initial placement of the models.
-  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
+  Images: {fileID: 11400000, guid: d795b865f2302b946be39061066e6492, type: 2}
   Videos: {fileID: 0}
   ClickableLinks:
   - Name: 

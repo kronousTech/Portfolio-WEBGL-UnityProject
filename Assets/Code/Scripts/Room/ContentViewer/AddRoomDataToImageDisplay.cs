@@ -20,7 +20,7 @@ public class AddRoomDataToImageDisplay : MonoBehaviour
 
     private void SetDataToDisplaysCallback(RoomData data)
     {
-        //m_imagesDisplay.SetData(data.Images);
-        //m_videosDisplay?.SetData(data.Videos);
+        m_imagesDisplay.SetData(data.Images);
+        m_videosDisplay?.SetData(data.Videos);
     }
 }

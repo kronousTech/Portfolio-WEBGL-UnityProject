@@ -38,7 +38,7 @@ MonoBehaviour:
       LinkedIn profile and website through the links bellow."
   - category: 7
     info: October 12, 2022 - Ongoing.
-  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
+  Images: {fileID: 11400000, guid: 1c0daf9f90c71ef45a445eb5b5771fb2, type: 2}
   Videos: {fileID: 0}
   ClickableLinks:
   - Name: 

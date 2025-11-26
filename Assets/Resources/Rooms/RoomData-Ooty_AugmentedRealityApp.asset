@@ -44,8 +44,8 @@ MonoBehaviour:
       these scripts into the scene and adjusted them to coexist harmoniously. Additionally,
       I implemented a script to detect whether the app was developed for iOS or Android,
       enabling or disabling the necessary scripts accordingly.
-  Images: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
-  Videos: {fileID: 0}
+  Images: {fileID: 11400000, guid: ed77e4fcd5c8b1d4cb4da1e7c429f129, type: 2}
+  Videos: {fileID: 11400000, guid: 0576bea9737b76a4dba294f555ccc059, type: 2}
   ClickableLinks:
   - Name: 
     URL: https://play.google.com/store/apps/details?id=com.hivolve.ooty&hl=pt_PT&gl=US
