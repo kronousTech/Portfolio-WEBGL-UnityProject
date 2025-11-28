@@ -3,9 +3,8 @@ using UnityEngine.Events;
 
 public class OnVisibilityEvents : MonoBehaviour
 {
-    [SerializeField] private UnityEvent<bool> OnVisible;
-
-    [SerializeField] private UnityEvent OnBecameVisibleEvent;
+    public UnityEvent<bool> OnVisible;
+    public UnityEvent OnBecameVisibleEvent;
 
     private void OnBecameVisible()
     {

@@ -96267,8 +96267,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_dataHolder: {fileID: 11400000, guid: 022b2e2a8e7e17e4aad9fad807ce5adc, type: 2}
-  m_indexDisplay: {fileID: 466268130}
-  m_titleDisplay: {fileID: 1283663825}
   m_downloadingImageGO: {fileID: 888232443}
   m_buttonsHolder: {fileID: 1194004171}
   m_buttonNext: {fileID: 2131360265}

@@ -1,17 +1,16 @@
 using KronosTech.AssetBundles;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace KronosTech.Room.ContentViewer
 {
-    public abstract class ContentViewerBase<T> : MonoBehaviour
+    public abstract class ContentViewerBase<T> : MonoBehaviour where T : ContentData
     {
         [Header("Settings")]
         [SerializeField] protected DataArrayHolder<T> m_dataHolder;
         [Header("References Base")]
-        [SerializeField] private TextMeshProUGUI m_indexDisplay;
-        [SerializeField] protected TextMeshProUGUI m_titleDisplay;
         [SerializeField] private GameObject m_downloadingImageGO;
         [SerializeField] private GameObject m_buttonsHolder;
         [SerializeField] private Button m_buttonNext;
@@ -34,10 +33,15 @@ namespace KronosTech.Room.ContentViewer
                     m_index = ((value % m_dataHolder.Data.Length) + m_dataHolder.Data.Length) % m_dataHolder.Data.Length;
                 }
 
-                UpdateDisplay();
+                ShowContent(m_dataHolder.Data[m_index] as T);
+
+                OnAssetChange?.Invoke(new(m_index, m_dataHolder.Data[m_index]));
             }
         }
-        private void Awake()
+
+        public event Action<ContentViewerOnAssetChangeEventArgs> OnAssetChange;
+
+        protected virtual void Awake()
         {
             m_downloader = FindFirstObjectByType<AssetBundleDownloadAll>(FindObjectsInactive.Include);
         }
@@ -59,7 +63,7 @@ namespace KronosTech.Room.ContentViewer
         {
             if(data == null)
             {
-                Debug.LogError($"ContentViewerBase.cs: " +
+                Debug.LogError($"{nameof(ContentViewerBase<ContentData>)}.cs: " +
                     $"Data is null.");
 
                 return;
@@ -88,9 +92,7 @@ namespace KronosTech.Room.ContentViewer
         }
         private void UpdateDisplay()
         {
-            m_indexDisplay.text = m_dataHolder.Data.Length > 1 ? (m_index + 1).ToString() : string.Empty;
-
-            ShowContent(m_dataHolder.Data[m_index]);
+            //m_indexDisplay.text = m_dataHolder.Data.Length > 1 ? (m_index + 1).ToString() : string.Empty;
         }
 
         protected abstract void ShowContent(T content);

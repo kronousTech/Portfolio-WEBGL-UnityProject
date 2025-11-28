@@ -9,11 +9,12 @@ namespace KronosTech.Room.ContentViewer
     public class ContentViewerVideos : ContentViewerBase<ContentDataUrl>
     {
         [Header("References")]
+        [SerializeField] private OnVisibilityEvents m_visibilityEvents;
         [SerializeField] private VideoPlayer m_videoPlayer;
         [SerializeField] private RawImage m_rawImage;
         [SerializeField] private Button m_buttonPlay;
         [SerializeField] private Button m_buttonPause;
-        [SerializeField] private Button _buttonRestart;
+        [SerializeField] private Button m_buttonRestart;
 
         private static Action<ContentViewerVideos> OnVideoStart;
 
@@ -26,7 +27,6 @@ namespace KronosTech.Room.ContentViewer
         public event Action OnRestartInput;
         public event Action OnRestart;
         public event Action OnPause;
-        public event Action<double> OnPlaying;
 
         protected override void OnEnable()
         {
@@ -34,11 +34,13 @@ namespace KronosTech.Room.ContentViewer
 
             m_buttonPlay.onClick.AddListener(() => StartCoroutine(PlayCoroutine()));
             m_buttonPause.onClick.AddListener(PauseVideoCallback);
-            _buttonRestart.onClick.AddListener(() => StartCoroutine(Restart()));
+            m_buttonRestart.onClick.AddListener(() => StartCoroutine(Restart()));
 
             m_videoPlayer.prepareCompleted += (source) => PauseVideoOnPreparedCallback();
 
-            OnVideoStart += DisableOtherVideoPlayers;
+            OnVideoStart += DisableOtherVideoPlayersCallback;
+
+            m_visibilityEvents.OnBecameVisibleEvent.AddListener(PrepareVideoCallback);
         }
         protected override void OnDisable()
         {
@@ -46,31 +48,40 @@ namespace KronosTech.Room.ContentViewer
 
             m_buttonPlay.onClick.RemoveListener(() => StartCoroutine(PlayCoroutine()));
             m_buttonPause.onClick.RemoveListener(PauseVideoCallback);
-            _buttonRestart.onClick.RemoveListener(() => StartCoroutine(Restart()));
+            m_buttonRestart.onClick.RemoveListener(() => StartCoroutine(Restart()));
 
             m_videoPlayer.prepareCompleted -= (source) => PauseVideoOnPreparedCallback();
 
-            OnVideoStart -= DisableOtherVideoPlayers;
+            OnVideoStart -= DisableOtherVideoPlayersCallback;
+
+            m_visibilityEvents.OnBecameVisibleEvent.RemoveListener(PrepareVideoCallback);
         }
-        private void Start()
+        protected override void Awake()
         {
+            base.Awake();
+
             m_videoPlayer.source = VideoSource.Url;
 
             var renderTexture = new RenderTexture(800, 600, 0);
             m_videoPlayer.targetTexture = renderTexture;
             m_rawImage.texture = renderTexture;
         }
-        private void Update()
+        
+
+        private void PrepareVideoCallback()
         {
-            if(m_videoPlayer.isPlaying && m_videoPlayer.isPrepared)
+            if (!m_videoPlayer.gameObject.activeInHierarchy)
             {
-                OnPlaying?.Invoke(m_videoPlayer.time);
+                return;
+            }
+            if (!m_videoPlayer.isPrepared && m_videoPlayer.enabled)
+            {
+                m_videoPlayer.Prepare();
             }
         }
-
-        private void DisableOtherVideoPlayers(ContentViewerVideos controller)
+        private void DisableOtherVideoPlayersCallback(ContentViewerVideos controller)
         {
-            if(controller != this)
+            if(controller != this && m_videoPlayer.gameObject.activeInHierarchy)
             {
                 m_videoPlayer.Pause();
             }
@@ -132,14 +143,6 @@ namespace KronosTech.Room.ContentViewer
             OnPause?.Invoke();
         }
 
-        private IEnumerator PrepareCoroutine()
-        {
-            yield return new WaitForSeconds(2.0f);
-
-            if(!m_videoPlayer.isPrepared && m_videoPlayer.enabled)
-                m_videoPlayer.Prepare();
-        }
-
         #region ContentDisplayBase
         protected override void ShowContent(ContentDataUrl content)
         {
@@ -150,8 +153,6 @@ namespace KronosTech.Room.ContentViewer
             if (m_videoPlayer.isActiveAndEnabled)
             {
                 m_videoPlayer.Prepare();
-            
-                StartCoroutine(PrepareCoroutine());
             }
             
             OnPrepare?.Invoke();

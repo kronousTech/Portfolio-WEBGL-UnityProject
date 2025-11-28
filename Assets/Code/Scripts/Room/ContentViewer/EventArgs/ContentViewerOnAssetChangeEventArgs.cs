@@ -5,12 +5,12 @@ namespace KronosTech.Room.ContentViewer
     public class ContentViewerOnAssetChangeEventArgs : EventArgs
     {
         public int Index { get; }
-        public string Title { get; }
+        public ContentData Data { get; }
 
-        public ContentViewerOnAssetChangeEventArgs(int index, string title)
+        public ContentViewerOnAssetChangeEventArgs(int index, ContentData data)
         {
             Index = index;
-            Title = title;
+            Data = data;
         }
     }
 }

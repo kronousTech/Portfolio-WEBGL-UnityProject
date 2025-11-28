@@ -3,9 +3,8 @@ using System;
 namespace KronosTech.Room.ContentViewer
 {
     [Serializable]
-    public class ContentData<T>
+    public class ContentData
     {
         public string Title;
-        public T Data;
     }
 }
