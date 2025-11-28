@@ -6,7 +6,7 @@ using UnityEngine;
 public class RoomVideoPlayerAutoStopper : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private ContentDisplayVideos m_videosDisplay;
+    [SerializeField] private ContentViewerVideos m_videosDisplay;
 
     private Transform m_playerTF;
     private const float k_stopDistance = 6f;

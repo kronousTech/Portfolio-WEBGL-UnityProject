@@ -1036,7 +1036,6 @@ GameObject:
   - component: {fileID: 2123196843683454698}
   - component: {fileID: 2749290661771289028}
   - component: {fileID: 7458261376309955443}
-  - component: {fileID: 6202564023067193162}
   m_Layer: 8
   m_Name: ContentViewerImages
   m_TagString: Untagged
@@ -1354,36 +1353,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8250671149305827228}
   m_Mesh: {fileID: 0}
---- !u!114 &6202564023067193162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8250671149305827228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6785fbdf888c5847be82e145df4d815, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnVisible:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1198610724001678549}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnBecameVisibleEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &9029896556958477930
 GameObject:
   m_ObjectHideFlags: 0

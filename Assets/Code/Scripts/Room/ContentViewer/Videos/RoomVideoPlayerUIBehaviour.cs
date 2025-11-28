@@ -3,12 +3,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace KronosTech.ShowroomGeneration.Room.Videoplayer
+namespace KronosTech.ShowroomGeneration.Room.VideoPlayer
 {
-    public class RoomVideoplayerUIBehavior : MonoBehaviour
+    public class RoomVideoPlayerUIBehaviour : MonoBehaviour
     {
         [SerializeField] private HorizontalLayoutGroup _buttonsLayout;
-        [SerializeField] private ContentDisplayVideos m_videoDisplay;
+        [SerializeField] private ContentViewerVideos m_videoDisplay;
         [SerializeField] private TextMeshProUGUI _title;
         [SerializeField] private TextMeshProUGUI _indexDisplay;
         [SerializeField] private GameObject _loadingVideoGO;

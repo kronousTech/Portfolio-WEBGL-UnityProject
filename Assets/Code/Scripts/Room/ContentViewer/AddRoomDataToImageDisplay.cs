@@ -6,7 +6,7 @@ public class AddRoomDataToImageDisplay : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private ContentViewerImages m_imagesDisplay;
-    [SerializeField] private ContentDisplayVideos m_videosDisplay;
+    [SerializeField] private ContentViewerVideos m_videosDisplay;
     [SerializeField] private DataRepositoryRoomData m_repository;
 
     private void OnEnable()

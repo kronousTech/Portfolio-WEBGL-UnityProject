@@ -1,4 +1,3 @@
-using KronosTech.AssetBundles;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -7,7 +6,7 @@ using UnityEngine.Video;
 
 namespace KronosTech.Room.ContentViewer
 {
-    public class ContentDisplayVideos : ContentViewerBase<ContentDataUrl>
+    public class ContentViewerVideos : ContentViewerBase<ContentDataUrl>
     {
         [Header("References")]
         [SerializeField] private VideoPlayer m_videoPlayer;
@@ -16,7 +15,7 @@ namespace KronosTech.Room.ContentViewer
         [SerializeField] private Button m_buttonPause;
         [SerializeField] private Button _buttonRestart;
 
-        private static Action<ContentDisplayVideos> OnVideoStart;
+        private static Action<ContentViewerVideos> OnVideoStart;
 
         public event Action<int> OnInitialize;
         public event Action<ContentDataUrl> OnVideoChange;
@@ -69,7 +68,7 @@ namespace KronosTech.Room.ContentViewer
             }
         }
 
-        private void DisableOtherVideoPlayers(ContentDisplayVideos controller)
+        private void DisableOtherVideoPlayers(ContentViewerVideos controller)
         {
             if(controller != this)
             {
@@ -141,54 +140,7 @@ namespace KronosTech.Room.ContentViewer
                 m_videoPlayer.Prepare();
         }
 
-        private void SaveVideoClipToDataCallback(AssetBundleLoadEventArgs<VideoClip> args, int index, Action callback)
-        {
-            //m_loadedVideosCount += 1;
-
-            if (!args.IsSuccessful)
-            {
-                Debug.LogError($"{nameof(ContentViewerImages)}.cs: " +
-                    $"Failed to load image at index {index}.");
-
-                return;
-            }
-
-           //Content.Add(new RoomVideoData(m_content.Data[index].Title, args.Asset));
-           //
-           //if (m_loadedVideosCount >= m_videosToLoadCount)
-           //{
-           //    Debug.Log(m_loadedVideosCount + "" + m_videosToLoadCount);
-           //
-           //    OnInitialize?.Invoke(Content.Count);
-           //
-           //    callback?.Invoke();
-           //}
-        }
-
         #region ContentDisplayBase
-        //protected override void LoadData(Action callback)
-        //{
-            
-            //
-            //var data = m_content.GetData();
-            //if (data.Length == 0)
-            //{
-            //    return;
-            //}
-            //
-            //m_videosToLoadCount = data.Length;
-            //m_loadedVideosCount = 0;
-            //
-            //Content = new();
-            //
-            //for (int i = 0; i < data.Length; i++)
-            //{
-            //    var index = i;
-            //    var asset = data[i]..Asset;
-            //
-            //    AssetBundlesRequest.Load<VideoClip>(asset.Bundle, asset.Name, (args) => SaveVideoClipToDataCallback(args, index, callback));
-            //}
-        //}
         protected override void ShowContent(ContentDataUrl content)
         {
             OnVideoChange?.Invoke(content);
