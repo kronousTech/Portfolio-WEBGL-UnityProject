@@ -1,5 +1,6 @@
 using KronosTech.Player;
 using NaughtyAttributes;
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -19,13 +20,13 @@ namespace KronosTech.Room.ContentViewer
         {
             m_videosDisplay.OnPlay += StartDistanceSearchCallback;
             m_videosDisplay.OnPause += StopDistanceSearchCallback;
-            m_videosDisplay.OnVideoChange += StopDistanceSearchCallback;
+            m_videosDisplay.OnAssetChange += StopDistanceSearchCallback;
         }
         private void OnDisable()
         {
             m_videosDisplay.OnPlay -= StartDistanceSearchCallback;
             m_videosDisplay.OnPause -= StopDistanceSearchCallback;
-            m_videosDisplay.OnVideoChange -= StopDistanceSearchCallback;
+            m_videosDisplay.OnAssetChange += StopDistanceSearchCallback;
         }
         private void Awake()
         {
@@ -54,7 +55,7 @@ namespace KronosTech.Room.ContentViewer
         {
             StopSearch();
         }
-        private void StopDistanceSearchCallback(ContentDataUrl content)
+        private void StopDistanceSearchCallback(ContentViewerOnAssetChangeEventArgs args)
         {
             StopSearch();
         }

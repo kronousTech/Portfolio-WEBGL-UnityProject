@@ -18,8 +18,6 @@ namespace KronosTech.Room.ContentViewer
 
         private static Action<ContentViewerVideos> OnVideoStart;
 
-        public event Action<int> OnInitialize;
-        public event Action<ContentDataUrl> OnVideoChange;
         public event Action OnPrepare;
         public event Action<double> OnPrepareCompleted;
         public event Action OnPlayInput;
@@ -158,8 +156,6 @@ namespace KronosTech.Room.ContentViewer
         #region ContentDisplayBase
         protected override void ShowContent(ContentDataUrl content)
         {
-            OnVideoChange?.Invoke(content);
-            
             m_videoPlayer.url = content.Data;
             
             if (m_videoPlayer.isActiveAndEnabled)

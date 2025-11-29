@@ -21,7 +21,7 @@ namespace KronosTech.AssetBundles
             return AssetBundle.LoadFromFile(GetSavedBundlePath(assetBundleName));
         }
 
-        public static async void Load<T>(string assetBundleName, string assetName, Action<AssetBundleLoadEventArgs<T>> callback)
+        public static void Load<T>(string assetBundleName, string assetName, Action<AssetBundleLoadEventArgs<T>> callback)
             where T : UnityEngine.Object
         {
             var bundlePath = GetSavedBundlePath(assetBundleName);
