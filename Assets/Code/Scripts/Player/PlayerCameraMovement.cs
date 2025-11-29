@@ -1,5 +1,5 @@
+using KronosTech.Gallery.Rooms.Teleportation;
 using KronosTech.InputSystem;
-using KronosTech.Teleport;
 using UnityEngine;
 
 namespace KronosTech.Player

@@ -1,5 +1,5 @@
-﻿using KronosTech.InputSystem;
-using KronosTech.Teleport;
+﻿using KronosTech.Gallery.Rooms.Teleportation;
+using KronosTech.InputSystem;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
