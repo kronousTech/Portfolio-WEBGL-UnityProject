@@ -12,8 +12,8 @@ namespace KronosTech.Room.ContentViewer
         [SerializeField] private OnVisibilityEvents m_visibilityEvents;
         [SerializeField] private VideoPlayer m_videoPlayer;
         [SerializeField] private RawImage m_rawImage;
-        [SerializeField] private Button m_buttonPlay;
-        [SerializeField] private Button m_buttonPause;
+        [SerializeField] private Button[] m_playButtons;
+        [SerializeField] private Button[] m_pauseButtons;
         [SerializeField] private Button m_buttonRestart;
 
         private static Action<ContentViewerVideos> OnVideoStart;
@@ -32,8 +32,14 @@ namespace KronosTech.Room.ContentViewer
         {
             base.OnEnable();
 
-            m_buttonPlay.onClick.AddListener(() => StartCoroutine(PlayCoroutine()));
-            m_buttonPause.onClick.AddListener(PauseVideoCallback);
+            for (int i = 0; i < m_playButtons.Length; i++)
+            {
+                m_playButtons[i].onClick.AddListener(() => StartCoroutine(PlayCoroutine()));
+            }
+            for (int i = 0; i < m_pauseButtons.Length; i++)
+            {
+                m_pauseButtons[i].onClick.AddListener(PauseVideoCallback);
+            }
             m_buttonRestart.onClick.AddListener(() => StartCoroutine(Restart()));
 
             m_videoPlayer.prepareCompleted += (source) => PauseVideoOnPreparedCallback();
@@ -46,8 +52,14 @@ namespace KronosTech.Room.ContentViewer
         {
             base.OnDisable();
 
-            m_buttonPlay.onClick.RemoveListener(() => StartCoroutine(PlayCoroutine()));
-            m_buttonPause.onClick.RemoveListener(PauseVideoCallback);
+            for (int i = 0; i < m_playButtons.Length; i++)
+            {
+                m_playButtons[i].onClick.RemoveListener(() => StartCoroutine(PlayCoroutine()));
+            }
+            for (int i = 0; i < m_pauseButtons.Length; i++)
+            {
+                m_pauseButtons[i].onClick.RemoveListener(PauseVideoCallback);
+            }
             m_buttonRestart.onClick.RemoveListener(() => StartCoroutine(Restart()));
 
             m_videoPlayer.prepareCompleted -= (source) => PauseVideoOnPreparedCallback();
