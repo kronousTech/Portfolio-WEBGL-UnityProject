@@ -1,12 +1,15 @@
 using KronosTech.AssetBundles;
 using System;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace KronosTech.Room.ContentViewer
 {
-    public abstract class ContentViewerBase<T> : MonoBehaviour where T : ContentData
+    public abstract class ContentViewerBase : MonoBehaviour
+    {
+        public Action<ContentViewerOnAssetChangeEventArgs> OnAssetChange;
+    }
+    public abstract class ContentViewerBase<T> : ContentViewerBase where T : ContentData
     {
         [Header("Settings")]
         [SerializeField] protected DataArrayHolder<T> m_dataHolder;
@@ -38,8 +41,6 @@ namespace KronosTech.Room.ContentViewer
                 OnAssetChange?.Invoke(new(m_index, m_dataHolder.Data[m_index]));
             }
         }
-
-        public event Action<ContentViewerOnAssetChangeEventArgs> OnAssetChange;
 
         protected virtual void Awake()
         {
