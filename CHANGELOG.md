@@ -12,6 +12,7 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 - Added a better looking loading screen with random messages and animations.
 - Updated to version 6000.0.58.f2.
 - Added scrollbar to text elements.
+- Added text viewer to all texts.
 ### Changed
 - Changed all of the backend asset bundle structure to be more optimized and organized.
 - Changed the folder placement of the scripts and assets.
@@ -22,7 +23,7 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 - All rooms come from the same prefab instead of variations for each.
 - Change log UI text now comes from the builds changelog.
 ### Fixed
-- Fixed WebGL mouse bug by changing the .js files directly via post processing.
+- Fixed WebGL mouse bug by changing the build java files directly via post processing.
 - Fixed issue with post process bloom.
 ### Removed
 - Removed a lot of unused scripts and assets.
@@ -43,15 +44,15 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 
 ## [1.3.0] - 08-01-2025
 ### Fixed
-- Fixed MowerMayhem info font sizes.
-- Fixed carrer duration time.
+- Fixed Mower Mayhem info font sizes.
+- Fixed career duration time.
 - Fixed baseboard size on project room walls.
 
 ## [1.2.0] - 07-01-2025
 ### Added
-- Added MowerMayhem project info.
+- Added Mower Mayhem project info.
 ### Changed
-- Improved gallery generation by adding the ObjectPool pattern.
+- Improved gallery generation by adding the Object Pool pattern.
 
 ## [1.1.0] - 21-11-2024
 ### Added
