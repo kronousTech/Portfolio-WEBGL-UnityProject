@@ -1,9 +1,0 @@
-[BUG]
-
-[FEATURES]
-- Add a way to increase/decrease video volume
-- Play/pause using the video screen instead of button.
-
-[OPTIMIZATION]
-- Download Materials from repo.
-- Optimize room generation

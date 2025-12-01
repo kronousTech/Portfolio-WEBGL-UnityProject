@@ -6,6 +6,7 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 
 ## [2.0.0] - 01-12-2025
 ### Added
+- Added change log text format.
 - Added screen buttons to the video players. 
 - Added time bar to video players.
 - Added a better looking loading screen with random messages and animations.
@@ -19,6 +20,7 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 - Improved and optimized the gallery generation.
 - Rewrote a lot of the code for better optimization and organization.
 - All rooms come from the same prefab instead of variations for each.
+- Change log UI text now comes from the builds changelog.
 ### Fixed
 - Fixed WebGL mouse bug by changing the .js files directly via post processing.
 - Fixed issue with post process bloom.
