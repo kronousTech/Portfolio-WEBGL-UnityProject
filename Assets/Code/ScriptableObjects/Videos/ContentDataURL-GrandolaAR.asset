@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_data:
   - Title: Part 1
-    Data: https://raw.githubusercontent.com/kronousTech/Portfolio-WEBGL-AssetBundle-Storage/main/Videos/GrandolaAR/GrandolaARPart1.mp4
+    Data: https://kronoustech.github.io/Portfolio-WEBGL-AssetBundle-Storage/Videos/GrandolaAR/GrandolaARPart1.mp4
   - Title: Part 2
-    Data: https://raw.githubusercontent.com/kronousTech/Portfolio-WEBGL-AssetBundle-Storage/main/Videos/GrandolaAR/GrandolaARPart2.mp4
+    Data: https://kronoustech.github.io/Portfolio-WEBGL-AssetBundle-Storage/Videos/GrandolaAR/GrandolaARPart2.mp4
