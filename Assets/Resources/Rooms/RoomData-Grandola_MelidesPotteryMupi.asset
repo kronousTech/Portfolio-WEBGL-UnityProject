@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-Grandola_MelidesPotteryMupi
+  m_EditorClassIdentifier: 
+  ProjectName: Melides Pottery Mupi
+  ClientName: Grandola
+  Tags: 96
+  Texts:
+  - category: 0
+    info: Lead Developer.
+  - category: 1
+    info: "Gr\xE2ndola's Municipal Chamber."
+  - category: 2
+    info: This project was designed for an interactive Mupi, featuring small, engaging,
+      and educational games centered around Melides pottery. The primary aim was
+      to offer a compact yet enjoyable experience, providing users with both entertainment
+      and insights into the world of Melides pottery.
+  - category: 3
+    info: The trickiest aspect of this project was putting together the Word Search
+      game, especially since it was my first attempt at creating one.
+  - category: 4
+    info: "To develop the Word Search game, I devised a system for placing words
+      on a grid, allowing certain letter squares to serve multiple words. \nFirst,
+      I randomly determined the direction of the word\u2014horizontal or vertical.
+      Once the direction was set, I selected a starting position by calculating a
+      range within the grid size, considering the word's letter count. Moving through
+      the squares, I checked if each square was either empty or contained the same
+      letter as the one being placed.\r\n\r\nIf placing the word wasn't feasible,
+      I sought a new position. In cases of repeated unsuccessful attempts, I reset
+      the temporary grid board and restarted the generation process. To minimize
+      the need for restarts, I ensured the grid was slightly larger than the largest
+      word, this made the need for restarts very rare. After placing all the words,
+      I filled the remaining empty squares with random letters and then displayed
+      the grid on the screen."
+  Images: {fileID: 11400000, guid: a637d26b62797574aa3be04f5dca16c1, type: 2}
+  Videos: {fileID: 11400000, guid: 1b1062af1b5c00d48bbe93d7719e5a5c, type: 2}
+  ClickableLinks: []

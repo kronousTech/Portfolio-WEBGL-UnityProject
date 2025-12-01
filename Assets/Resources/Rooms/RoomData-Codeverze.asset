@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-Codeverze
+  m_EditorClassIdentifier: 
+  ProjectName: External API Integration
+  ClientName: Codeverze
+  Tags: 136
+  Texts:
+  - category: 0
+    info: Unity Developer
+  - category: 1
+    info: Codeverze uses the latest technologies to develop high-quality responsive,
+      personalized, and pixel-perfect designs. From e-commerce to large-scale web
+      and mobile applications, Codeverze helps organizations, businesses, and individuals
+      to effectively market and enhance their digital presence. Through custom solutions,
+      access to a reliable team, and fast delivery, Codeverze offers extensive end-to-end
+      expertise to ensure an excellent client experience.
+  - category: 2
+    info: "Job name : Unity Developer - C# integration with an external API\n\nIn
+      my initial Upwork assignment, I collaborated with Alan Mac Cormack, the founder
+      of Codeverze. My main responsibility was integrating API's into Unity applications,
+      working closely alongside Alan and his team.\n\nThroughout this collaboration,
+      both Alan and his team demonstrated excellence in their work, and commitment
+      to teaching and providing assistance whenever needed.\nThis experience has
+      set a high standard for my expectations in future Upwork endeavors.\n\nUnfortunately,
+      I'm unable to provide specific project details due to the signing of a non-disclosure
+      agreement (NDA). \n\nFor further insights into Codeverze you can explore their
+      LinkedIn profile and website through the links bellow."
+  - category: 7
+    info: October 12, 2022 - Ongoing.
+  Images: {fileID: 11400000, guid: 30cc639f0b8d7dd40a3f47b915fd0164, type: 2}
+  Videos: {fileID: 0}
+  ClickableLinks:
+  - Name: 
+    URL: https://www.linkedin.com/company/codeverze/about/
+    Icon: {fileID: 0}
+  - Name: 
+    URL: https://codeverze.com
+    Icon: {fileID: 0}

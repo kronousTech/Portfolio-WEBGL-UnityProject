@@ -1,4 +1,3 @@
-using Cinemachine;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,12 +5,12 @@ using UnityEngine.UI;
 public class SliderViewDistance : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _fieldOfViewText;
-    private CinemachineVirtualCamera _camera;
+    private Camera _camera;
     private Slider _slider;
 
     private void Awake()
     {
-        _camera = FindObjectOfType<CinemachineVirtualCamera>();
+        _camera = Camera.main;
         if (_camera == null)
         {
             Debug.LogError("Didn't found Camera on FieldOfViewSlider");
@@ -22,12 +21,12 @@ public class SliderViewDistance : MonoBehaviour
     private void OnEnable()
     {
         _slider.onValueChanged.AddListener(UpdateText);
-        _slider.onValueChanged.AddListener((value) => _camera.m_Lens.FarClipPlane = value);
+        _slider.onValueChanged.AddListener((value) => _camera.farClipPlane= value);
     }
     private void OnDisable()
     {
         _slider.onValueChanged.RemoveListener(UpdateText);
-        _slider.onValueChanged.RemoveListener((value) => _camera.m_Lens.FarClipPlane = value);
+        _slider.onValueChanged.RemoveListener((value) => _camera.farClipPlane = value);
     }
 
     private void UpdateText(float value)

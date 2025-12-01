@@ -1,3 +1,4 @@
+using KronosTech.AssetBundles;
 using System;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
@@ -8,6 +9,9 @@ namespace KronosTech.InputSystem
 {
 	public class StarterAssetsInputs : MonoBehaviour
 	{
+		[Header("References")]
+		[SerializeField] private AssetBundleDownloadAll m_downloader;
+
 		[Header("Character Input Values")]
 		public Vector2 move;
         public Vector2 look;
@@ -24,8 +28,8 @@ namespace KronosTech.InputSystem
 
         private void OnEnable()
         {
-			AssetsLoader.OnBundlesDownload += () => _disableMouseInput = false;
-            AssetsLoader.OnBundlesDownload += () => _disableMoveInput = false;
+            m_downloader.OnAllBundlesDownloaded += () => _disableMouseInput = false;
+            m_downloader.OnAllBundlesDownloaded += () => _disableMoveInput = false;
 
             GameEvents.OnPanelOpen += (state) => _disableMouseInput = state;
             GameEvents.OnPanelOpen += (state) => _disableMoveInput = state;
@@ -33,12 +37,12 @@ namespace KronosTech.InputSystem
         }
         private void OnDisable()
         {
-            AssetsLoader.OnBundlesDownload -= () => _disableMouseInput = false;
-            AssetsLoader.OnBundlesDownload -= () => _disableMoveInput = false;
+            m_downloader.OnAllBundlesDownloaded -= () => _disableMouseInput = false;
+            m_downloader.OnAllBundlesDownloaded -= () => _disableMoveInput = false;
 
             GameEvents.OnPanelOpen -= (state) => _disableMouseInput = state;
             GameEvents.OnPanelOpen -= (state) => _disableMoveInput = state;
-            GameEvents.OnPanelOpen += (state) => { if (state) StopMovement(); };
+            GameEvents.OnPanelOpen -= (state) => { if (state) StopMovement(); };
         }
 
 #if ENABLE_INPUT_SYSTEM

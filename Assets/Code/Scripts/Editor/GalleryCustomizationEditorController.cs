@@ -1,4 +1,4 @@
-using KronosTech.Customization;
+using KronosTech.Gallery.Customization;
 using UnityEditor;
 using UnityEngine;
 
@@ -23,7 +23,7 @@ public class GalleryCustomizationEditorController : EditorWindow
         if (Application.isPlaying)
         {
             if (GUILayout.Button("REPLACE"))
-                GalleryCustomization.SetNewCurrentMat(CustomizableElement.Floor, _floorIndex);
+                GalleryCustomization.SetNewCurrentMat(CustomizableType.Floor, _floorIndex);
         }
         else GUILayout.Button("REPLACE");
 
@@ -34,7 +34,7 @@ public class GalleryCustomizationEditorController : EditorWindow
         if (Application.isPlaying)
         {
             if (GUILayout.Button("REPLACE"))
-                GalleryCustomization.SetNewCurrentMat(CustomizableElement.Baseboard, _baseboardIndex);
+                GalleryCustomization.SetNewCurrentMat(CustomizableType.Baseboard, _baseboardIndex);
         }
         else GUILayout.Button("REPLACE");
 
@@ -45,7 +45,7 @@ public class GalleryCustomizationEditorController : EditorWindow
         if (Application.isPlaying)
         {
             if (GUILayout.Button("REPLACE"))
-                GalleryCustomization.SetNewCurrentMat(CustomizableElement.Wall, _wallIndex);
+                GalleryCustomization.SetNewCurrentMat(CustomizableType.Wall, _wallIndex);
         }
         else GUILayout.Button("REPLACE");
 
@@ -56,7 +56,7 @@ public class GalleryCustomizationEditorController : EditorWindow
         if (Application.isPlaying)
         {
             if (GUILayout.Button("REPLACE"))
-                GalleryCustomization.SetNewCurrentMat(CustomizableElement.Guideline, _guidelineIndex);
+                GalleryCustomization.SetNewCurrentMat(CustomizableType.Guideline, _guidelineIndex);
         }
         else GUILayout.Button("REPLACE");
     }

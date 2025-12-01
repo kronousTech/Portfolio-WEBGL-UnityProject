@@ -1,49 +1,34 @@
+using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 
 public class FpsCounterDisplay : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _text;
-    [SerializeField] private Color _low;
-    [SerializeField] private Color _medium;
-    [SerializeField] private Color _high;
+    [Header("Settings")]
+    [SerializeField] private Gradient m_performanceGradient;
+    [Header("References")]
+    [SerializeField] private TextMeshProUGUI m_text;
+    [Header("Debug View")]
+    [SerializeField, ReadOnly] private int m_framesCount = 0;
+    [SerializeField, ReadOnly] private float m_timeLeft = 0;
 
-    private const float INTERVAL = 0.5f;
-
-    private float accum = 0.0f;
-    private int frames = 0;
-    private float timeleft;
+    private const float k_interval = 1f;
+    private const float k_maxFramesReference = 60f;
 
     private void Update()
     {
-        timeleft -= Time.deltaTime;
-        accum += Time.timeScale / Time.deltaTime;
-        frames++;
+        m_timeLeft -= Time.deltaTime;
+        m_framesCount++;
 
-        // Interval ended - update GUI text and start new interval
-        if (timeleft <= 0.0)
+        if (m_timeLeft <= 0.0)
         {
-            var value = (int)(accum / frames);
-            
-            if (value <= 15)
-            {
-                _text.color = _low;
-            }
-            else if(value <= 45)
-            {
-                _text.color = _medium;
-            }
-            else
-            {
-                _text.color = _high;
-            }
+            var count = m_framesCount / k_maxFramesReference;
 
-            _text.text = value.ToString();
+            m_text.color = m_performanceGradient.Evaluate(count);
+            m_text.text = m_framesCount.ToString();
 
-            // Reset variables
-            timeleft = INTERVAL;
-            accum = 0.0f;
-            frames = 0;
+            m_timeLeft = k_interval;
+            m_framesCount = 0;
         }
     }
 }

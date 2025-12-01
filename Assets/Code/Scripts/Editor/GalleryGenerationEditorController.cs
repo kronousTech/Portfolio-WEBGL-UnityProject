@@ -1,3 +1,5 @@
+using KronosTech.Data;
+using KronosTech.Gallery.Rooms;
 using UnityEditor;
 using UnityEngine;
 
@@ -15,9 +17,9 @@ public class GalleryGenerationEditorController : EditorWindow
     {
         GUILayout.Label("Categories", EditorStyles.boldLabel);
 
-        _tags = (RoomTagFlags)EditorGUILayout.EnumMaskField("Select Tags", _tags);
+        _tags = (RoomTagFlags)EditorGUILayout.EnumFlagsField("Select Tags", _tags);
 
-        if (GUILayout.Button("GENERATE"))
-            TagSelector.ForceNewRequest(_tags);
+        //if (GUILayout.Button("GENERATE"))
+        //    TagSelector.ForceNewRequest(_tags);
     }
 }
