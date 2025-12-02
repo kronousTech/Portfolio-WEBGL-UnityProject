@@ -26,6 +26,7 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 ### Fixed
 - Fixed WebGL mouse bug by changing the build java files directly via post processing.
 - Fixed issue with post process bloom.
+- Fixed issue where the user could press several teleports at a time after already selecting one.
 ### Removed
 - Removed a lot of unused scripts and assets.
 
