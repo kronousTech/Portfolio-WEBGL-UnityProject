@@ -15,7 +15,9 @@ namespace KronosTech.Gallery.Rooms.Teleportation
         public void Initialize(RoomData roomData, UnityAction clickAction)
         {
             m_nameDisplay.text = roomData.GetFullName();
-            m_tagsDisplay.text = roomData.Tags.ToString();
+            m_tagsDisplay.text = roomData.Tags == RoomTagFlags.None 
+                ? string.Empty 
+                : roomData.Tags.ToString();
 
             m_button.onClick.AddListener(clickAction);
         }

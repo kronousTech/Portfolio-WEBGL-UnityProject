@@ -17,11 +17,11 @@ namespace KronosTech.Gallery.Generation.TagSelection
             m_toggle = GetComponent<Toggle>();
         }
 
-        public void Initialize(string tag)
+        public void Initialize(RoomTagFlags tag)
         {
-            m_selectedTag = System.Enum.Parse<RoomTagFlags>(tag);
+            m_selectedTag = tag;
 
-            OnInitialized?.Invoke(tag);
+            OnInitialized?.Invoke(tag.ToString());
         }
         public bool GetTag(out RoomTagFlags tag)
         {

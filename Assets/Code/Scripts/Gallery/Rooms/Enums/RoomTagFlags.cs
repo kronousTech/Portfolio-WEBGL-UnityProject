@@ -5,6 +5,7 @@ namespace KronosTech.Gallery.Rooms
     [Flags]
     public enum RoomTagFlags
     {
+        None = 0,
         VR = 1 << 1,
         AR = 1 << 2,
         WebGL = 1 << 3,
