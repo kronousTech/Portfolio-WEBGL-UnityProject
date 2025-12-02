@@ -9,6 +9,7 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 - Added change log text format.
 - Added screen buttons to the video players. 
 - Added time bar to video players.
+- Added volume bar to video players.
 - Added a better looking loading screen with random messages and animations.
 - Updated to version 6000.0.58.f2.
 - Added scrollbar to text elements.

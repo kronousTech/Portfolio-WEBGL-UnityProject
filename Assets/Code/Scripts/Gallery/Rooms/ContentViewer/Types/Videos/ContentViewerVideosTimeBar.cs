@@ -1,55 +1,80 @@
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
 namespace KronosTech.Gallery.Rooms.ContentViewer
 {
-    public class ContentViewerVideosTimeBar : MonoBehaviour
+    public class ContentViewerVideosTimeBar : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         [Header("References")]
         [SerializeField] private VideoPlayer m_videoPlayer;
-        [SerializeField] private Slider m_timebar;
+        [SerializeField] private Scrollbar m_scrollbar;
+        [SerializeField] private Image m_fillImage;
         [Header("Debug View")]
         [SerializeField, ReadOnly] private ContentViewerVideos m_videoDisplay;
 
+        private bool m_isInteracting;
+
         private void OnEnable()
         {
-            m_videoDisplay.OnPrepare += () => m_timebar.value = 0;
+            m_videoDisplay.OnPrepare += () => m_scrollbar.value = 0;
             m_videoDisplay.OnPrepareCompleted += SetPreparedStateCallback;
-            m_videoDisplay.OnRestartInput += () => m_timebar.value = 0.0f;
+            m_videoDisplay.OnRestartInput += () => m_scrollbar.value = 0.0f;
 
-            m_timebar.onValueChanged.AddListener(SetVideoTimeCallback);
+            m_scrollbar.onValueChanged.AddListener(SetVideoTimeCallback);
+            
+            m_videoPlayer.frameReady += UpdateFillbarCallback;
         }
         private void OnDisable()
         {
-            m_videoDisplay.OnPrepare -= () => m_timebar.value = 0;
+            m_videoDisplay.OnPrepare -= () => m_scrollbar.value = 0;
             m_videoDisplay.OnPrepareCompleted -= SetPreparedStateCallback;
-            m_videoDisplay.OnRestartInput -= () => m_timebar.value = 0.0f;
+            m_videoDisplay.OnRestartInput -= () => m_scrollbar.value = 0.0f;
 
-            m_timebar.onValueChanged.RemoveListener(SetVideoTimeCallback);
+            m_scrollbar.onValueChanged.RemoveListener(SetVideoTimeCallback);
+
+            m_videoPlayer.frameReady -= UpdateFillbarCallback;
         }
         private void Awake()
         {
+            m_videoPlayer.sendFrameReadyEvents = true;
             m_videoDisplay = GetComponentInParent<ContentViewerVideos>(true);
         }
-        private void Update()
+
+        private void UpdateFillbarCallback(VideoPlayer source, long frameIdx)
         {
-            if (m_videoPlayer.isPlaying && m_videoPlayer.isPrepared)
+            if(m_isInteracting)
             {
-                m_timebar.SetValueWithoutNotify((float)m_videoPlayer.time);
+                return;
             }
+
+            m_fillImage.fillAmount = (float)(m_videoPlayer.time / m_videoPlayer.length);
         }
 
         private void SetPreparedStateCallback(double length)
         {
-            m_timebar.maxValue = (float)length;
-            m_timebar.SetValueWithoutNotify(0);
+            m_scrollbar.SetValueWithoutNotify(0);
+            m_fillImage.fillAmount = 0;
+        }
+        private void SetVideoTimeCallback(float value)
+        {
+            m_videoPlayer.time = value * (float)m_videoPlayer.length;
+            m_fillImage.fillAmount = value;
         }
 
-        private void SetVideoTimeCallback(float arg0)
+        #region IPointerDownHandler
+        public void OnPointerDown(PointerEventData eventData)
         {
-            m_videoPlayer.time = arg0;
+            m_isInteracting = true;
         }
+        #endregion
+        #region IPointerUpHandler
+        public void OnPointerUp(PointerEventData eventData)
+        {
+            m_isInteracting = false;
+        }
+        #endregion
     }
 }

@@ -11374,7 +11374,7 @@ MonoBehaviour:
   m_parent: {fileID: 387230617}
   m_displayPrefab: {fileID: 63370271902059438, guid: 50f3a013f94a6664bbd2d7d5c615e8d5,
     type: 3}
-  m_teleportPanel: {fileID: 0}
+  m_teleportPanel: {fileID: 353031640}
 --- !u!1 &475095453
 GameObject:
   m_ObjectHideFlags: 0
@@ -72924,7 +72924,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<b><size=90>About Me:</b>\r</size>\nHello, I'm Jo\xE3o, a Unity Developer
-    with over <color=#0066FFFF><b>6</b>Years <b>5</b> Months <b>14</b> Days </color>
+    with over <color=#0066FFFF><b>6</b>Years <b>5</b> Months <b>15</b> Days </color>
     of professional experience working in both AR/VR experiences and games, based
     in Portugal, I've been on a continuous journey of growth and learning in the
     world of programming and game development\n\n<b><size=90>Welcome to My Portfolio:</b>\r</size>\nWithin
