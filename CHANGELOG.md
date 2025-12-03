@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [2.0.1] - 03-12-2025
+### Removed
+- Removed 'E' interact input from HUD.
+
 ## [2.0.0] - 03-12-2025
 ### Added
 - Added change log text format.
