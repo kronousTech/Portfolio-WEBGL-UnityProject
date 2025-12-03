@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [2.0.3] - 03-12-2025
+### Changed
+- Reworked UI look of all menus.
+
 ## [2.0.2] - 03-12-2025
 ### Added
 - Added new Space environment.
