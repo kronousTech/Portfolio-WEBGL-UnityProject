@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [2.0.2] - 03-12-2025
+### Added
+- Added new Space environment.
+### Changed
+- Changed environment code structure.
+### Removed
+- Removed some unused sprites.
+
 ## [2.0.1] - 03-12-2025
 ### Removed
 - Removed 'E' interact input from HUD.
