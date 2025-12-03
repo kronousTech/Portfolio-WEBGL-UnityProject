@@ -8,8 +8,11 @@ namespace KronosTech.UI.ChangeLog
         [Header("References")]
         [SerializeField] private ConvertChangeLogToTMP m_converter;
 
+#if UNITY_EDITOR
         private readonly string m_developmentChangeLogURL = "https://raw.githubusercontent.com/kronousTech/Portfolio-WEBGL-UnityProject/refs/heads/develop/CHANGELOG.md";
+#else
         private readonly string m_mainChangeLogURL = "https://raw.githubusercontent.com/kronousTech/Portfolio-WEBGL-UnityProject/refs/heads/main/CHANGELOG.md";
+#endif
 
         private void Awake()
         {

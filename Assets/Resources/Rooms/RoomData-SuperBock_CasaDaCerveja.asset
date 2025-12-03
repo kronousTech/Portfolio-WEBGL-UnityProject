@@ -46,7 +46,10 @@ MonoBehaviour:
       it significantly expedited and simplified the initial placement of the models.
   Images: {fileID: 11400000, guid: d795b865f2302b946be39061066e6492, type: 2}
   Videos: {fileID: 0}
-  ClickableLinks:
+  Urls:
   - Name: 
     URL: https://play.google.com/store/apps/details?id=com.YourCompany.SuperBockHouse
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 6bbc5dc9075f9a148b11abc7a95f2bcc, type: 3}
+  - Name: 
+    URL: https://apps.apple.com/us/app/casa-da-cerveja-ar/id1500622998
+    Icon: {fileID: 21300000, guid: 4bfca44c1c96d1a4aa01b46779e8597c, type: 3}

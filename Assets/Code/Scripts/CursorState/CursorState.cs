@@ -1,3 +1,4 @@
+using KronosTech.UI.UIPanels;
 using UnityEngine;
 
 public class CursorState : MonoBehaviour
@@ -9,11 +10,11 @@ public class CursorState : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEvents.OnPanelOpen += (open) => SetCursorLockState(!open);
+        UIPanel.OnToggle += (open) => SetCursorLockState(!open);
     }
     private void OnDisable()
     {
-        GameEvents.OnPanelOpen -= (open) => SetCursorLockState(!open);
+        UIPanel.OnToggle -= (open) => SetCursorLockState(!open);
     }
     private void Awake()
     {

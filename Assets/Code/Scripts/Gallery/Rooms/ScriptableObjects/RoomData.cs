@@ -13,7 +13,7 @@ namespace KronosTech.Gallery.Rooms
         public List<InfoCategoryData> Texts;
         public ContentDataHolderAssetData Images;
         public ContentDataHolderUrl Videos;
-        public RoomClickableLinkData[] ClickableLinks;
+        public RoomClickableLinkData[] Urls;
 
         public string GetFullName()
         {

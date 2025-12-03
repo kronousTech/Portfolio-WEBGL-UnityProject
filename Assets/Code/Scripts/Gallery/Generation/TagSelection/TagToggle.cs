@@ -1,5 +1,5 @@
 using KronosTech.Gallery.Rooms;
-using TMPro;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,21 +7,21 @@ namespace KronosTech.Gallery.Generation.TagSelection
 {
     public class TagToggle : MonoBehaviour
     {
-        [Header("References")]
-        [SerializeField] private TextMeshProUGUI m_tagText;
-
         private Toggle m_toggle;
         private RoomTagFlags m_selectedTag;
+
+        public event Action<string> OnInitialized;
 
         private void Awake()
         {
             m_toggle = GetComponent<Toggle>();
         }
 
-        public void Initialize(string tag)
+        public void Initialize(RoomTagFlags tag)
         {
-            m_tagText.text = tag;
-            m_selectedTag = System.Enum.Parse<RoomTagFlags>(tag);
+            m_selectedTag = tag;
+
+            OnInitialized?.Invoke(tag.ToString());
         }
         public bool GetTag(out RoomTagFlags tag)
         {

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using KronosTech.UI.UIPanels;
 
 namespace KronosTech.Gallery.Rooms.Teleportation
 {
@@ -9,7 +10,7 @@ namespace KronosTech.Gallery.Rooms.Teleportation
         [Header("References")]
         [SerializeField] private Transform m_parent;
         [SerializeField] private TeleportLocationDisplay m_displayPrefab;
-        [SerializeField] private UiDisplay m_teleportPanel;
+        [SerializeField] private UIPanel m_teleportPanel;
 
         private readonly Dictionary<Transform, GameObject> m_locationsDictionary = new();
 

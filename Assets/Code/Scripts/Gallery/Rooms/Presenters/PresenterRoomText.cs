@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Text;
 using TMPro;
 using UnityEngine;
@@ -10,9 +11,10 @@ namespace KronosTech.Gallery.Rooms.Presenters
         [SerializeField] private int m_headersFontSize = 90;
         [SerializeField] private int m_textFontSize = 70;
         [Header("References")]
-        [SerializeField] private DataRepositoryRoomData m_repository;
         [SerializeField] private TextMeshPro m_textDisplay;
-
+        [Header("Debug View")]
+        [SerializeField, ReadOnly] private DataRepositoryRoomData m_repository;
+        
         private void OnEnable()
         {
             m_repository.OnDataSet += SetTextCallback;
@@ -23,8 +25,10 @@ namespace KronosTech.Gallery.Rooms.Presenters
         }
         private void Awake()
         {
+            m_repository = GetComponentInParent<DataRepositoryRoomData>();
             m_textDisplay.fontSize = m_textFontSize;
         }
+
 
         private void SetTextCallback(RoomData data)
         {

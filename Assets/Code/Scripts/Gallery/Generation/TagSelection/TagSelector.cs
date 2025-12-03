@@ -25,8 +25,13 @@ namespace KronosTech.Gallery.Generation.TagSelection
         }
         private void Awake()
         {
-            foreach (var tag in System.Enum.GetNames(typeof(RoomTagFlags)))
+            foreach (RoomTagFlags tag in System.Enum.GetValues(typeof(RoomTagFlags)))
             {
+                if(tag == RoomTagFlags.None)
+                {
+                    continue;
+                }
+
                 var toggle = Instantiate(m_togglePrefab, m_parent);
                 toggle.Initialize(tag);
 

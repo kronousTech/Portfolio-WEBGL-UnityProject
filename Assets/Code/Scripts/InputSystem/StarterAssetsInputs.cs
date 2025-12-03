@@ -1,4 +1,5 @@
 using KronosTech.AssetBundles;
+using KronosTech.UI.UIPanels;
 using System;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
@@ -31,18 +32,18 @@ namespace KronosTech.InputSystem
             m_downloader.OnAllBundlesDownloaded += () => _disableMouseInput = false;
             m_downloader.OnAllBundlesDownloaded += () => _disableMoveInput = false;
 
-            GameEvents.OnPanelOpen += (state) => _disableMouseInput = state;
-            GameEvents.OnPanelOpen += (state) => _disableMoveInput = state;
-            GameEvents.OnPanelOpen += (state) => { if (state) StopMovement(); };
+            UIPanel.OnToggle += (state) => _disableMouseInput = state;
+            UIPanel.OnToggle += (state) => _disableMoveInput = state;
+            UIPanel.OnToggle += (state) => { if (state) StopMovement(); };
         }
         private void OnDisable()
         {
             m_downloader.OnAllBundlesDownloaded -= () => _disableMouseInput = false;
             m_downloader.OnAllBundlesDownloaded -= () => _disableMoveInput = false;
 
-            GameEvents.OnPanelOpen -= (state) => _disableMouseInput = state;
-            GameEvents.OnPanelOpen -= (state) => _disableMoveInput = state;
-            GameEvents.OnPanelOpen -= (state) => { if (state) StopMovement(); };
+            UIPanel.OnToggle -= (state) => _disableMouseInput = state;
+            UIPanel.OnToggle -= (state) => _disableMoveInput = state;
+            UIPanel.OnToggle -= (state) => { if (state) StopMovement(); };
         }
 
 #if ENABLE_INPUT_SYSTEM
