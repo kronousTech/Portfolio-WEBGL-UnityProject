@@ -39,7 +39,7 @@ MonoBehaviour:
       of the technical aspects involved in it.
   Images: {fileID: 11400000, guid: 848b73b8c834c824f8345ec96a5e665e, type: 2}
   Videos: {fileID: 0}
-  ClickableLinks:
+  Urls:
   - Name: 
     URL: https://assetstore.unity.com/packages/tools/utilities/webgl-fullscreen-template-243280
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: a6541b20609208343a3746df48c0ba87, type: 3}

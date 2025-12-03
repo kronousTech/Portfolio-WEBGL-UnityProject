@@ -40,10 +40,10 @@ MonoBehaviour:
     info: October 12, 2022 - Ongoing.
   Images: {fileID: 11400000, guid: 30cc639f0b8d7dd40a3f47b915fd0164, type: 2}
   Videos: {fileID: 0}
-  ClickableLinks:
+  Urls:
   - Name: 
     URL: https://www.linkedin.com/company/codeverze/about/
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 8756b18f96a9dd34e8b5019db7a7240d, type: 3}
   - Name: 
     URL: https://codeverze.com
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 0088092e7e55cf74789731886d4829e3, type: 3}

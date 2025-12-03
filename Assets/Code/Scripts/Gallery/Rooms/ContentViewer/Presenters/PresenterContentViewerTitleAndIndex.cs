@@ -1,10 +1,9 @@
-using KronosTech.Gallery.Rooms.ContentViewer;
 using TMPro;
 using UnityEngine;
 
 namespace KronosTech.Gallery.Rooms.ContentViewer.Presenter
 {
-    public class ContentViewerTitleAndIndexPresenter : MonoBehaviour
+    public class PresenterContentViewerTitleAndIndex : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private ContentViewerBase m_contentViewer;

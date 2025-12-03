@@ -40,7 +40,7 @@ MonoBehaviour:
       and functioning.
   Images: {fileID: 11400000, guid: d3d8b909e22d17c4495a74bfd9d25d95, type: 2}
   Videos: {fileID: 11400000, guid: b50760c5f84bdee4e92e58a357a5ab54, type: 2}
-  ClickableLinks:
+  Urls:
   - Name: 
     URL: https://github.com/kronousTech/SABSEG-BrandActivation-Build
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 9c311d94462e3b841b09ae01198d8ee2, type: 3}

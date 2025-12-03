@@ -39,7 +39,7 @@ MonoBehaviour:
       in visual quality.
   Images: {fileID: 11400000, guid: 26f166a90aad30449a632dadd7d9db40, type: 2}
   Videos: {fileID: 0}
-  ClickableLinks:
+  Urls:
   - Name: 
     URL: https://kronoustech.github.io/PortfolioProject-Essani/
-    Icon: {fileID: 0}
+    Icon: {fileID: 21300000, guid: 9c311d94462e3b841b09ae01198d8ee2, type: 3}
