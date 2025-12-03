@@ -26,7 +26,6 @@ namespace KronosTech.Gallery.Customization.Environment
             m_backgroundSoundSource.clip = data.BackgroundNoise;
             m_backgroundSoundSource.Play();
 
-
             m_directionalLightTransform.localEulerAngles = new Vector3(m_directionalLightTransform.localEulerAngles.x, data.CameraAngleY, m_directionalLightTransform.localEulerAngles.z);
 
             DynamicGI.UpdateEnvironment();

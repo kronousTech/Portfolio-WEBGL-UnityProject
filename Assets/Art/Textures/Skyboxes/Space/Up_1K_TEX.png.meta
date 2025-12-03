@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 96c199bf2da6633479ea4536ce66bec2
+guid: 074265280bfab4949b132a5dd423d9cb
 AssetOrigin:
   serializedVersion: 1
   productId: 80503
   packageName: SpaceSkies Free
   packageVersion: 1.0
-  assetPath: Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Back_1K_TEX.png
+  assetPath: Assets/SpaceSkies Free/Skybox_3/Textures/1K_Resolution/Up_1K_TEX.png
   uploadId: 160409
 TextureImporter:
   internalIDToNameTable: []
@@ -76,7 +76,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1

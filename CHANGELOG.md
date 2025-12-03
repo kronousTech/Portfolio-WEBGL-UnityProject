@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
+[Unreleased] - 03-12-2025
+### Changed
+- Organized some assets.
+
 ## [2.0.3] - 03-12-2025
 ### Changed
 - Reworked UI look of all menus.
