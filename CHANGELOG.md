@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
-## [2.0.0] - 01-12-2025
+## [2.0.0] - 03-12-2025
 ### Added
 - Added change log text format.
 - Added screen buttons to the video players. 
@@ -14,6 +14,7 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 - Updated to version 6000.0.58.f2.
 - Added scrollbar to text elements.
 - Added text viewer to all texts.
+- Added new icons to url buttons.
 ### Changed
 - Changed all of the backend asset bundle structure to be more optimized and organized.
 - Changed the folder placement of the scripts and assets.
@@ -23,6 +24,7 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 - Rewrote a lot of the code for better optimization and organization.
 - All rooms come from the same prefab instead of variations for each.
 - Change log UI text now comes from the builds changelog.
+- Changed url buttons structured.
 ### Fixed
 - Fixed WebGL mouse bug by changing the build java files directly via post processing.
 - Fixed issue with post process bloom.
