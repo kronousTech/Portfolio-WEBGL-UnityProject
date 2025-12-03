@@ -10552,7 +10552,7 @@ GameObject:
   - component: {fileID: 443217114}
   - component: {fileID: 443217113}
   m_Layer: 31
-  m_Name: StartingLocation:Main Hall
+  m_Name: StartingLocation:Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13718,7 +13718,7 @@ GameObject:
   - component: {fileID: 538930576}
   - component: {fileID: 538930575}
   m_Layer: 31
-  m_Name: StartingLocation:Entrance
+  m_Name: StartingLocation:TagSeleciton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13733,7 +13733,7 @@ Transform:
   m_GameObject: {fileID: 538930573}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.0699999, z: -4.05}
+  m_LocalPosition: {x: 4, y: 1.0699999, z: -4.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
