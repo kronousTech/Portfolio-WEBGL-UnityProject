@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [2.0.7] - 04-12-2025
+### Added
+- Added KendirStudios room.
+- Added Script Dependencies Viewer room.
+
 ## [2.0.6] - 04-12-2025
 ### Fixed
 - Fixed cursor lock issues on safari.

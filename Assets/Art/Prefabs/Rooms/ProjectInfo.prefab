@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf8d6d62c3f3a94cb044cbad376248c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_headersFontSize: 80
+  m_headersFontSize: 75
   m_textFontSize: 62
   m_textDisplay: {fileID: 7417853966653778928}
   m_repository: {fileID: 0}
