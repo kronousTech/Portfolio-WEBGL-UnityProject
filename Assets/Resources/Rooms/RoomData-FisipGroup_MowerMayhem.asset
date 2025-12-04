@@ -17,29 +17,33 @@ MonoBehaviour:
   Tags: 224
   Texts:
   - category: 0
-    info: Unity Developer
-  - category: 1
-    info: Codeverze uses the latest technologies to develop high-quality responsive,
-      personalized, and pixel-perfect designs. From e-commerce to large-scale web
-      and mobile applications, Codeverze helps organizations, businesses, and individuals
-      to effectively market and enhance their digital presence. Through custom solutions,
-      access to a reliable team, and fast delivery, Codeverze offers extensive end-to-end
-      expertise to ensure an excellent client experience.
+    info: Lead Developer & Team Manager
   - category: 2
-    info: "Job name : Unity Developer - C# integration with an external API\n\nIn
-      my initial Upwork assignment, I collaborated with Alan Mac Cormack, the founder
-      of Codeverze. My main responsibility was integrating API's into Unity applications,
-      working closely alongside Alan and his team.\n\nThroughout this collaboration,
-      both Alan and his team demonstrated excellence in their work, and commitment
-      to teaching and providing assistance whenever needed.\nThis experience has
-      set a high standard for my expectations in future Upwork endeavors.\n\nUnfortunately,
-      I'm unable to provide specific project details due to the signing of a non-disclosure
-      agreement (NDA). \n\nFor further insights into Codeverze you can explore their
-      LinkedIn profile and website through the links bellow."
+    info: Unleash the thrill of mowing in Mower Mayhem, the ultimate grass-cutting
+      challenge! Customize your mower, tackle diverse levels, and slice through grass
+      for that perfect cut. Compete against the clock, level up, and claim top spot
+      on the leaderboards. Ready, set, mow!
+  - category: 3
+    info: '- Successfully oversaw and shipped a Mobile Game to both the Apple Store
+      and Play Store.
+
+      - Led a cross-functional team of programmers and artists,
+      managed communication with the project owner, and implemented Scrum methodologies
+      with a focus on an incremental MVP to ensure project alignment and timely delivery.
+
+      -
+      Created a Custom Editor to develop level content for the game.
+
+      - Handled
+      third-party services for Analytics|GameAnalytics, Ad Networks|IronSource, Leaderboards|Unity
+      Services and In-app purchases|Unity Services.
+
+      - Developed or prototyped
+      critical systems, such as gameplay mechanics, physics, UI, and enemy AI.'
   - category: 7
-    info: October 12, 2022 - Ongoing.
+    info: 2023-2024
   Images: {fileID: 11400000, guid: 1c0daf9f90c71ef45a445eb5b5771fb2, type: 2}
-  Videos: {fileID: 0}
+  Videos: {fileID: 11400000, guid: 4a95d6d35bf3b2b44a58d44f49d5297c, type: 2}
   Urls:
   - Name: 
     URL: https://www.linkedin.com/company/fisip-group/
@@ -47,3 +51,9 @@ MonoBehaviour:
   - Name: 
     URL: https://fisipgroup.com
     Icon: {fileID: 21300000, guid: c094a78d1bcd30946a230c3b29a22be3, type: 3}
+  - Name: 
+    URL: https://play.google.com/store/apps/details?id=com.FisipGroup.MowerMayhem&pcampaignid=web_share
+    Icon: {fileID: 21300000, guid: 6bbc5dc9075f9a148b11abc7a95f2bcc, type: 3}
+  - Name: 
+    URL: https://apps.apple.com/mt/app/mower-mayhem-cut-to-the-chase/id6502991236
+    Icon: {fileID: 21300000, guid: 4bfca44c1c96d1a4aa01b46779e8597c, type: 3}
