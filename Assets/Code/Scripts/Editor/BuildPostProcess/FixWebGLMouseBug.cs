@@ -1,8 +1,9 @@
-using UnityEditor.Build;
-using UnityEditor.Build.Reporting;
+using System;
+using System.Diagnostics;
 using System.IO;
 using UnityEditor;
-using System.Diagnostics;
+using UnityEditor.Build;
+using UnityEditor.Build.Reporting;
 
 namespace KronosTech.BuildPostProcessing
 {
@@ -14,16 +15,16 @@ namespace KronosTech.BuildPostProcessing
         {
             if (report.summary.platform == BuildTarget.WebGL)
             {
-                // string outputPath = Path.Combine(report.summary.outputPath, "Build/Web/");
                 string outputPath = report.summary.outputPath;
+
                 ModifyFilesInDirectory(outputPath);
             }
         }
 
         private void ModifyFilesInDirectory(string directoryPath)
         {
-            // Search for gzipped JavaScript files first
             var gzippedFiles = Directory.GetFiles(directoryPath, "*.js.gz", SearchOption.AllDirectories);
+
             if (gzippedFiles.Length > 0)
             {
                 foreach (var filePath in gzippedFiles)
@@ -33,11 +34,9 @@ namespace KronosTech.BuildPostProcessing
             }
             else
             {
-                // If no gzipped files, search for plain JavaScript files
                 var jsFiles = Directory.GetFiles(directoryPath, "*.js", SearchOption.AllDirectories);
                 foreach (var filePath in jsFiles)
                 {
-                    // Avoid modifying .js files that are already covered by .js.gz processing
                     if (!filePath.EndsWith(".js.gz"))
                     {
                         ModifyAndCompressFile(filePath, false);
@@ -49,29 +48,59 @@ namespace KronosTech.BuildPostProcessing
         private void ModifyAndCompressFile(string filePath, bool isGzipped)
         {
             string tempFilePath = filePath;
+
             if (isGzipped)
             {
                 tempFilePath = Path.ChangeExtension(filePath, ".tmp.js");
-                // Decompress the file
-                ProcessStartInfo decompress = new ProcessStartInfo("gzip", $"-d -k -c \"{filePath}\" > \"{tempFilePath}\"");
-                decompress.UseShellExecute = false;
+
+                var decompress = new ProcessStartInfo("gzip", $"-d -k -c \"{filePath}\" > \"{tempFilePath}\"")
+                {
+                    UseShellExecute = false
+                };
+
                 Process.Start(decompress).WaitForExit();
             }
 
-            // Modify the content
             string content = File.ReadAllText(tempFilePath);
-            content = content.Replace("requestPointerLock()", "requestPointerLock({unadjustedMovement: true}).catch(function(error) {console.log(error);})");
+            string wrapper = "(function(){var orig=Element.prototype.requestPointerLock;var pending=false;Element.prototype.requestPointerLock=function(opts){if(pending){return;}pending=true;var p=orig.call(this,opts);try{if(p&&typeof p.finally==='function'){p.finally(function(){pending=false;});}else{pending=false;}}catch(e){pending=false;}if(p&&typeof p.catch==='function'){p.catch(function(err){console.log(err);});}return p;};})();\n";
+
+            if (content.Contains(".loader.js"))
+            {
+                int idx = content.IndexOf(".loader.js", StringComparison.InvariantCulture);
+                if (idx >= 0)
+                {
+                    int scriptOpen = content.LastIndexOf("<script", idx, StringComparison.InvariantCulture);
+                    if (scriptOpen >= 0)
+                    {
+                        content = content.Insert(scriptOpen, "<script>" + wrapper + "</script>\n");
+                    }
+                }
+            }
+
+            if (filePath != null && filePath.EndsWith(".loader.js", StringComparison.InvariantCultureIgnoreCase))
+            {
+                content = wrapper + content;
+            }
+
+            content = content.Replace(
+                "requestPointerLock()",
+                "requestPointerLock({unadjustedMovement:true})"
+            );
+
             File.WriteAllText(tempFilePath, content);
 
             if (isGzipped)
             {
-                // Compress the file again and cleanup
-                File.Delete(filePath); // Delete the original gz file as gzip won't overwrite
-                ProcessStartInfo compress = new ProcessStartInfo("gzip", $"-c \"{tempFilePath}\" > \"{filePath}\"");
-                compress.UseShellExecute = false;
-                Process.Start(compress).WaitForExit();
+                File.Delete(filePath);
 
-                File.Delete(tempFilePath); // Delete the temporary decompressed file
+                var startInfo = new ProcessStartInfo("gzip", $"-c \"{tempFilePath}\" > \"{filePath}\"")
+                {
+                    UseShellExecute = false
+                };
+
+                Process.Start(startInfo).WaitForExit();
+
+                File.Delete(tempFilePath);
             }
         }
     }
