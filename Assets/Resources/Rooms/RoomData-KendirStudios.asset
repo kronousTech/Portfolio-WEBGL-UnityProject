@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-KendirStudios
+  m_EditorClassIdentifier: 
+  ProjectName: Can't Disclose
+  ClientName: KendirStudios
+  Tags: 40
+  Texts:
+  - category: 1
+    info: 'Educational role playing games and worldbuilding development studio based
+      in Porto. Spinning-off Schoolers & Scholars, a research project aimed at identifying
+      and testing the impact of RPGs in education, we are a team dedicated to building
+      massive year-long games for different subjects and integrating educational
+      contents and pedagogical objectives into the narrative and the worlds built.
+
+      We
+      aim at taking Game Based Learning to a whole new level, changing the way students
+      learn by creating immersive and engaging scenarios and building games in a
+      way never seen before in the Edutech field!'
+  - category: 0
+    info: Architecture Director
+  - category: 2
+    info: '- Progressed from Unity Developer to Architecture Director taking on high-level
+      planning and technical leadership responsibilities.
+
+      - Led architectural
+      planning for upcoming projects, designing scalable and modular code structures.
+
+      -
+      Established development standards and best practices to ensure consistency
+      and efficiency across teams.'
+  - category: 7
+    info: Jun 2025 - Present
+  - category: 0
+    info: Unity Developer
+  - category: 2
+    info: '- Developed educational games in Unity for the Portuguese Directorate-General
+      for Education (DGE).
+
+      - Built in-game content and internal tools as reusable
+      Custom Unity Packages to streamline workflow.'
+  - category: 7
+    info: Feb 2025- Jun 2025
+  Images: {fileID: 11400000, guid: 6e78a1fa437d08444ad75b02827f68ca, type: 2}
+  Videos: {fileID: 0}
+  Urls:
+  - Name: 
+    URL: https://www.linkedin.com/company/kendir-studios/
+    Icon: {fileID: 21300000, guid: 8756b18f96a9dd34e8b5019db7a7240d, type: 3}
+  - Name: 
+    URL: https://www.kendirstudios.pt/
+    Icon: {fileID: 21300000, guid: 629a416212bc7724e8e8a9e87260ed18, type: 3}
