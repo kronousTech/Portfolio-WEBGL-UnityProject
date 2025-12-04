@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
-## [2.0.5] - 03-12-2025
+## [2.0.6] - 04-12-2025
+### Fixed
+- Fixed cursor lock issues on safari.
+### Removed
+- Removed splash screen.
+
+## [2.0.5] - 04-12-2025
 ### Added
 - Added gameplay video to the MowerMayhem.
 - Added new meme images.
