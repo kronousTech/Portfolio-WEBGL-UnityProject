@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [2.0.5] - 03-12-2025
+### Added
+- Added gameplay video to the MowerMayhem.
+- Added new meme images.
+### Fixed
+- Fixed the MowerMayhem project description.
+
 ## [2.0.4] - 03-12-2025
 ### Changed
 - Organized some assets.
