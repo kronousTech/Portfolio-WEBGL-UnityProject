@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [2.1.0] - 07-12-2025
+### Added
+- Added static batching.
+- Added one more meme image.
+- Added new floor material.
+### Changed
+- Changed the vases because they were single handedly causing optimization issues. (60k+ triangles each)
+- Lowered the shadow view distance.
+- Changed some post processing changes to improve performance.
+
 ## [2.0.7] - 04-12-2025
 ### Added
 - Added KendirStudios room.
