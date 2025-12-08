@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 1753110724325421474}
   - component: {fileID: 5506080319409926538}
   - component: {fileID: 4231585592771002133}
+  - component: {fileID: -7609452465648725021}
   m_Layer: 0
   m_Name: DynamicRoom-Wall
   m_TagString: Untagged
@@ -166,6 +167,19 @@ MonoBehaviour:
   m_repository: {fileID: 1518586823748319061}
   m_title: {fileID: 1254172310306924986}
   m_tags: {fileID: 8686938230483379349}
+--- !u!114 &-7609452465648725021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5196600039252470121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae746ed433e794442b824778770ee5df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mapImage: {fileID: 21300000, guid: 6bdbf563d1c94eb469ae9ad5b84bc433, type: 3}
 --- !u!1 &5486838510015999272
 GameObject:
   m_ObjectHideFlags: 0

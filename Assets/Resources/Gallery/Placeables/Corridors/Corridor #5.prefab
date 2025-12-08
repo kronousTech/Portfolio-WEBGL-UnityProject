@@ -8594,6 +8594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3542072855018158841}
   - component: {fileID: 3542072855018158840}
+  - component: {fileID: -3499355755466847683}
   m_Layer: 0
   m_Name: Corridor #5
   m_TagString: Untagged
@@ -8632,6 +8633,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _exit: {fileID: 4500469428168569963}
+--- !u!114 &-3499355755466847683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3542072855018158838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae746ed433e794442b824778770ee5df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mapImage: {fileID: 21300000, guid: 3af9b653c0360d040804db1a14354b15, type: 3}
 --- !u!1 &3711088543920725255
 GameObject:
   m_ObjectHideFlags: 0

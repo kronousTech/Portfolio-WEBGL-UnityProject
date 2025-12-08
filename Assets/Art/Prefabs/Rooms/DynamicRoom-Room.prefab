@@ -12830,6 +12830,7 @@ GameObject:
   - component: {fileID: 1269966058159285049}
   - component: {fileID: 53283683273281950}
   - component: {fileID: 8625279938950224965}
+  - component: {fileID: 5707586790016453791}
   m_Layer: 0
   m_Name: DynamicRoom-Room
   m_TagString: Untagged
@@ -12986,6 +12987,19 @@ MonoBehaviour:
   m_contentViewer: {fileID: 7580598093450254580}
   m_title: {fileID: 5937646292057083138}
   m_index: {fileID: 2793324659255293617}
+--- !u!114 &5707586790016453791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5196600039252470121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae746ed433e794442b824778770ee5df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mapImage: {fileID: 21300000, guid: bce090ff18542264a9de1609415ec482, type: 3}
 --- !u!1 &5916113201084755902
 GameObject:
   m_ObjectHideFlags: 0

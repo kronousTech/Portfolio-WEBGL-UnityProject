@@ -3046,6 +3046,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4862593559259022807}
   - component: {fileID: 4760198811899884975}
+  - component: {fileID: -145386512729124244}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -3082,6 +3083,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _line: {fileID: 5610743119583193883}
+--- !u!114 &-145386512729124244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8293082598532240837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae746ed433e794442b824778770ee5df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mapImage: {fileID: 21300000, guid: 6bdbf563d1c94eb469ae9ad5b84bc433, type: 3}
 --- !u!1 &8465010258410018729
 GameObject:
   m_ObjectHideFlags: 0
