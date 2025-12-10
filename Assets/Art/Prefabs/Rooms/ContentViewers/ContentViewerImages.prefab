@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2724747563827723613}
   - component: {fileID: 9142991637887178813}
   - component: {fileID: 4697977692130295084}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Text Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 8998283233957026715}
   - component: {fileID: 8321355513217086834}
   - component: {fileID: 8644295795595329855}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 735775022397997894}
   - component: {fileID: 8148367827413087335}
   - component: {fileID: 4580819430628657500}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Text-Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 5380411864089094076}
   - component: {fileID: 8245087726714816157}
   - component: {fileID: 7773234802127217546}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TextTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 8535835890065108876}
   - component: {fileID: 8612771388913172784}
   - component: {fileID: 4788867984860794306}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 5738416622085764922}
   - component: {fileID: 5572873354140558352}
   - component: {fileID: 9019549264595446499}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 738015931422555585}
   - component: {fileID: 3011388744075908421}
   - component: {fileID: 4956198963637674031}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Button - Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 8227661848934925755}
   - component: {fileID: 1945596357216987929}
   - component: {fileID: 4554435906389423232}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Text_DownloadingImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +958,7 @@ GameObject:
   - component: {fileID: 3411984257451843503}
   - component: {fileID: 2412697038283532209}
   - component: {fileID: 2435971241344458962}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ GameObject:
   - component: {fileID: 3119107882684069184}
   - component: {fileID: 2071954060953409091}
   - component: {fileID: 4800149570033731068}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Button - Previous
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1140,7 +1140,7 @@ GameObject:
   - component: {fileID: 2123196843683454698}
   - component: {fileID: 2749290661771289028}
   - component: {fileID: 7458261376309955443}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ContentViewerImages
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1468,7 +1468,7 @@ GameObject:
   - component: {fileID: 8804289512776379028}
   - component: {fileID: 4163879117953624678}
   - component: {fileID: 3753062937801487377}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ButtonsHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

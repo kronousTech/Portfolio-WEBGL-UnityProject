@@ -14,12 +14,12 @@ GameObject:
   - component: {fileID: 3231276201373060909}
   - component: {fileID: 1189440535878833728}
   - component: {fileID: 7353454737689144849}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: InfoPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 20
   m_IsActive: 1
 --- !u!4 &8971900248694976031
 Transform:
@@ -364,12 +364,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3616949417753158688}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Hangers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 20
   m_IsActive: 1
 --- !u!4 &3616949417753158688
 Transform:
@@ -399,12 +399,12 @@ GameObject:
   - component: {fileID: 6240816138772501628}
   - component: {fileID: 8594488783509296980}
   - component: {fileID: 2680664999719610806}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 20
   m_IsActive: 1
 --- !u!224 &6240816138772501628
 RectTransform:
@@ -576,12 +576,12 @@ GameObject:
   - component: {fileID: 4694320317170987665}
   - component: {fileID: 4813708085670961337}
   - component: {fileID: 7325979842088095233}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 20
   m_IsActive: 1
 --- !u!4 &4694320317170987665
 Transform:
@@ -662,12 +662,12 @@ GameObject:
   - component: {fileID: 5607761695228766260}
   - component: {fileID: 7358774005989416161}
   - component: {fileID: 8100468963470590574}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 20
   m_IsActive: 1
 --- !u!4 &5607761695228766260
 Transform:
@@ -748,12 +748,12 @@ GameObject:
   - component: {fileID: 770966888643916258}
   - component: {fileID: 2856836871666186764}
   - component: {fileID: 5537775820075787417}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Tags
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 20
   m_IsActive: 1
 --- !u!224 &770966888643916258
 RectTransform:

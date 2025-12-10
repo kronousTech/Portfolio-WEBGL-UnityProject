@@ -21,22 +21,17 @@ namespace KronosTech.Gallery.Customization
 
         public void Initialize(Material material)
         {
-            // Skybox
-            if (material.HasProperty("_Tex"))
-            {
-                var texture2D = ConvertCubemapToTexture2D((Cubemap)material.GetTexture("_Tex"));
-
-                m_image.sprite = Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), Vector2.zero);
-            }
-            else if (material.HasTexture("_MainTex") && material.mainTexture != null)
+            if (material.HasTexture("_MainTex") && material.mainTexture != null)
             {
                 var texture2D = TextureToTexture2D(material.mainTexture);
 
                 m_image.sprite = Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), Vector2.zero);
             }
-            
-            if(material.HasProperty("_Color"))
+
+            if (material.HasProperty("_Color"))
+            {
                 m_image.color = material.color;
+            }
         }
 
         private static Texture2D TextureToTexture2D(Texture texture)
@@ -55,24 +50,6 @@ namespace KronosTech.Gallery.Customization
             RenderTexture.ReleaseTemporary(renderTexture);
 
             return texture2D;
-        }
-
-        Texture2D ConvertCubemapToTexture2D(Cubemap cubemap)
-        {
-            var width = cubemap.width;
-            var height = cubemap.height;
-
-            // Create a new Texture2D
-            var texture = new Texture2D(width, height, TextureFormat.RGB24, false);
-
-            // Set pixels from the specified face of the cubemap
-            var colors = cubemap.GetPixels(CubemapFace.PositiveY);
-            texture.SetPixels(colors);
-
-            // Apply changes
-            texture.Apply();
-
-            return texture;
         }
     }
 }

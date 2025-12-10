@@ -21,24 +21,18 @@ namespace KronosTech.Gallery.Customization
 
         public void ReplaceMaterial(string materialName, Material material)
         {
-            var index = -1;
+            var shared = m_renderer.sharedMaterials;
 
-            for (int i = 0; i < m_renderer.materials.Length; i++)
+            for (int i = 0; i < shared.Length; i++)
             {
-                if (m_renderer.materials[i].name.Contains(materialName))
+                if (shared[i] != null && shared[i].name.Contains(materialName))
                 {
-                    index = i;
-                    break;
+                    shared[i] = material;
+
+                    m_renderer.sharedMaterials = shared;
+
+                    return;
                 }
-            }
-
-            // Found mat
-            if (index > -1)
-            {
-                var newMats = m_renderer.sharedMaterials;
-                newMats[index] = material;
-
-                m_renderer.materials = newMats;
             }
         }
     }

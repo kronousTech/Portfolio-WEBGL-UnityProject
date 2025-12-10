@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2585605605633802238}
   - component: {fileID: 4979134695364318686}
   - component: {fileID: 3432217102738427210}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Button - Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 7429621855419303030}
   - component: {fileID: 6967270756358500584}
   - component: {fileID: 9090272345515859397}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Text_DownloadingImage (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 3643100467230757779}
   - component: {fileID: 1765438496557831613}
   - component: {fileID: 4836544881031150240}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Button-ScreenPause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 1330425645905827123}
   - component: {fileID: 3429872356112129932}
   - component: {fileID: 8419018566506147747}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3291198666556587145}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ScreenButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1381672076746820392}
   - component: {fileID: 8527043396017213835}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Play/Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 4506220375981906140}
   - component: {fileID: 7389399515944223250}
   - component: {fileID: 8632653686882975575}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +627,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567341677992474686}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ScrollbarHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 6963191126872930098}
   - component: {fileID: 7385452993455772805}
   - component: {fileID: 1486152203440293701}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Button - Previous
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,7 +799,7 @@ GameObject:
   - component: {fileID: 4755093540384635530}
   - component: {fileID: 7748691417481647672}
   - component: {fileID: 2281348699872458459}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,7 +874,7 @@ GameObject:
   - component: {fileID: 8500554829167020940}
   - component: {fileID: 6069490632982398451}
   - component: {fileID: 6356970897533600249}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Scrollbar-Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,7 +980,7 @@ GameObject:
   - component: {fileID: 4230712251600954845}
   - component: {fileID: 4310136262733874786}
   - component: {fileID: 6156017227270076052}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Icon-Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1071,7 +1071,7 @@ GameObject:
   - component: {fileID: 4356111051253869547}
   - component: {fileID: 550618924583844616}
   - component: {fileID: 8620219080912233075}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Button - Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1204,7 +1204,7 @@ GameObject:
   - component: {fileID: 6253304987871027418}
   - component: {fileID: 85717090629011020}
   - component: {fileID: 8317619090342774311}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DownloadingOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1281,7 +1281,7 @@ GameObject:
   - component: {fileID: 9130789615806603920}
   - component: {fileID: 5875681068115140104}
   - component: {fileID: 5589477088849248838}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Button - Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1402,7 +1402,7 @@ GameObject:
   - component: {fileID: 1681274376864220210}
   - component: {fileID: 5538193516658609402}
   - component: {fileID: 3367957888049277823}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Image-VideoPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1608,7 +1608,7 @@ GameObject:
   - component: {fileID: 7853866079848181978}
   - component: {fileID: 4906144845401031727}
   - component: {fileID: 9126808428672179046}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Text Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1758,7 +1758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3378156686615821460}
   - component: {fileID: 7850207772620438954}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Scrollbar-Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1869,7 +1869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 727001360527622690}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ScrollbarHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1904,7 +1904,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1320712284176276230}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: VideoPlayerButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1946,7 +1946,7 @@ GameObject:
   - component: {fileID: 1008263822159098370}
   - component: {fileID: 3445430935440928116}
   - component: {fileID: 5651613259865729290}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Button-ScreenPlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2068,7 +2068,7 @@ GameObject:
   - component: {fileID: 6567064308965116636}
   - component: {fileID: 6036084568246420903}
   - component: {fileID: 1544609920352824152}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Text Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2204,7 +2204,7 @@ GameObject:
   - component: {fileID: 6813998823203985767}
   - component: {fileID: 5442952655882481308}
   - component: {fileID: 1562401609072862085}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2282,7 +2282,7 @@ GameObject:
   - component: {fileID: 5068026028987591598}
   - component: {fileID: 3148828923627584775}
   - component: {fileID: 7241842158207698551}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2358,7 +2358,7 @@ GameObject:
   - component: {fileID: 4341652821636957762}
   - component: {fileID: 6401005321752412319}
   - component: {fileID: 9154399701843637395}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2465,7 +2465,7 @@ GameObject:
   - component: {fileID: 1569161939977296372}
   - component: {fileID: 1194998061712864065}
   - component: {fileID: 9151822340681825892}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Button - Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2603,7 +2603,7 @@ GameObject:
   - component: {fileID: 7439052573797927330}
   - component: {fileID: 5788428489003680742}
   - component: {fileID: 8493008909934986199}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ContentViewerVideos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2982,7 +2982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703896610048686908}
   - component: {fileID: 1398610143600142836}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ButtonsHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3031,7 +3031,7 @@ GameObject:
   - component: {fileID: 2967180525215792412}
   - component: {fileID: 724463561613615317}
   - component: {fileID: 7689210985291403771}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: TextTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
