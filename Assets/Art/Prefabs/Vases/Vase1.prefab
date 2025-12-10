@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 250477232798125414}
   - component: {fileID: 1173462480969728543}
   - component: {fileID: -2858302025529312927}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Vase1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1463504124209114, guid: 30a3561e72e42d045a72040495368d04, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1463504124209114, guid: 30a3561e72e42d045a72040495368d04, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -89,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1739541281279610, guid: 30a3561e72e42d045a72040495368d04, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1739541281279610, guid: 30a3561e72e42d045a72040495368d04, type: 3}
       propertyPath: m_StaticEditorFlags

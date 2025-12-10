@@ -4,18 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
-## [2.1.0] - 08-12-2025
+## [2.1.0] - Big Optimization Patch - 09-12-2025
 ### Added
 - Added static batching.
 - Added one more meme image.
 - Added new floor material.
 - Created new map system.
+- Added occlusion culling to improve performance.
 ### Changed
 - Changed the vases because they were single handedly causing optimization issues. (60k+ triangles each)
 - Lowered the shadow view distance.
 - Changed some post processing changes to improve performance.
 ### Removed
 - Removed old map system components and scripts.
+### Fixed
+- Fixed bug where camera draw distance would be above the options max value.
 
 ## [2.0.7] - 04-12-2025
 ### Added

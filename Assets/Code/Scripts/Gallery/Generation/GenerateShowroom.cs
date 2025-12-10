@@ -99,6 +99,8 @@ namespace KronosTech.Gallery.Generation
                 yield break;
             }
 
+            m_isGeneratingRoom = true;
+
             m_tilesPool.ClearObjects();
             m_corridorsPool.ClearObjects();
             m_wallsPool.ClearObjects();
@@ -113,8 +115,6 @@ namespace KronosTech.Gallery.Generation
             var remainingRooms = availableRooms.Length;
             PlaceableExit nextExit = null;
             var roomIndex = 0;
-
-            m_isGeneratingRoom = true;
 
             while (remainingRooms > 0)
             {

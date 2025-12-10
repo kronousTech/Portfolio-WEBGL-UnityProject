@@ -1,36 +1,49 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class SliderViewDistance : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _fieldOfViewText;
-    private Camera _camera;
-    private Slider _slider;
+    [Header("Settings")]
+    [SerializeField] private int m_startValue = 50;
+    [Header("References")]
+    [SerializeField] private TextMeshProUGUI m_viewDistanceText;
+    private Camera m_camera;
+    private Slider m_slider;
 
+    private void OnEnable()
+    {
+        m_slider.onValueChanged.AddListener(UpdateTextCallback);
+        m_slider.onValueChanged.AddListener(UpdateCameraFarClipPlaneCallback);
+    }
+    private void OnDisable()
+    {
+        m_slider.onValueChanged.RemoveListener(UpdateTextCallback);
+        m_slider.onValueChanged.RemoveListener(UpdateCameraFarClipPlaneCallback);
+    }
     private void Awake()
     {
-        _camera = Camera.main;
-        if (_camera == null)
+        m_camera = Camera.main;
+        if (m_camera == null)
         {
             Debug.LogError("Didn't found Camera on FieldOfViewSlider");
             return;
         }
-        _slider = GetComponent<Slider>();   
+        m_slider = GetComponent<Slider>();
     }
-    private void OnEnable()
+    private void Start()
     {
-        _slider.onValueChanged.AddListener(UpdateText);
-        _slider.onValueChanged.AddListener((value) => _camera.farClipPlane= value);
-    }
-    private void OnDisable()
-    {
-        _slider.onValueChanged.RemoveListener(UpdateText);
-        _slider.onValueChanged.RemoveListener((value) => _camera.farClipPlane = value);
+        UpdateTextCallback(m_startValue);
+        UpdateCameraFarClipPlaneCallback(m_startValue);
     }
 
-    private void UpdateText(float value)
+    private void UpdateTextCallback(float value)
     {
-        _fieldOfViewText.text = ((int)value).ToString();
+        m_viewDistanceText.text = ((int)value).ToString();
+    }
+    private void UpdateCameraFarClipPlaneCallback(float value)
+    {
+        m_camera.farClipPlane = value;
     }
 }

@@ -2,17 +2,17 @@ using KronosTech.Gallery.Generation.Placeables;
 
 namespace KronosTech.Gallery.Map
 {
-    public class MapElementGalleryPlaceable : MapElementBase
+    public class MapElementGalleryPlaceable : MapElementSource
     {
         private IPlaceablePieceBase m_placeable;
 
         private void OnEnable()
         {
-            m_placeable.OnPlacement += PlaceElementCallback;
+            m_placeable.OnPlacement += UpdateMapPositionCallback;
         }
         private void OnDisable()
         {
-            m_placeable.OnPlacement -= PlaceElementCallback;
+            m_placeable.OnPlacement -= UpdateMapPositionCallback;
         }
         protected override void Awake()
         {
@@ -21,9 +21,9 @@ namespace KronosTech.Gallery.Map
             m_placeable = GetComponent<IPlaceablePieceBase>();
         }
 
-        private void PlaceElementCallback()
+        private void UpdateMapPositionCallback()
         {
-            PlaceMapElement();
+            UpdateMapPosition();
         }
     }
 }

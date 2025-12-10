@@ -11,6 +11,7 @@ namespace KronosTech.Gallery.Map
 
         public void Setup(Sprite m_mapImage, Transform worldTransform)
         {
+            name = worldTransform.name;
             m_sprite.sprite = m_mapImage;
             transform.GetRectTransform().sizeDelta = m_mapImage.rect.size;
 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7157410205137426720}
   - component: {fileID: 658006998394401630}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 3912683577007522395}
   - component: {fileID: 1347936297332225123}
   - component: {fileID: 7345288728805161170}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 2070805564422779433}
   - component: {fileID: 7607956416794186038}
   - component: {fileID: 2879027411649346059}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ProjectInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 8316320771864072647}
   - component: {fileID: 6236622999953482283}
   - component: {fileID: 8149754715850358385}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 4516337650076926501}
   - component: {fileID: 2099994728031400330}
   - component: {fileID: 7417853966653778928}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -751,6 +751,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: URLButton
       objectReference: {fileID: 0}
+    - target: {fileID: 2027473046296659969, guid: b066922e5a389004e891916cb9be5daa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2030526042087477154, guid: b066922e5a389004e891916cb9be5daa,
         type: 3}
       propertyPath: m_Pivot.x
@@ -870,6 +875,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2070805564422779433}
     m_Modifications:
+    - target: {fileID: 250023939524470555, guid: f662dbb53983f5d499df829f551faba6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016370712785435027, guid: f662dbb53983f5d499df829f551faba6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077459395037180009, guid: f662dbb53983f5d499df829f551faba6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532233564785642846, guid: f662dbb53983f5d499df829f551faba6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3800597040055441216, guid: f662dbb53983f5d499df829f551faba6,
         type: 3}
       propertyPath: m_textDisplay
@@ -934,6 +959,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button-ReadText
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094746939312773230, guid: f662dbb53983f5d499df829f551faba6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
