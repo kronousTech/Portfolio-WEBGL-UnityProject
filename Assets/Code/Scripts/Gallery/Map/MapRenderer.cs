@@ -27,7 +27,7 @@ namespace KronosTech.Gallery.Map
         private void AddElementCallback(MapElementSourceData data)
         {
             var newElement = Instantiate(m_prefab, m_parent);
-            newElement.Setup(data.Sprite, data.Transform);
+            newElement.Setup(data);
 
             m_elements.Add(data.ID, newElement);
         }

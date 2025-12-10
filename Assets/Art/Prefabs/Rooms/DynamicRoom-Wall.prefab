@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 1753110724325421474}
   - component: {fileID: 5506080319409926538}
   - component: {fileID: 4231585592771002133}
-  - component: {fileID: -7609452465648725021}
+  - component: {fileID: 7333527937896193685}
   m_Layer: 0
   m_Name: DynamicRoom-Wall
   m_TagString: Untagged
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_repository: {fileID: 1518586823748319061}
   m_title: {fileID: 1254172310306924986}
   m_tags: {fileID: 8686938230483379349}
---- !u!114 &-7609452465648725021
+--- !u!114 &7333527937896193685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5196600039252470121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae746ed433e794442b824778770ee5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b71c3154769e9b4fad022f100995057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_mapImage: {fileID: 21300000, guid: 6bdbf563d1c94eb469ae9ad5b84bc433, type: 3}
@@ -2764,7 +2764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1e540b0f2f0ed4f8587fba7e10d441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_roomData: {fileID: 0}
+  m_roomData: {fileID: 11400000, guid: d07f0814d19b73543b09fef488f34cca, type: 2}
   m_transformLocation: {fileID: 7625574640914076617}
   m_repository: {fileID: 1518586823748319061}
 --- !u!1 &6879363414755502727

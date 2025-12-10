@@ -10,8 +10,10 @@ namespace KronosTech.Gallery.Map
         {
             m_placeable.OnPlacement += UpdateMapPositionCallback;
         }
-        private void OnDisable()
+        protected override void OnDisable()
         {
+            base.OnDisable();
+
             m_placeable.OnPlacement -= UpdateMapPositionCallback;
         }
         protected override void Awake()

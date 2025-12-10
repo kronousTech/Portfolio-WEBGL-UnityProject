@@ -8,14 +8,20 @@ namespace KronosTech.Gallery.Map
     {
         [Header("References")]
         [SerializeField] private Image m_sprite;
+        [SerializeField] private Material m_priorityMaterial;
 
-        public void Setup(Sprite m_mapImage, Transform worldTransform)
+        public void Setup(MapElementSourceData data)
         {
-            name = worldTransform.name;
-            m_sprite.sprite = m_mapImage;
-            transform.GetRectTransform().sizeDelta = m_mapImage.rect.size;
+            if(data.Priority)
+            {
+                m_sprite.material = m_priorityMaterial;
+            }
 
-            Place(worldTransform);
+            name = data.Transform.name;
+            m_sprite.sprite = data.Sprite;
+            transform.GetRectTransform().sizeDelta = data.Sprite.rect.size;
+
+            Place(data.Transform);
         }
 
         public void Place(Transform worldTransform)

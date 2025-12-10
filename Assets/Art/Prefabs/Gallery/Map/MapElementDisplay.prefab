@@ -89,3 +89,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sprite: {fileID: 5557112583275880763}
+  m_priorityMaterial: {fileID: 2100000, guid: 69920b8e8fa612f4d8942f3d76696239, type: 2}

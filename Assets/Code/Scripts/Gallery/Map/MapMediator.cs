@@ -29,9 +29,6 @@ namespace KronosTech.Gallery.Map
         {
             if (!s_sources.ContainsKey(data.ID))
             {
-                Debug.LogError($"{nameof(MapMediator)}.cs: " +
-                    $"Trying to remove a element that is not present on the dictionary");
-
                 return;
             }
 

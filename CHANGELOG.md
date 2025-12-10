@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
-## [2.1.0] - Big Optimization Patch - 09-12-2025
+## [2.1.1] - 10-12-2025
+### Added
+- Added missing icon to where the player is.
+### Fixed
+- Fixed issue where map icons wouldn't disappear on hiding rooms.
+
+## [2.1.0] - Optimization Patch - 09-12-2025
 ### Added
 - Added static batching.
 - Added one more meme image.
