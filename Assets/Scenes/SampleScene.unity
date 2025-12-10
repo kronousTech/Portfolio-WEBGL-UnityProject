@@ -4323,6 +4323,7 @@ GameObject:
   - component: {fileID: 128086609}
   - component: {fileID: 128086608}
   - component: {fileID: 128086613}
+  - component: {fileID: 128086614}
   m_Layer: 5
   m_Name: Display - Options
   m_TagString: Untagged
@@ -4466,6 +4467,22 @@ MonoBehaviour:
   m_otherDisplays: []
   m_actionRef: {fileID: -4016801669369870238, guid: 4419d82f33d36e848b3ed5af4c8da37e,
     type: 3}
+--- !u!114 &128086614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128086605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617cdbc7b33335e4fae19995d5fb7ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_startValue: 75
+  m_viewDistanceText: {fileID: 775381049}
+  m_slider: {fileID: 1152509415}
+  m_camera: {fileID: 9005220659232928288}
 --- !u!1 &133482098
 GameObject:
   m_ObjectHideFlags: 0
@@ -66634,9 +66651,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1152509413}
   - component: {fileID: 1152509415}
-  - component: {fileID: 1152509416}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Slider-ViewDistance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66715,20 +66731,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1152509416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1152509412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 617cdbc7b33335e4fae19995d5fb7ded, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_startValue: 50
-  m_viewDistanceText: {fileID: 775381049}
 --- !u!1 &1157848224
 GameObject:
   m_ObjectHideFlags: 0

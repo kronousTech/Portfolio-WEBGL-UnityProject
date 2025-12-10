@@ -1,16 +1,15 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
 
 public class SliderViewDistance : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private int m_startValue = 50;
+    [SerializeField] private int m_startValue = 75;
     [Header("References")]
     [SerializeField] private TextMeshProUGUI m_viewDistanceText;
-    private Camera m_camera;
-    private Slider m_slider;
+    [SerializeField] private Slider m_slider;
+    [SerializeField] private Camera m_camera;
 
     private void OnEnable()
     {
@@ -21,16 +20,6 @@ public class SliderViewDistance : MonoBehaviour
     {
         m_slider.onValueChanged.RemoveListener(UpdateTextCallback);
         m_slider.onValueChanged.RemoveListener(UpdateCameraFarClipPlaneCallback);
-    }
-    private void Awake()
-    {
-        m_camera = Camera.main;
-        if (m_camera == null)
-        {
-            Debug.LogError("Didn't found Camera on FieldOfViewSlider");
-            return;
-        }
-        m_slider = GetComponent<Slider>();
     }
     private void Start()
     {
