@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [2.1.2] - 29-12-2025
+### Added
+- Added changelog to build instead of unity project.
+- Added changelog automatically to the build when built.
+
 ## [2.1.1] - 10-12-2025
 ### Added
 - Added missing icon to where the player is.

@@ -1,25 +1,26 @@
 using KronosTech.WebRequests;
+using System.IO;
 using UnityEngine;
 
-namespace KronosTech.UI.ChangeLog
+namespace KronosTech.ChangeLog
 {
     public class DownloadChangeLogToConverter : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private ConvertChangeLogToTMP m_converter;
 
-#if UNITY_EDITOR
-        private readonly string m_developmentChangeLogURL = "https://raw.githubusercontent.com/kronousTech/Portfolio-WEBGL-UnityProject/refs/heads/develop/CHANGELOG.md";
-#else
-        private readonly string m_mainChangeLogURL = "https://raw.githubusercontent.com/kronousTech/Portfolio-WEBGL-UnityProject/refs/heads/main/CHANGELOG.md";
+        private readonly string m_fileName = "CHANGELOG.md";
+
+#if !UNITY_EDITOR
+        private readonly string m_buildChangeLogURL = "https://raw.githubusercontent.com/kronousTech/Portfolio-WEBGL-Build/refs/heads/main/CHANGELOG.md";
 #endif
 
         private void Awake()
         {
 #if UNITY_EDITOR
-            WebRequest.Get(m_developmentChangeLogURL, AddTextToConverterCallback);
+            GetChangeLogFromProjectRoot();
 #else
-            WebRequest.Get(m_mainChangeLogURL, AddTextToConverterCallback);
+            WebRequest.Get(m_buildChangeLogURL, AddTextToConverterCallback);
 #endif
         }
 
@@ -36,6 +37,16 @@ namespace KronosTech.UI.ChangeLog
             }
 
             m_converter.SetChangeLog(args.Handler.text);
+        }
+
+        private void GetChangeLogFromProjectRoot()
+        {
+            var sourceFilePath = Path.Combine(
+                Directory.GetParent(Application.dataPath).FullName,
+                m_fileName
+            );
+
+            m_converter.SetChangeLog(File.ReadAllText(sourceFilePath));
         }
     }
 }

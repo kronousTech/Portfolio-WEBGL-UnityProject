@@ -2,7 +2,7 @@ using System.Text;
 using TMPro;
 using UnityEngine;
 
-namespace KronosTech.UI.ChangeLog
+namespace KronosTech.ChangeLog
 {
     public class ConvertChangeLogToTMP : MonoBehaviour
     {
