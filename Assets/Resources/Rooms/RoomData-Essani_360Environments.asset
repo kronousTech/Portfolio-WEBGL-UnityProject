@@ -19,24 +19,26 @@ MonoBehaviour:
   - category: 0
     info: Lead Developer.
   - category: 1
-    info: Essani is specialized in customized lighting products and services for
-      the furniture and architecture industry, as well as for industrial automation.
+    info: 'Essani specializes in custom lighting products and services for the furniture
+      and architecture industries, and for industrial automation.
+
+      
+
+'
   - category: 2
-    info: The primary objective of this project was to showcase diverse environments
-      illuminated by various types of lighting. This was accomplished through a dynamic
-      exploration of distinct 360-degree images, seamlessly adjusting their presentation
-      in response to the selected lighting conditions.
+    info: "A WebGL lighting configurator. Users explore 360\xB0 environments (a factory,
+      a house and a store) and switch between lighting setups, with the scene updating
+      to match the selected lighting.\r\n\r\n"
   - category: 3
-    info: In embarking on my first WebGL project, I encountered a range of new challenges
-      related to optimization and build sizes. These challenges provided valuable
-      learning opportunities, allowing me to deepen my understanding of WebGL development
-      intricacies and refine my problem-solving skills.
-  - category: 4
-    info: To address the optimization and build size concerns, I began by reducing
-      the quality of various images. In some cases, the default quality was unnecessarily
-      high, and cutting it in half significantly reduced the build size. This adjustment
-      resulted in smoother application performance with almost no noticeable difference
-      in visual quality.
+    info: "Build size and load time. WebGL apps are downloaded in the browser, and
+      the high-resolution 360\xB0 images made the build heavy.\r\n\r\n"
+  - category: 9
+    info: '- Audited the image assets and found many were imported at far higher
+      quality than the screen could show.
+
+      - Halving the quality on those
+      assets significantly reduced the build size and made the app run more smoothly,
+      with almost no visible difference.'
   Images: {fileID: 11400000, guid: 26f166a90aad30449a632dadd7d9db40, type: 2}
   Videos: {fileID: 0}
   Urls:

@@ -17,40 +17,31 @@ MonoBehaviour:
   Tags: 40
   Texts:
   - category: 1
-    info: 'Educational role playing games and worldbuilding development studio based
-      in Porto. Spinning-off Schoolers & Scholars, a research project aimed at identifying
-      and testing the impact of RPGs in education, we are a team dedicated to building
-      massive year-long games for different subjects and integrating educational
-      contents and pedagogical objectives into the narrative and the worlds built.
+    info: 'A Porto-based studio that builds large, year-long educational role-playing
+      games, spun off from Schoolers & Scholars, a research project on the impact
+      of RPGs in education.
 
-      We
-      aim at taking Game Based Learning to a whole new level, changing the way students
-      learn by creating immersive and engaging scenarios and building games in a
-      way never seen before in the Edutech field!'
+      
+
+'
   - category: 0
     info: Architecture Director
-  - category: 2
-    info: '- Progressed from Unity Developer to Architecture Director taking on high-level
-      planning and technical leadership responsibilities.
-
-      - Led architectural
-      planning for upcoming projects, designing scalable and modular code structures.
-
-      -
-      Established development standards and best practices to ensure consistency
-      and efficiency across teams.'
-  - category: 7
-    info: Jun 2025 - Present
-  - category: 0
-    info: Unity Developer
   - category: 2
     info: '- Developed educational games in Unity for the Portuguese Directorate-General
       for Education (DGE).
 
+      - Promoted from Unity Developer to Architecture
+      Director, taking on high-level planning and technical leadership.
+
+      -
+      Lead architectural planning for upcoming projects, designing scalable, modular
+      code structures.
+
       - Built in-game content and internal tools as reusable
-      Custom Unity Packages to streamline workflow.'
-  - category: 7
-    info: Feb 2025- Jun 2025
+      custom Unity packages to streamline workflows.
+
+      - Established development
+      standards and best practices for consistency and efficiency across teams.'
   Images: {fileID: 11400000, guid: 6e78a1fa437d08444ad75b02827f68ca, type: 2}
   Videos: {fileID: 0}
   Urls:

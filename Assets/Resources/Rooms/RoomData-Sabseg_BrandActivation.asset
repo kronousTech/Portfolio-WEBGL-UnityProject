@@ -19,25 +19,31 @@ MonoBehaviour:
   - category: 0
     info: Intern Developer.
   - category: 1
-    info: "SABSEG is an insurance broker that sponsors several football clubs of
-      the 1st and 2nd division of Portuguese. As part of one of its \u201CCelebrate
-      Football\u201D initiatives, hivolve challenged SABSEG to carry out a brand
-      activation using Virtual Reality in the stadiums of sponsored clubs."
+    info: 'SABSEG is an insurance broker that sponsors several clubs in Portugal''s
+      first and second football divisions. For its Celebrate Football initiative,
+      hivolve created a VR brand activation that ran in the stadiums of the sponsored
+      clubs.
+
+      
+
+'
   - category: 2
-    info: In this innovative project, we crafted new immersive environments, including
-      various football stadiums, diverse player scenarios, and dynamic weather conditions.
-      The core experience revolves around the user's objective of defending penalties,
-      each successful defense resulting in a rewarding outcome.
-  - category: 6
-    info: SteamVR Plugin.
+    info: 'A VR penalty-saving game. The player is the goalkeeper and tries to stop
+      penalties, with a reward for each save. We built several football stadiums,
+      different player scenarios and dynamic weather conditions.
+
+      
+
+'
   - category: 3
     info: As my initial venture into VR development, the most significant challenge
       revolved around grasping the workings of VR components.
-  - category: 4
-    info: To comprehend the intricacies of the SteamVR plugin, I extensively read
-      its documentation and experimented with the pre-built scenes included in the
-      plugin. This hands-on approach provided a clearer understanding of its capabilities
-      and functioning.
+  - category: 9
+    info: '- This was my first VR project. I got up to speed with SteamVR by studying
+      its documentation and taking apart its example scenes.
+
+      - Used that
+      knowledge to build the VR goalkeeping gameplay on top of the plugin.'
   Images: {fileID: 11400000, guid: d3d8b909e22d17c4495a74bfd9d25d95, type: 2}
   Videos: {fileID: 11400000, guid: b50760c5f84bdee4e92e58a357a5ab54, type: 2}
   Urls:

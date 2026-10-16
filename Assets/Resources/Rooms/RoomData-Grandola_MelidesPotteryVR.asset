@@ -19,21 +19,30 @@ MonoBehaviour:
   - category: 0
     info: Lead Developer.
   - category: 1
-    info: "Gr\xE2ndola's Municipal Chamber."
+    info: "Gr\xE2ndola Municipality (C\xE2mara Municipal de Gr\xE2ndola)."
   - category: 2
-    info: This project showcases the traditional process of crafting clay pots, allowing
-      players to experience each step, from gathering raw clay to shaping and eventually
+    info: 'A VR experience about the traditional craft of making clay pots. Players
+      go through every step themselves, from gathering raw clay to shaping and finally
       selling the finished pot.
+
+      
+
+'
   - category: 3
-    info: Being a long experience, the main challenge involved establishing a system
-      to incorporate multiple tasks for players. Each task required a clear condition
-      and corresponding visual cues to guide the player. Additionally, there was
-      a need for visual or auditory feedback upon task completion.
-  - category: 4
-    info: To address this challenge, I devised a script encompassing all scene tasks,
-      iterating to the next one once the current task was finished. I established
-      an abstract class for tasks, providing a flexible structure that allowed for
-      creativity and expansion while maintaining a robust foundation.
+    info: 'It is a long, guided experience made of many sequential tasks. Each task
+      needed a clear completion condition, visual cues to guide the player, and visual
+      or audio feedback when it was done.
+
+      
+
+'
+  - category: 9
+    info: '- Designed a task system: a manager that runs all the tasks in a scene
+      and advances to the next one when the current task completes.
+
+      - Built
+      it on an abstract task base class, so each new task type plugs in with its
+      own condition, hints and feedback while sharing the same flow.'
   Images: {fileID: 11400000, guid: 32daee7033425d04e816b0124e18c592, type: 2}
   Videos: {fileID: 11400000, guid: 68c0d8d4902e72248a714816290839e8, type: 2}
-  ClickableLinks: []
+  Urls: []

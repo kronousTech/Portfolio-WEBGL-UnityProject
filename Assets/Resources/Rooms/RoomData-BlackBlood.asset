@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-BlackBlood
+  m_EditorClassIdentifier: 
+  ProjectName: Black-Blood
+  ClientName: KronosTech
+  Tags: 32
+  Texts:
+  - category: 0
+    info: Solo Developer
+  - category: 2
+    info: 'BlackBlood combines the gunplay of DOOM with the flashy combos of Devil
+      May Cry. You survive intense combat arenas by constantly switching weapons
+      and mixing melee and ranged attacks, and a live style rank rewards you for
+      doing it well.
+
+
+
+'
+  - category: 8
+    info: '- Seamless gun and melee combat, with switching mid-combo
+
+      - Dynamic
+      style ranking (D / C / B / A / S tiers)
+
+      - Parkour movement: dash, wall-run
+      and swing
+
+      - Multiple melee and ranged weapons
+
+      - More systems
+      in progress'
+  - category: 9
+    info: I design, program and produce the whole game myself, including the combat,
+      movement, weapon and style-ranking systems and the architecture that keeps
+      a 350+ file codebase maintainable as a solo developer.
+  Images: {fileID: 11400000, guid: 8bbd0d4633a99d3489b7e1e5399f00d2, type: 2}
+  Videos: {fileID: 0}
+  Urls:
+  - Name: Latest Build
+    URL: https://github.com/kronousTech/BlackBlood-TestersBuild/releases/latest
+    Icon: {fileID: 21300000, guid: 9c311d94462e3b841b09ae01198d8ee2, type: 3}
+  - Name: Discord Community
+    URL: https://discord.gg/g3Rx4kWm7j
+    Icon: {fileID: 21300000, guid: 681f557fde227484a854d6d8ce7d753f, type: 3}

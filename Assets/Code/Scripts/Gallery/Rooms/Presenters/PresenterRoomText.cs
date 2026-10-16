@@ -36,11 +36,21 @@ namespace KronosTech.Gallery.Rooms.Presenters
 
             foreach (var text in data.Texts)
             {
-                fullText.AppendLine($"<b><size={m_headersFontSize}>{text.category}</b></size>");
-                fullText.AppendLine($"{text.info}\n");
+                fullText.AppendLine($"<b><size={m_headersFontSize}>{GetCategoryText(text.category)}</b></size>");
+                fullText.AppendLine($"{text.info.TrimEnd('\r', '\n')}\n");
             }
 
             m_textDisplay.text = fullText.ToString();
+        }
+        private string GetCategoryText(TextSectionType sectionType)
+        {
+            switch (sectionType)
+            {
+                case TextSectionType.WhatIDid:
+                    return "What I Did";
+            }
+            
+            return sectionType.ToString();
         }
     }
 }

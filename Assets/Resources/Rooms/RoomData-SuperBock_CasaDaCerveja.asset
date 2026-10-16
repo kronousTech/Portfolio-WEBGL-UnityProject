@@ -19,31 +19,35 @@ MonoBehaviour:
   - category: 0
     info: Lead Developer.
   - category: 1
-    info: Super Bock is a Portuguese beer brand from the Super Bock Group brewery,
-      which produces a range of beers under the same name. Established in 1927, Super
-      Bock maintains a leading position in the market, and it is among the favorite
-      beer brands of the Portuguese. It is also the best-selling Portuguese beer
-      in the world.
-  - category: 2
-    info: 'Come travel back in time at Super Bock ''Casa da Cerveja'', and follow
-      how beer was made in our first brewing room, which now comes to life again
-      through this immersive Augmented Reality experience.
+    info: 'Super Bock is Portugal''s best-selling beer brand worldwide, produced
+      by the Super Bock Group since 1927.
 
-      The Super Bock
-      ''Casa da Cerveja'' is a tour circuit located right inside the Super Bock Group
-      Production Center. On this journey through the world of beer, you will learn
-      about its manufacturing process, from the raw materials that give rise to it,
-      to the production of the wort, through fermentation and ending with the filling,
-      where you can hear the clinking of the bottles.'
+      
+
+'
+  - category: 2
+    info: 'Casa da Cerveja is a visitor tour inside the Super Bock Group production
+      centre. This AR app brings the group''s original brewing room back to life,
+      walking visitors through the whole process: raw materials, wort production,
+      fermentation, and bottling.
+
+      
+
+'
   - category: 3
-    info: The primary challenge for this project came from only being able to test
-      in the museum environment. This constraint made the placement of models in
-      the experience particularly challenging.
-  - category: 4
-    info: To aid in model placement, we developed a script that calculated the distance
-      between the marker and the developer. This allowed us to save the position
-      for later use during development when adding the models. While not flawless,
-      it significantly expedited and simplified the initial placement of the models.
+    info: 'The experience could only be tested on-site, in the museum. Placing 3D
+      models accurately relative to the real room was slow and hard to iterate on.
+
+      
+
+'
+  - category: 9
+    info: '- Built a developer placement tool that measured the device''s position
+      relative to the AR marker on-site and saved it.
+
+      - Used those saved
+      positions back in the studio to place models in the scene. It wasn''t perfect,
+      but it made the initial layout much faster and simpler.'
   Images: {fileID: 11400000, guid: d795b865f2302b946be39061066e6492, type: 2}
   Videos: {fileID: 0}
   Urls:

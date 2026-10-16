@@ -19,14 +19,28 @@ MonoBehaviour:
   - category: 0
     info: Unity Developer
   - category: 2
-    info: "Script Viewer is a custom Unity Editor tool that provides a visual, interactive
-      map of all C# scripts within your project\u2019s Assets folder. Designed for
-      developers who want better visibility and control over their codebase, it offers
-      a drag-and-zoom workspace where each script is represented as a movable, clickable
-      node (box) displaying the script's name and namespace.\r\n\r\nWith support
-      for live editing, coloring, and navigation, Script Viewer improves project
-      maintainability and understanding\u2014especially in large or modular Unity
-      projects."
+    info: 'Script Dependency Viewer is a Unity Editor tool that draws an interactive
+      map of every C# script in a project''s Assets folder. Each script is a movable,
+      clickable node showing its name and namespace, laid out in a drag-and-zoom
+      workspace.
+
+      
+
+      Nodes can be coloured, edited live and used to
+      jump straight to the code, which makes large or modular projects much easier
+      to understand and maintain.'
+  - category: 9
+    info: '- A custom Editor window with a pannable, zoomable canvas.
+
+      - Automatic
+      discovery of all scripts in the project, with name and namespace parsing.
+
+      -
+      Node interactions: drag, select, colour-code and navigate to the script.
+
+      -
+      Packaging and submission to the Unity Asset Store, following its publishing
+      guidelines.'
   Images: {fileID: 11400000, guid: 278f963aee1e6404d9ea5f93e1b005bb, type: 2}
   Videos: {fileID: 0}
   Urls:

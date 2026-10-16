@@ -19,29 +19,30 @@ MonoBehaviour:
   - category: 0
     info: Lead Developer & Team Manager
   - category: 2
-    info: Unleash the thrill of mowing in Mower Mayhem, the ultimate grass-cutting
-      challenge! Customize your mower, tackle diverse levels, and slice through grass
-      for that perfect cut. Compete against the clock, level up, and claim top spot
-      on the leaderboards. Ready, set, mow!
+    info: 'Mower Mayhem is a casual mobile racing game: clear the grass on each level
+      and race to the finish line as fast as you can. It was built in Unity and shipped
+      on Android and iOS.
+
+      
+
+'
   - category: 3
-    info: '- Successfully oversaw and shipped a Mobile Game to both the Apple Store
-      and Play Store.
+    info: 'This was a production game with a large, growing codebase that I had to
+      maintain, extend and take through store release, while also leading the team
+      building it.
 
-      - Led a cross-functional team of programmers and artists,
-      managed communication with the project owner, and implemented Scrum methodologies
-      with a focus on an incremental MVP to ensure project alignment and timely delivery.
+      
 
-      -
-      Created a Custom Editor to develop level content for the game.
-
-      - Handled
-      third-party services for Analytics|GameAnalytics, Ad Networks|IronSource, Leaderboards|Unity
-      Services and In-app purchases|Unity Services.
-
-      - Developed or prototyped
-      critical systems, such as gameplay mechanics, physics, UI, and enemy AI.'
-  - category: 7
-    info: 2023-2024
+'
+  - category: 9
+    info: "- Led the team: coordinated programmers and artists, ran Scrum with an
+      incremental MVP, and was the main technical contact for the project owner.\r\n-
+      Built the level pipeline: a custom Unity Editor tool so levels could be authored
+      quickly without touching code.\r\n- Integrated live services:\r\n  - Analytics:
+      GameAnalytics\r\n  - Ads: IronSource\r\n  - Leaderboards and in-app purchases:
+      Unity Services\r\n- Kept it maintainable: careful planning, consistent testing
+      and incremental feature iteration let the project keep growing without falling
+      apart, all the way to release on both stores."
   Images: {fileID: 11400000, guid: 1c0daf9f90c71ef45a445eb5b5771fb2, type: 2}
   Videos: {fileID: 11400000, guid: 4a95d6d35bf3b2b44a58d44f49d5297c, type: 2}
   Urls:

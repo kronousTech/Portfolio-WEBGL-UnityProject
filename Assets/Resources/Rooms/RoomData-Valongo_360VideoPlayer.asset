@@ -18,23 +18,14 @@ MonoBehaviour:
   Texts:
   - category: 0
     info: Lead Developer.
+  - category: 1
+    info: "Valongo Municipality (C\xE2mara Municipal de Valongo).\r\n\r\n"
   - category: 2
-    info: 'This project was developed for the Valongo Municipal Chamber to showcase
-      the city''s rich tourist appeal. Its primary objective was to vividly portray
-      the diverse attractions and cultural gems that contribute to the city''s unique
-      allure.
-
-
-      The narrative unfolded through a captivating series of immersive
-      360-degree videos.'
-  - category: 3
-    info: "The challenge in this project was to showcase a 360\xBA video within a
-      sphere, creating a fully immersive viewing experience."
-  - category: 4
-    info: To address this, we implemented a solution by incorporating a render texture
-      into the sphere material. This render texture was also applied to the video
-      player. While in retrospect, this solution seems straightforward, at the time,
-      with less experience in Unity, it took some time to figure out.
+    info: "A VR tourism experience that presents the city's attractions and cultural
+      highlights through a series of immersive 360\xB0 videos.\r\n\r\n"
+  - category: 9
+    info: "Built the 360\xB0 video player: a video player renders into a render texture,
+      which is applied to the material of an inward-facing sphere around the viewer.\r\n"
   Images: {fileID: 11400000, guid: 3d2b29b2094831a49a43849af744c279, type: 2}
   Videos: {fileID: 0}
-  ClickableLinks: []
+  Urls: []

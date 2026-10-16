@@ -19,31 +19,32 @@ MonoBehaviour:
   - category: 0
     info: Lead Developer.
   - category: 1
-    info: Ooty is a registered trademark belonging to the Black Oak Company, which
-      operates in the field of prefabricated and modular structures with a wooden
-      substructure. Houses, Bungalows, accommodation modules, tourism, commerce,
-      annexes, etc.
+    info: "Ooty is a trademark of the Black Oak Company (now K\u014Dz\u014Dwood Industries),
+      which builds prefabricated and modular wooden structures: houses, bungalows,
+      accommodation modules, and commercial and tourism buildings.\r\n\r\n"
   - category: 2
-    info: Developed for both Android and iOS, this project leverages the ArCore and
-      ArKit frameworks to provide users with an engaging augmented reality (AR) experience.
-      The app allows users to place products in their actual size for an immersive
-      view or scale them down for a more comprehensive perspective. Additionally,
-      users have the creative freedom to construct personalized houses using a custom
-      editor. The primary goal of the app is to showcase the diverse collection of
-      products offered by the client, combining functionality with a seamless AR
-      interface.
-  - category: 6
-    info: ARKit and ARCore.
+    info: 'An augmented reality app for Android and iOS that showcases the client''s
+      product range. Users can:
+
+      - Place houses at real size to walk around
+      them, or scale them down for an overview,
+
+      - View interiors,
+
+      -
+      Design their own house in a custom in-app house editor.'
   - category: 3
-    info: "\rThe main challenge for this app was devising a method to make it compatible
-      with both iOS and Android by incorporating both the ARKit and ARCore plugins."
-  - category: 4
-    info: To enable this app to utilize both ARKit and ARCore plugins, I invested
-      considerable time in thoroughly studying the documentation for both ARKit and
-      ARCore. By identifying essential elements for app functionality, I integrated
-      these scripts into the scene and adjusted them to coexist harmoniously. Additionally,
-      I implemented a script to detect whether the app was developed for iOS or Android,
-      enabling or disabling the necessary scripts accordingly.
+    info: The app had to run on both iOS and Android, which meant supporting two
+      different AR frameworks, ARKit and ARCore, in a single Unity project.
+  - category: 9
+    info: '- Studied both SDKs in depth and identified the minimal set of components
+      each one needed.
+
+      - Integrated both into the same scene and adjusted
+      them to coexist without conflicts.
+
+      - Wrote a platform-detection layer
+      that enables the right framework for iOS or Android.'
   Images: {fileID: 11400000, guid: ed77e4fcd5c8b1d4cb4da1e7c429f129, type: 2}
   Videos: {fileID: 11400000, guid: 0576bea9737b76a4dba294f555ccc059, type: 2}
   Urls:

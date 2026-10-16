@@ -19,12 +19,12 @@ MonoBehaviour:
   - category: 0
     info: Unity Developer
   - category: 1
-    info: Codeverze uses the latest technologies to develop high-quality responsive,
-      personalized, and pixel-perfect designs. From e-commerce to large-scale web
-      and mobile applications, Codeverze helps organizations, businesses, and individuals
-      to effectively market and enhance their digital presence. Through custom solutions,
-      access to a reliable team, and fast delivery, Codeverze offers extensive end-to-end
-      expertise to ensure an excellent client experience.
+    info: 'Codeverze is a product of Meridian Pulse, a web and mobile development
+      agency building e-commerce and large-scale applications for its clients.
+
+      
+
+'
   - category: 2
     info: "Job name : Unity Developer - C# integration with an external API\n\nIn
       my initial Upwork assignment, I collaborated with Alan Mac Cormack, the founder
@@ -36,6 +36,14 @@ MonoBehaviour:
       I'm unable to provide specific project details due to the signing of a non-disclosure
       agreement (NDA). \n\nFor further insights into Codeverze you can explore their
       LinkedIn profile and website through the links bellow."
+  - category: 9
+    info: '- Developed the frontend of WebGL applications.
+
+      - Integrated the
+      backend API, connecting the Unity frontend to the platform''s data.
+
+      -
+      Collaborated with artists on the application''s UI.'
   - category: 7
     info: October 12, 2022 - Ongoing.
   Images: {fileID: 11400000, guid: 30cc639f0b8d7dd40a3f47b915fd0164, type: 2}

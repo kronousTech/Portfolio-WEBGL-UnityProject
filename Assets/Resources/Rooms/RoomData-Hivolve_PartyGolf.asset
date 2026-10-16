@@ -17,26 +17,34 @@ MonoBehaviour:
   Tags: 96
   Texts:
   - category: 0
-    info: Intern Developer.
+    info: Unity Developer (internship project)
   - category: 1
-    info: hivolve develops XR (VR/AR/MR) experiences to increase business performance.
-      With businesses in Europe & America, working closely with HR, Sales or Marketing
-      executives.
+    info: hivolve developed XR (VR/AR/MR) experiences for businesses in Europe and
+      America, working with HR, sales and marketing teams at well-known private companies
+      and public entities. (The company is no longer active.)
   - category: 2
-    info: '''Party Golf'' is a game that I developed during my internship at hivolve.
-      The game was inspired by the golf game ''Golf It'' but following a party theme.'
-  - category: 3
-    info: Though it's been quite a few years since my internship, I distinctly recall
-      struggling with the physics of the golf ball and incorporating Ads into the
-      game.
-  - category: 4
-    info: To overcome these challenges, I spent a significant amount of time delving
-      into Unity documentation until I pinpointed the sources of these issues and
-      could address them effectively.
-  - category: 5
-    info: Being my first mobile game I've developed at the time, it inspired me to
-      learn more about how to create inputs via mobile screen, game optimization,
-      ads and physics.
+    info: 'A party-themed mobile mini-golf game I built during my internship at hivolve,
+      inspired by Golf It. It has level select, local multiplayer and an in-game
+      shop.
+
+      
+
+'
+  - category: 9
+    info: '- Ball physics: tuned the golf ball physics to feel right on a phone.
+
+      -
+      Touch controls: designed aiming and shooting for touchscreens.
+
+      - Monetization:
+      integrated mobile ads.
+
+      - Optimization: my first pass at optimizing
+      a game for mobile hardware.
+
+
+      As my first mobile game, it set the foundation
+      for the mobile input, physics, ads and optimization work in my later projects.'
   Images: {fileID: 11400000, guid: 536e65c3fd981f443aa5ae7924791a87, type: 2}
   Videos: {fileID: 11400000, guid: 7424a1f251405b24cb60c1ebd3ea8dc3, type: 2}
-  ClickableLinks: []
+  Urls: []

@@ -19,19 +19,24 @@ MonoBehaviour:
   - category: 0
     info: Lead Developer.
   - category: 1
-    info: "Gr\xE2ndola's Municipal Chamber."
+    info: "Gr\xE2ndola Municipality (C\xE2mara Municipal de Gr\xE2ndola).\r\n\r\n"
   - category: 2
-    info: "The project was developed with the purpose of creating entertaining animations
-      related to the pottery process and Gr\xE2ndola's old cultures."
+    info: "A marker-based AR app with animated scenes about the pottery process and
+      Gr\xE2ndola's traditional culture.\r\n\r\n"
   - category: 3
-    info: This project was straightforward overall, with the primary hurdle being
-      effectively interpreting AR markers and ensuring consistent tracking once the
-      models appeared.
-  - category: 4
-    info: To ensure reliable tracking, we implemented a 3-second timer. This way,
-      if the marker temporarily lost tracking, the object would persist in its last
-      known position. This helped prevent the object from disappearing due to minor
-      tracking glitches when the marker detection faltered.
+    info: 'Keeping the AR content stable. When marker tracking flickered for a moment,
+      models would disappear and pop back in, which broke the experience.
+
+      
+
+'
+  - category: 9
+    info: '- Added a tracking grace period: when a marker is lost, the model stays
+      at its last known pose for 3 seconds before hiding.
+
+      - This removed
+      the flicker caused by brief tracking drops while still hiding content when
+      the marker was really gone.'
   Images: {fileID: 11400000, guid: 50a1bb0e142fc7c4b89a040572f0bfc4, type: 2}
   Videos: {fileID: 11400000, guid: 31b1c9c763ce0824984dd15522d64b11, type: 2}
-  ClickableLinks: []
+  Urls: []

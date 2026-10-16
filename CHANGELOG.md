@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [2.2.0] - Text Rework - 16-10-2026
+### Added
+- Added BlackBlood and DroneStrikeVR projects.
+### Changed
+- Reworked all of the project room texts.
+### Fixed
+- Fixed and optimized some issues with the new map system.
+
 ## [2.1.0] - Big Optimization Patch - 09-12-2025
 ### Added
 - Added static batching.

@@ -19,23 +19,33 @@ MonoBehaviour:
   - category: 0
     info: Lead developer.
   - category: 1
-    info: Siroco develops innovative solutions through the combination of years of
-      expertise, attention to detail and fast responses. Siroco also produces high
-      precision mechanical parts and tools, in small series, with technical expertise.
+    info: 'Siroco designs innovative engineering solutions and produces high-precision
+      mechanical parts and tools in small series.
+
+      
+
+'
   - category: 2
-    info: This project was developed for HTC Vive with the purpose of showing the
-      clients machines in high detail as well as containing the necessary information.
-  - category: 6
-    info: SteamVR plugin and later in development Oculus SDK.
+    info: 'A VR showroom that presents the client''s machines in high detail, along
+      with the technical information for each one. It started on HTC Vive with the
+      SteamVR plugin and later moved to the Oculus SDK.
+
+      
+
+'
   - category: 3
-    info: "\rGiven the intricate details of the machines, maintaining optimal performance
-      became a significant challenge when presenting them and ensuring a stable frame
-      rate."
-  - category: 4
-    info: To address the optimization challenges, we opted to display only one machine
-      at a time and transition between them this ensured a stable and engaging user
-      experience. This approach led to the creation of a sleek dissolve shader that
-      you can see in action on a video to your right.
+    info: 'The machine models were very detailed, and showing them while holding
+      a stable VR frame rate was hard.
+
+      
+
+'
+  - category: 9
+    info: '- Changed the presentation to show one machine at a time, which kept rendering
+      cost under control.
+
+      - Wrote a custom dissolve shader to transition
+      between machines, which turned the constraint into a polished part of the experience.'
   Images: {fileID: 11400000, guid: 98d5294c917a28b449bdbf49ffdf7cb1, type: 2}
   Videos: {fileID: 11400000, guid: a6c7f7491e974c84799ea497b0e2df43, type: 2}
-  ClickableLinks: []
+  Urls: []

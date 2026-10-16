@@ -19,24 +19,21 @@ MonoBehaviour:
   - category: 0
     info: Lead Developer.
   - category: 2
-    info: 'A simple package with a WebGL template to make your build screen adapt
-      to the browsers window size.
+    info: 'A lightweight Unity WebGL template that makes the build canvas resize
+      to fill the browser window, instead of Unity''s default fixed-size frame.
 
+      
 
-      After developing it for this experience,
-      I decided to publish it on Unity Asset Store.'
-  - category: 3
-    info: "\rThe primary challenge in developing this package was the lack of experience
-      with the HTML programming language."
-  - category: 4
-    info: As a solution, I delved into grasping the fundamentals of HTML programming,
-      engaging in numerous trial-and-error attempts until I successfully developed
-      a functional template.
-  - category: 5
-    info: In the process of publishing my package on the Unity Asset Store, I gained
-      valuable insights into Unity's publishing guidelines. Additionally, delving
-      into the code behind the WebGL templates provided me with a comprehensive understanding
-      of the technical aspects involved in it.
+'
+  - category: 9
+    info: '- A custom WebGL template (HTML/CSS/JS) that scales the Unity canvas responsively
+      with the browser window.
+
+      - A drop-in package: import it, select the
+      template in Player Settings, and build.
+
+      - Published to the Unity Asset
+      Store, which meant working through Unity''s packaging and review guidelines.'
   Images: {fileID: 11400000, guid: 848b73b8c834c824f8345ec96a5e665e, type: 2}
   Videos: {fileID: 0}
   Urls:

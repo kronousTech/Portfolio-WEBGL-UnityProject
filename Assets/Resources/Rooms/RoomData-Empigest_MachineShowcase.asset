@@ -19,25 +19,20 @@ MonoBehaviour:
   - category: 0
     info: Lead Developer.
   - category: 1
-    info: EMPIGEST started its activity in 2007, as a result of the enormous desire
-      of a group of professionals in the forklift market to create a different project,
-      based on the quality of the services provided, regardless of the brands assisted
-      and the size of the customer.
+    info: EMPIGEST has serviced forklifts and industrial machines since 2007, regardless
+      of brand or customer size.
   - category: 2
-    info: "This project was designed with the intent of showcasing the operational
-      prowess of EMPIGEST's autonomous machines\u2014innovative technologies that
-      function seamlessly without the necessity of direct human control."
-  - category: 6
-    info: The project was developed for Google VR using its SDK for Unity.
+    info: A mobile VR experience (Google VR SDK) that shows EMPIGEST's autonomous
+      machines working on their own, with no direct human control.
   - category: 3
-    info: In this project, I faced the task of making different machines work together
-      smoothly. It was one of my first professional projects, and ensuring that these
-      components didn't interfere with each other negatively proved to be quite a
-      challenge.
-  - category: 4
-    info: To tackle this issue, I had to enhance my programming skills and develop
-      the behavior of each machine with minimal dependencies to ensure a straightforward
-      and smooth-running system.
+    info: Several autonomous machines had to operate in the same scene at once without
+      interfering with each other.
+  - category: 9
+    info: '- Wrote each machine''s behaviour as a self-contained component with minimal
+      dependencies on the others.
+
+      - This kept the simulation predictable
+      and easy to extend with new machines.'
   Images: {fileID: 11400000, guid: 0dd79ca3ed491084aaf912ad3f1d224d, type: 2}
   Videos: {fileID: 0}
-  ClickableLinks: []
+  Urls: []

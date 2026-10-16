@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae6b0ca0a32c8a42a9dc27b41af18a6, type: 3}
+  m_Name: RoomData-CodeImpact - DroneStrikeVR
+  m_EditorClassIdentifier: 
+  ProjectName: DroneStrikeVR
+  ClientName: CodeImpact
+  Tags: 162
+  Texts:
+  - category: 0
+    info: Unity Developer (Sole Developer)
+  - category: 2
+    info: 'A VR base-defence strategy game for Oculus Quest. Players protect their
+      main tower from waves of enemy drones while attacking the opponent''s key infrastructure.
+
+
+
+      Economy:
+      an oil factory generates credits used to buy new assets. Credits carry over
+      between levels.
+
+      Defence: radar improves drone detection, air defence
+      shoots down incoming threats, and handheld weapons let the player fight directly.
+
+      Offence:
+      precision-guided missiles and kamikaze drones target the enemy''s radar, oil
+      factory and air defence. Destroying them wins the level.
+
+      Progression:
+      each level adds complexity and new weapons, and leaderboards score players
+      on remaining oil and base damage.
+
+      The project was stopped before the
+      end of production.'
+  - category: 3
+    info: I was the only developer on a project of this scale. With many moving units
+      and simultaneous AI behaviours, performance problems built up quickly on the
+      Quest's mobile hardware.
+  - category: 9
+    info: '- Used Unity''s profiling tools to find CPU bottlenecks, memory spikes
+      and inefficient update loops.
+
+      - Reworked the offending systems, which
+      improved both stability and overall frame rate on device.'
+  Images: {fileID: 11400000, guid: b3e249917c7ee704ba6f8a9911149e11, type: 2}
+  Videos: {fileID: 11400000, guid: f2acd13707954bd468ff472459619245, type: 2}
+  Urls: []

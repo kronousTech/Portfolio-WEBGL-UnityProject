@@ -10,5 +10,7 @@ namespace KronosTech.Gallery.Rooms
         Lessons = 5,
         Technologies = 6,
         Duration = 7,
+        Features = 8,
+        WhatIDid = 9
     }
 }
