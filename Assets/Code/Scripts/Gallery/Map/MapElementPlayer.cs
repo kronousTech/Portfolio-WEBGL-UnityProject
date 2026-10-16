@@ -1,5 +1,4 @@
 using KronosTech.InputSystem;
-using UnityEngine;
 
 namespace KronosTech.Gallery.Map
 {
@@ -9,10 +8,8 @@ namespace KronosTech.Gallery.Map
         {
             StarterAssetsInputs.OnMoveEvent += UpdateMapPositionCallback;
         }
-        protected override void OnDisable()
+        private void OnDisable()
         {
-            base.OnDisable();
-
             StarterAssetsInputs.OnMoveEvent -= UpdateMapPositionCallback;
         }
         private void Start()

@@ -34,6 +34,7 @@ namespace KronosTech.Gallery.Generation.TagSelection
 
                 var toggle = Instantiate(m_togglePrefab, m_parent);
                 toggle.Initialize(tag);
+                toggle.SetIsOn(true);
 
                 m_toggles.Add(toggle);
             }

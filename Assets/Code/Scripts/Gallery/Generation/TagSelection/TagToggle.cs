@@ -33,5 +33,9 @@ namespace KronosTech.Gallery.Generation.TagSelection
         {
             m_toggle.interactable = interactable;
         }
+        public void SetIsOn(bool isOn)
+        {
+            m_toggle.isOn = isOn;
+        }
     }
 }

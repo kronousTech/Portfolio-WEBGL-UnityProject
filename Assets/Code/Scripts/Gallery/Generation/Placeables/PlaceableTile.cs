@@ -14,6 +14,7 @@ namespace KronosTech.Gallery.Generation.Placeables
         public int GetExitsCount { get { return m_exits.Length; } private set { } }
 
         public event Action OnPlacement;
+        public event Action<bool> OnVisibilityChange;
 
         public void InitializeGallery(int remainingRooms, PlaceableExit exit, Action<PlaceableExit, PlaceableExit[]> exits)
         {
@@ -60,6 +61,13 @@ namespace KronosTech.Gallery.Generation.Placeables
             {
                 exits?.Invoke(null, m_exits);
             }
+        }
+
+        public override void Release()
+        {
+            base.Release();
+
+            OnVisibilityChange?.Invoke(false);
         }
 
         #region IPlaceablePieceBase

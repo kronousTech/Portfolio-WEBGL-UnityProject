@@ -5,15 +5,15 @@ namespace KronosTech.Gallery.Generation.ObjectPooling
 {
     public class PoolObjectGalleryBase : MonoBehaviour
     {
-        private IObjectPool<PoolObjectGalleryBase> _pool;
+        private IObjectPool<PoolObjectGalleryBase> m_pool;
 
         public void Initialize(IObjectPool<PoolObjectGalleryBase> pool)
         {
-            _pool = pool;
+            m_pool = pool;
         }
-        public void Release()
+        public virtual void Release()
         {
-            _pool.Release(this);
+            m_pool.Release(this);
         }
     }
 }

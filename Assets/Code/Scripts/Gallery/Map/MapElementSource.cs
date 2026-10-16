@@ -15,12 +15,16 @@ namespace KronosTech.Gallery.Map
         }
         private void OnDestroy()
         {
-            MapMediator.UnRegisterSource(m_data);
+            RemoveSource();
         }
 
         protected void UpdateMapPosition()
         {
             MapMediator.UpdateSourcePosition(m_data);
+        }
+        protected void RemoveSource()
+        {
+            MapMediator.UnRegisterSource(m_data);
         }
     }
 }

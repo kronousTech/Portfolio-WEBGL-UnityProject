@@ -10,6 +10,14 @@ namespace KronosTech.Gallery.Generation.Placeables
         [SerializeField] private GameObject _line;
 
         public event Action OnPlacement;
+        public event Action<bool> OnVisibilityChange;
+
+        public override void Release()
+        {
+            base.Release();
+
+            OnVisibilityChange?.Invoke(false);
+        }
 
         #region IPlaceablePieceBase
         public void Place(PlaceableExit exit)

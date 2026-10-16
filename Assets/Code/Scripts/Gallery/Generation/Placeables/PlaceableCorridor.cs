@@ -11,6 +11,14 @@ namespace KronosTech.Gallery.Generation.Placeables
         public PlaceableExit GetExit => _exit;
 
         public event Action OnPlacement;
+        public event Action<bool> OnVisibilityChange;
+
+        public override void Release()
+        {
+            base.Release();
+
+            OnVisibilityChange?.Invoke(false);
+        }
 
         #region IPlaceablePieceBase
         public void Place(PlaceableExit exit)

@@ -10,7 +10,7 @@ namespace Ui.Options
 
         private void Awake()
         {
-            _headBobbing = GameObject.FindObjectOfType<PlayerHeadBobbing>();
+            _headBobbing = GameObject.FindAnyObjectByType<PlayerHeadBobbing>();
             if (_headBobbing == null)
             {
                 Debug.LogError("Didn't found PlayerHeadBobbing on HeadBobbingToggle");

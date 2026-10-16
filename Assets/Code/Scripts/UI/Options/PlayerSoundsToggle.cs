@@ -9,7 +9,7 @@ namespace Ui.Options
 
         private void Awake()
         {
-            _playerSounds = GameObject.FindObjectOfType<PlayerSounds>();
+            _playerSounds = GameObject.FindAnyObjectByType<PlayerSounds>();
             if (_playerSounds == null)
             {
                 Debug.LogError("Didn't found PlayerSounds on PlayerSoundsToggle");

@@ -13,15 +13,20 @@ namespace KronosTech.Gallery.Generation.Placeables
         [SerializeField] private DataRepositoryRoomData m_repository;
 
         public event Action OnPlacement;
+        public event Action<bool> OnVisibilityChange;
 
         public void Initialize(RoomData data)
         {
             m_repository.SetData(data);
             transform.name = $"Room: {data.GetFullName()}";
+            
+            OnPlacement?.Invoke();
         }
         public void SetVisibility(bool state)
         {
             _holder.SetActive(state);
+
+            OnVisibilityChange?.Invoke(state);
         }
 
         #region IPlaceablePieceBase
